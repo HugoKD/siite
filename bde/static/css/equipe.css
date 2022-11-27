@@ -336,9 +336,10 @@ body {
     padding: 10px;
     color: #a51840;
     font-size: 35px;
+    transition: all .4s;
 }
 .icon a:hover {
-    color: #1f2121;
+    color: #421114;
 }
 
 /*vp*/
@@ -429,6 +430,7 @@ button.carousel-control-next {
     flex-direction: column;
     text-align: center;
 
+
 }
 
 .carouselIcon a {
@@ -437,6 +439,7 @@ button.carousel-control-next {
     color: #a51840;
     font-size: 30px;
     padding: 10px;
+    transition: all .4s;
 
 }
 .carouselIcon a:hover {
@@ -1212,6 +1215,7 @@ button.carousel-control-next {
     padding: 10px;
     color: #a51840;
     font-size: 35px;
+    transition: all .4s;
 }
 .parentIcon a:hover {
     color: #1f2121;
