@@ -63,7 +63,7 @@ canvas {
 
 .tsp .cadre {
     flex-wrap: wrap;
-    border: 5px #a51840 double;
+    border: 3px #a51840 groove;
     border-radius: 10px;
     display: flex;
     width: 100%;
@@ -180,7 +180,7 @@ canvas {
 
 .imt .cadre {
     flex-wrap: wrap;
-    border: 5px #a51840 double;
+    border: 3px #a51840 groove;
     border-radius: 10px;
     display: flex;
     width: 100%;
