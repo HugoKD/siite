@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+/* Réinitialiser les styles par défaut du navigateur */
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border: 0;
+  border-spacing: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: astro;
+  src: url(spaceage.ttf);
+}
+
+
+html, body {
+    height: 80%;
+    margin: 0;
+    border: 0;
+    font-family: 'Lato', sans-serif;
+}
+
+
+
+.container {
+    overflow: hidden;
+    width: 100%;
+    margin:0;
+}
+
+section#main {
+    padding: 15px 15px;
+    height: 100vh;
+    margin: 0 auto;
+    background-image: url("../img/programme.jpg");
+    background-repeat: no-repeat;
+    background-position: 50% 30%;
+}
+
+#container {
+    padding: 50px;
+}
+
+.title {
+    font-size: 4rem;
+    color: white;
+    text-align: center;
+}
+
+.line {
+    background-color: #a51840;
+    width: 10%;
+    height: 5px;
+    margin: 0 auto;
+    margin-bottom: 100px;
+    margin-top: 20px;
+}
+
+.texte {
+    color:white;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+
+.item__body {
+    padding: 50px;
+    border: solid 5px #a51840;
+    border-radius: 10px;
+    box-shadow: 0px 10px 10px -10px #1f2121;
+    width: 60%;
+    margin: 0 auto;
+}
+
+.item__title {
+    color: white;
+    font-size: 3rem;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+
+.item__description {
+    color: white;
+    font-size: 30px;
+    text-align: left;
+
+}
+
+.items {
+    position: relative;
+}
+
+.carousel {
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel__container {
+    transition: 0.3s;
+}
+
+.carousel__container::after {
+    content:'';
+    clear:both;
+    display: table;
+}
+
+.carousel-item {
+    float:left;
+}
+
+
+.carousel__next{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: url("../img/circle-right-solid.svg") center center no-repeat;
+    background-size: 20px 20px;
+    border-radius: 50%;
+    top:50%;
+    cursor: pointer;
+    margin-top:-20px;
+    transition: 0.3s;
+}
+
+.carousel__prev {
+    width: 40px;
+    height: 40px;
+    background: url("../img/circle-left-solid.svg") center center no-repeat;
+    border-radius: 50%;
+    background-size: 50px 50px;
+    cursor: pointer;
+    top:50%;
+    margin-left: 300px;
+    transition: 0.3s;
+    position: absolute;
+}
+
+
+.parentIcon {
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    background-color: black;
+}
+.parentIcon a {
+    text-align: center;
+    width: 12%;
+    padding: 10px;
+    color: #a51840;
+    font-size: 35px;
+}
+.parentIcon a:hover {
+    color: #1f2121;
+}
+
+.copy {
+    height: 5vh;
+    background-color: black;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+@media screen and (max-width: 700px) {
+
+    .copy {
+        height: 110%;
+}
+
+.title {
+    font-size: 1.5rem;
+}
+
+.texte {
+    font-size: 10px;
+    margin-bottom: 50px;
+}
+
+
+.item__title {
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+
+.item__description {
+    font-size: 15px;
+
+}
+
+.item__body {
+    padding: 10px;
+    height: 60%;
+    width: 100%;
+
+}
+
+.items {
+    padding: 5px;
+}
+
+}
+

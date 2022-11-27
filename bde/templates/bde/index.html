@@ -1,0 +1,60 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Liste Astro BDE</title>
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/717f408a62.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    {% include 'bde/navbar.html' %}
+    {% block content %}
+    {% endblock %}
+
+
+    <section>
+        <div class="title">
+            <video src="{% static "img/backvideo1.mp4" %}" loop muted autoplay>
+            </video>
+            <div class="above">
+                <h1>Astro</h1>
+                <h3>Prêt au décollage ?</h3>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="bloque" id="a-propos">
+            <div class="texte">
+                <h1>A propos de nous :</h1>
+                <div class="line">
+                </div>
+                <p>Bonjour à tous!
+                    Que vous soyez 1A, 2A ou 3A (ou plus), la liste Thunder est ici pour vous. Nous sommes 39 élèves prêts à perpétuer l’esprit de l’INT tout en proposant plein de nouveautés. Nous comptons bien donner notre maximum jusqu’à la fin de campagne afin de servir le campus comme il se doit.
+                    Pour cela nous dialoguons avec vous afin de comprendre vos attentes, d’apprendre à vous connaître et d’établir un réel lien amical avec vous. En effet nous voulons être la liste qui rassemble un maximum les années, les clubs et les associations afin que les élèves puissent profiter d’une nouvelle année et représenter fièrement l’INT.</p>
+            </div>
+            <div class="image">
+                <img src="{% static "img/background.png" %}" alt="test">
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="parentIcon">
+            <a href="https://www.facebook.com/groups/campusTMSP/about/"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+        <div class="copy">
+            <p>Copyright © 2022 - Liste BDE Astro | Développé par Adrien Bonnivard et Hugo Cadet
+            </p>
+        </div>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+</body>
+</html>

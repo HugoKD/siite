@@ -1,0 +1,125 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pougnes - Liste Astro BDE</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{% static 'css/pougnes.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/717f408a62.js" crossorigin="anonymous"></script>
+    <script src="{% static "js/particules.js" %}" async></script>
+    <script src="{% static "js/loader.js" %}" async></script>
+
+
+
+</head>
+<body>
+
+    {% include 'bde/navbar.html' %}
+    {% block content %}
+    {% endblock %}
+
+
+    <!-- particles.js container -->
+    <div id="particles-js">
+
+
+        <div class="bloc1">
+
+            <div class="tsp">
+                <div class="cadre">
+                    <div class="img_">
+                        <h1>Ines Picard</h1>
+                        <img src="{% static "img/hamza2.jpg" %}" alt="pougne_tsp">
+                        <div class="icon">
+                            <a href="https://www.facebook.com/julia.sartre.5"><i class="fa-brands fa-facebook"></i></a>
+                            <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="https://www.linkedin.com/feed/"><i class="fa-brands fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <div class="texte">
+                        <div class="titre">
+                            <h1>Pougnes TSP</h1>
+                        </div>
+                        <div class="box"></div>
+                        <div class="paragraphe">
+                            <p>Le président a une multitude de responsabilités. La plus importante est de bien gérer son groupe en interne : être sûr que chaque pôle travaille comme il faut et superviser tous les différents projets, ce qu’il ne pourra pas faire sans l’aide de ses VP. Il faut qu’il sache s’adapter et trouver des solutions aux problèmes qu’encontre le BDE, et prendre des décisions parfois importantes. Il a également des responsabilités en externe : il est l’image et le porte parole du BDE et de la vie associative, notamment auprès des écoles.</p>
+                        </div>
+                    </div>
+                    <div class="drive">
+                        <a href="https://www.facebook.com/groups/campusTMSP/about/"><i class="fab fa-google-drive"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="imt">
+                <div class="cadre">
+                <div class="img_">
+                    <h1>Victor Saunal</h1>
+                    <img src="{% static "img/hamza2.jpg" %}" alt="pougne_imt-bs">
+                    <div class="icon">
+                                <a href="https://www.facebook.com/julia.sartre.5"><i class="fa-brands fa-facebook"></i></a>
+                                <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                                <a href="https://www.linkedin.com/feed/"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="texte">
+                    <div class="titre">
+                        <h1>Pougnes IMT-BS</h1>
+                    </div>
+                    <div class="box"></div>
+                    <div class="paragraphe">
+                        <p>Le président a une multitude de responsabilités. La plus importante est de bien gérer son groupe en interne : être sûr que chaque pôle travaille comme il faut et superviser tous les différents projets, ce qu’il ne pourra pas faire sans l’aide de ses VP. Il faut qu’il sache s’adapter et trouver des solutions aux problèmes qu’encontre le BDE, et prendre des décisions parfois importantes. Il a également des responsabilités en externe : il est l’image et le porte parole du BDE et de la vie associative, notamment auprès des écoles.</p>
+                    </div>
+                </div>
+                <div class="drive">
+                    <a href="https://www.facebook.com/groups/campusTMSP/about/"><i class="fab fa-google-drive"></i></a>
+                </div>
+            </div>
+        </div>
+
+        </div>
+
+        <!--
+        <div class="bachelor">
+            <div class="cadre">
+                <div class="img_">
+                    <img src="{% static "img/pougne.png" %}" alt="pougne_imt">
+                </div>
+                <div class="texte">
+                    <div class="titre">
+                        <h1>Pougnes Bachelor</h1>
+                    </div>
+                    <div class="box"></div>
+                    <div class="paragraphe">
+                        <p>Le président a une multitude de responsabilités. La plus importante est de bien gérer son groupe en interne : être sûr que chaque pôle travaille comme il faut et superviser tous les différents projets, ce qu’il ne pourra pas faire sans l’aide de ses VP. Il faut qu’il sache s’adapter et trouver des solutions aux problèmes qu’encontre le BDE, et prendre des décisions parfois importantes. Il a également des responsabilités en externe : il est l’image et le porte parole du BDE et de la vie associative, notamment auprès des écoles.</p>
+                    </div>
+                </div>
+                <div class="drive">
+                    <a href="https://www.facebook.com/groups/campusTMSP/about/"><i class="fab fa-google-drive"></i></a>
+                </div>
+            </div>
+        </div>
+        -->
+
+
+    </div>
+
+    <footer>
+        <div class="parentIcon">
+            <a href="https://www.facebook.com/groups/campusTMSP/about/"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+        <div class="copy">
+            <p>Copyright © 2022 - Liste BDE Astro | Développé par Adrien Bonnivard et Hugo Cadet
+            </p>
+        </div>
+    </footer>
+
+    <!-- particles.js lib - https://github.com/VincentGarreau/particles.js -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+</body>
+</html>

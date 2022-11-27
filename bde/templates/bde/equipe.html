@@ -1,0 +1,802 @@
+﻿{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>L'équipe - Liste Astro BDE</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="{% static "js/jquery-3.6.1.min.js" %}"></script>
+    <script src="{% static "js/rocket.js" %}" async></script>
+    <link rel="stylesheet" href="{% static 'css/equipe.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/717f408a62.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" type="image/png" href="{% static 'img/astronaute_detouré.png' %}"/>
+    <script src="{% static "js/loader.js" %}" async></script>
+
+
+
+
+</head>
+
+<body>
+
+    {% include 'bde/navbar.html' %}
+    {% block content %}
+    {% endblock %}
+
+    <section id="particles-js">
+
+        <div class="loader">
+            <img src="{% static "img/astronaute_detouré.png" %}" alt="loader">
+        </div>
+
+        <section id="main">
+            <div class="organigramme">
+
+                <h1>L'équipage :</h1>
+
+                <div class="image-container">
+                    <img src="{% static "img/orga.jpg" %}" alt="organigramme">
+                </div>
+
+                <div class="popup-img">
+                    <span>&times;</span>
+                    <img src="{% static "img/Organigramme_ASTRO_V13.png" %}" alt="organigramme">
+                </div>
+
+                <script>
+                    document.querySelectorAll('.image-container img').forEach( img => {
+                        img.onclick =  () => {
+                            document.querySelector('.popup-img').style.display= 'block';
+                            document.querySelector('.popup-img img').src=image.getAttribute('src');
+                    }
+                });
+                document.querySelector('.popup-img span').onclick = () => {
+                    document.querySelector('.popup-img').style.display= 'none';}
+
+                </script>
+
+                <div class="astro"><img src="{% static "img/astronaute_detouré.png" %}" alt="astro"></div>
+
+
+            </div>
+
+
+        </section>
+
+        <section class="presentation">
+
+            <br>
+            <h1> Le mot des pôles</h1>
+            <div class="effet"><div class="trait"></div></div>
+            <br>
+
+            <div class="président">
+                <div class="astro_pres"><img src="{% static "img/astronaute_detouré.png" %}" alt="astro"></div>
+                <div class="cadre">
+                    <div class="img_président">
+                        <h1>Julia Sartre</h1>
+                        <img src="{% static "img/juliia.png" %}" alt="presidence">
+                        <div class="icon">
+                            <a href="https://www.facebook.com/julia.sartre.5"><i class="fa-brands fa-facebook"></i></a>
+                            <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="https://www.linkedin.com/feed/"><i class="fa-brands fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="texte">
+                        <div class="titre">
+                            <h1>Le mot de la président</h1>
+                        </div>
+                        <div class="trait"></div>
+                        <div class="paragraphe">
+                            <p>Le président a une multitude de responsabilités. La plus importante est de bien gérer son groupe en interne : être sûr que chaque pôle travaille comme il faut et superviser tous les différents projets, ce qu’il ne pourra pas faire sans l’aide de ses VP. Il faut qu’il sache s’adapter et trouver des solutions aux problèmes qu’encontre le BDE, et prendre des décisions parfois importantes. Il a également des responsabilités en externe : il est l’image et le porte parole du BDE et de la vie associative, notamment auprès des écoles.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="vice-présidents">
+                <div class="cadre">
+
+                    <div id="carousel-vp" class="carousel slide carousel-fade" data-bs-ride="carousel" >
+                      <div class="carousel-inner">
+                            <div class="carousel-item active " data-interval="10">
+                                <h1>Kessel Diaroumaye</h1>
+                                <img src="{% static "img/background.png" %}" class="d-block w-100" alt="...">
+                                <div class="carouselIcon">
+                                    <a href="https://www.facebook.com/kessel.diaroumeye"><i class="fa-brands fa-facebook"></i></a>
+                                    <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                                    <a href="https://www.linkedin.com/feed/"><i class="fa-brands fa-linkedin-in"></i></a>
+                                </div>
+                            </div>
+                            <div class="carousel-item" data-interval="10" >
+                                <h1>Loucas Brémond</h1>
+                                <img src="{% static "img/background.png" %}" class="d-block w-100" alt="...">
+                                <div class="carouselIcon">
+                                    <a href="https://www.facebook.com/loulou.bremond"><i class="fa-brands fa-facebook"></i></a>
+                                    <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                                    <a href="https://www.linkedin.com/feed/"><i class="fa-brands fa-linkedin-in"></i></a>
+                                </div>
+                            </div>
+                            <div class="carousel-item" data-interval="10">
+                                <h1>Geoffroy nanani</h1>
+                                <img src="{% static "img/background.png" %}" class="d-block w-100" alt="...">
+                                <div class="carouselIcon">
+                                    <a href="https://www.facebook.com"><i class="fa-brands fa-facebook"></i></a>
+                                    <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                                    <a href="https://www.linkedin.com/feed/"><i class="fa-brands fa-linkedin-in"></i></a>
+                                </div>
+                            </div>
+                      </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#carousel-vp" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#carousel-vp" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                  </button>
+                </div>
+
+                    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+                    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+
+
+                    <div class="texte">
+                        <div class="titre">
+                            <h1>Le mot des VP</h1>
+                        </div>
+                        <div class="box"></div>
+                        <div class="paragraphe">
+                            <p>La vice-présidence c’est avant tout savoir soulager les autres dans leur travail, que ce soit celui du président comme celui des différents pôles. Cela peut prendre différentes formes telles que la circulation des informations au sein de la liste ou encore l’investissement dans les différents pôles. Un vice-président sait tout ce qui se passe au sein du groupe et se doit d’être flexible au vu de son travail multi-tâches.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="communication">
+                <div class="cadre">
+
+                    <div id="carousel-communication" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                      <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <h1 class="valentine">Valentine Delhome</h1>
+                                <img src="{% static "img/background.png" %}" class="d-block w-100" alt="...">
+                                <div class="carouselIcon">
+                                    <a href="https://www.facebook.com"><i class="fa-brands fa-facebook"></i></a>
+                                    <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                                    <a href="https://www.linkedin.com/feed/"><i class="fa-brands fa-linkedin-in"></i></a>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <h1 class="sinoué">Sinoué Gad</h1>
+                                <img src="{% static "img/background.png" %}" class="d-block w-100" alt="...">
+                                <div class="carouselIcon">
+                                    <a href="https://www.facebook.com"><i class="fa-brands fa-facebook"></i></a>
+                                    <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                                    <a href="https://www.linkedin.com/feed/"><i class="fa-brands fa-linkedin-in"></i></a>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <h1 class="lilou">Lilou Draili</h1>
+                                <img src="{% static "img/background.png" %}" class="d-block w-100" alt="...">
+                                <div class="carouselIcon">
+                                    <a href="https://www.facebook.com"><i class="fa-brands fa-facebook"></i></a>
+                                    <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                                    <a href="https://www.linkedin.com/feed/"><i class="fa-brands fa-linkedin-in"></i></a>
+                                </div>
+                            </div>
+                          <div class="carousel-item">
+                                <h1 class="enola">Enola Courbet</h1>
+                                <img src="{% static "img/background.png" %}" class="d-block w-100" alt="...">
+                                <div class="carouselIcon">
+                                    <a href="https://www.facebook.com"><i class="fa-brands fa-facebook"></i></a>
+                                    <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                                    <a href="https://www.linkedin.com/feed/"><i class="fa-brands fa-linkedin-in"></i></a>
+                                </div>
+                            </div>
+                      </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#carousel-communication" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#carousel-communication" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                  </button>
+                </div>
+
+                    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+                    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+
+
+                    <div class="texte">
+                        <div class="titre">
+                            <h1>communication</h1>
+                        </div>
+                        <div class="box"></div>
+                        <div class="paragraphe">
+                            <p>Le pôle soirée est comme tu l’auras deviné chargé d’organiser les soirées. Plus précisément, il s’occupe du choix du thème et des décorations, de la sécurité mais aussi du budget, et doit se coordonner avec les différents clubs qui participent à la soirée comme Déclic, INTech, les clubs de danse ou bien BPM. Il doit réaliser un dossier à présenter devant l’administration avant chaque soirée pour qu’elle la valide et sa mission est simple : émerveiller le campus.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bloc1">
+
+                <div class="numérique">
+                    <div class="cadre">
+
+                        <div id="carousel-numérique" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                          <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <h1 class="hugo">Hugo Cadet</h1>
+                                    <img src="{% static "img/background.png" %}" class="d-block w-100" alt="...">
+                                    <div class="carouselIcon">
+                                        <a href="https://www.facebook.com"><i class="fa-brands fa-facebook"></i></a>
+                                        <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                                        <a href="https://www.linkedin.com/feed/"><i class="fa-brands fa-linkedin-in"></i></a>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <h1 class="adrien">Adrien B.</h1>
+                                    <img src="{% static "img/background.png" %}" class="d-block w-100" alt="...">
+                                    <div class="carouselIcon">
+                                        <a href="https://www.facebook.com"><i class="fa-brands fa-facebook"></i></a>
+                                        <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                                        <a href="https://www.linkedin.com/feed/"><i class="fa-brands fa-linkedin-in"></i></a>
+                                    </div>
+                                </div>
+                          </div>
+                      <button class="carousel-control-prev" type="button" data-bs-target="#carousel-numérique" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                      </button>
+                      <button class="carousel-control-next" type="button" data-bs-target="#carousel-numérique" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                      </button>
+                    </div>
+
+                        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+                        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+
+
+                        <div class="texte">
+                            <div class="titre">
+                                <h1>Numérique</h1>
+                            </div>
+                            <div class="box"></div>
+                            <div class="paragraphe">
+                                <p>Le pôle soirée est comme tu l’auras deviné chargé d’organiser les soirées. Plus précisément, il s’occupe du choix du thème et des décorations, de la sécurité mais aussi du budget, et doit se coordonner avec les différents clubs qui participent à la soirée comme Déclic, INTech, les clubs de danse ou bien BPM. Il doit réaliser un dossier à présenter devant l’administration avant chaque soirée pour qu’elle la valide et sa mission est simple : émerveiller le campus.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="secrétariat">
+                    <div class="cadre">
+                        <div class="img_secrétariat">
+                            <h1>Martin Fait </h1>
+                            <img src="{% static "img/background.png" %}" alt="secretariat">
+                             <div class="icon">
+                                <a href="https://www.facebook.com/julia.sartre.5"><i class="fa-brands fa-facebook"></i></a>
+                                <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                                <a href="https://www.linkedin.com/feed/"><i class="fa-brands fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                        <div class="texte">
+                            <div class="titre">
+                                <h1>Secretariat</h1>
+                            </div>
+                            <div class="box"></div>
+                            <div class="paragraphe">
+                                <p>Le président a une multitude de responsabilités. La plus importante est de bien gérer son groupe en interne : être sûr que chaque pôle travaille comme il faut et superviser tous les différents projets, ce qu’il ne pourra pas faire sans l’aide de ses VP. Il faut qu’il sache s’adapter et trouver des solutions aux problèmes qu’encontre le BDE, et prendre des décisions parfois importantes. Il a également des responsabilités en externe : il est l’image et le porte parole du BDE et de la vie associative, notamment auprès des écoles.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="soirée">
+                <div class="cadre">
+
+                    <div id="carousel-soirée" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                      <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <h1>Stéphane Bajou</h1>
+                                <img src="{% static "img/background.png" %}" class="d-block w-100" alt="...">
+                                <div class="carouselIcon">
+                                    <a href="https://www.facebook.com"><i class="fa-brands fa-facebook"></i></a>
+                                    <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                                    <a href="https://www.linkedin.com/feed/"><i class="fa-brands fa-linkedin-in"></i></a>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <h1>Adm Boumal</h1>
+                                <img src="{% static "img/background.png" %}" class="d-block w-100" alt="...">
+                                <div class="carouselIcon">
+                                    <a href="https://www.facebook.com"><i class="fa-brands fa-facebook"></i></a>
+                                    <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                                    <a href="https://www.linkedin.com/feed/"><i class="fa-brands fa-linkedin-in"></i></a>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <h1>Louis Simon</h1>
+                                <img src="{% static "img/background.png" %}" class="d-block w-100" alt="...">
+                                <div class="carouselIcon">
+                                    <a href="https://www.facebook.com"><i class="fa-brands fa-facebook"></i></a>
+                                    <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                                    <a href="https://www.linkedin.com/feed/"><i class="fa-brands fa-linkedin-in"></i></a>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <h1>Lilian Mathiens</h1>
+                                <img src="{% static "img/background.png" %}" class="d-block w-100" alt="...">
+                                <div class="carouselIcon">
+                                    <a href="https://www.facebook.com"><i class="fa-brands fa-facebook"></i></a>
+                                    <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                                    <a href="https://www.linkedin.com/feed/"><i class="fa-brands fa-linkedin-in"></i></a>
+                                </div>
+                            </div>
+                      </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#carousel-soirée" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#carousel-soirée" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                  </button>
+                </div>
+
+                    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+                    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+
+
+                    <div class="texte">
+                        <div class="titre">
+                            <h1>Le Pôle soirée</h1>
+                        </div>
+                        <div class="box"></div>
+                        <div class="paragraphe">
+                            <p>Le pôle soirée est comme tu l’auras deviné chargé d’organiser les soirées. Plus précisément, il s’occupe du choix du thème et des décorations, de la sécurité mais aussi du budget, et doit se coordonner avec les différents clubs qui participent à la soirée comme Déclic, INTech, les clubs de danse ou bien BPM. Il doit réaliser un dossier à présenter devant l’administration avant chaque soirée pour qu’elle la valide et sa mission est simple : émerveiller le campus.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bloc1">
+
+                <div class="trésorerie">
+                    <div class="cadre">
+
+                        <div id="carousel-trésorerie" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                          <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <h1>Lea Journoud !!</h1>
+                                    <img src="{% static "img/background.png" %}" class="d-block w-100" alt="...">
+                                    <div class="carouselIcon">
+                                        <a href="https://www.facebook.com"><i class="fa-brands fa-facebook"></i></a>
+                                        <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                                        <a href="https://www.linkedin.com/feed/"><i class="fa-brands fa-linkedin-in"></i></a>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <h1>Tatiana K.</h1>
+                                    <img src="{% static "img/background.png" %}" class="d-block w-100" alt="...">
+                                    <div class="carouselIcon">
+                                        <a href="https://www.facebook.com"><i class="fa-brands fa-facebook"></i></a>
+                                        <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                                        <a href="https://www.linkedin.com/feed/"><i class="fa-brands fa-linkedin-in"></i></a>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <h1>Geoffroy nanani</h1>
+                                    <img src="{% static "img/background.png" %}" class="d-block w-100" alt="...">
+                                    <div class="carouselIcon">
+                                        <a href="https://www.facebook.com"><i class="fa-brands fa-facebook"></i></a>
+                                        <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                                        <a href="https://www.linkedin.com/feed/"><i class="fa-brands fa-linkedin-in"></i></a>
+                                    </div>
+                                </div>
+                          </div>
+                      <button class="carousel-control-prev" type="button" data-bs-target="#carousel-trésorerie" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                      </button>
+                      <button class="carousel-control-next" type="button" data-bs-target="#carousel-trésorerie" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                      </button>
+                    </div>
+
+                        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+                        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+
+
+                        <div class="texte">
+                            <div class="titre">
+                                <h1>trésorerie</h1>
+                            </div>
+                            <div class="box"></div>
+                            <div class="paragraphe">
+                                <p>Le pôle soirée est comme tu l’auras deviné chargé d’organiser les soirées. Plus précisément, il s’occupe du choix du thème et des décorations, de la sécurité mais aussi du budget, et doit se coordonner avec les différents clubs qui participent à la soirée comme Déclic, INTech, les clubs de danse ou bien BPM. Il doit réaliser un dossier à présenter devant l’administration avant chaque soirée pour qu’elle la valide et sa mission est simple : émerveiller le campus.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="seculog">
+                    <div class="cadre">
+                        <div class="img_seculog">
+                            <h1>Alessio Mazzenlla</h1>
+                            <img src="{% static "img/background.png" %}" alt="seculog">
+                            <div class="icon">
+                                <a href="https://www.facebook.com/julia.sartre.5"><i class="fa-brands fa-facebook"></i></a>
+                                <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                                <a href="https://www.linkedin.com/feed/"><i class="fa-brands fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                        <div class="texte">
+                            <div class="titre">
+                                <h1>seculog</h1>
+                            </div>
+                            <div class="box"></div>
+                            <div class="paragraphe">
+                                <p>Le président a une multitude de responsabilités. La plus importante est de bien gérer son groupe en interne : être sûr que chaque pôle travaille comme il faut et superviser tous les différents projets, ce qu’il ne pourra pas faire sans l’aide de ses VP. Il faut qu’il sache s’adapter et trouver des solutions aux problèmes qu’encontre le BDE, et prendre des décisions parfois importantes. Il a également des responsabilités en externe : il est l’image et le porte parole du BDE et de la vie associative, notamment auprès des écoles.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="évènement">
+                <div class="cadre">
+
+                    <div id="carousel-évènement" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                      <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <h1 class="corentin">Corentin Vincensini</h1>
+                                <img src="{% static "img/background.png" %}" class="d-block w-100" alt="...">
+                                <div class="carouselIcon">
+                                    <a href="https://www.facebook.com"><i class="fa-brands fa-facebook"></i></a>
+                                    <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                                    <a href="https://www.linkedin.com/feed/"><i class="fa-brands fa-linkedin-in"></i></a>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <h1 class="alexandre">Alexandre Leconte</h1>
+                                <img src="{% static "img/background.png" %}" class="d-block w-100" alt="...">
+                                <div class="carouselIcon">
+                                    <a href="https://www.facebook.com"><i class="fa-brands fa-facebook"></i></a>
+                                    <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                                    <a href="https://www.linkedin.com/feed/"><i class="fa-brands fa-linkedin-in"></i></a>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <h1 class="juliette">Juliette Gantzer</h1>
+                                <img src="{% static "img/background.png" %}" class="d-block w-100" alt="...">
+                                <div class="carouselIcon">
+                                    <a href="https://www.facebook.com"><i class="fa-brands fa-facebook"></i></a>
+                                    <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                                    <a href="https://www.linkedin.com/feed/"><i class="fa-brands fa-linkedin-in"></i></a>
+                                </div>
+                            </div>
+                           <div class="carousel-item">
+                                <h1 class="mathis">Mathis Poli</h1>
+                                <img src="{% static "img/background.png" %}" class="d-block w-100" alt="...">
+                                <div class="carouselIcon">
+                                    <a href="https://www.facebook.com"><i class="fa-brands fa-facebook"></i></a>
+                                    <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                                    <a href="https://www.linkedin.com/feed/"><i class="fa-brands fa-linkedin-in"></i></a>
+                                </div>
+                            </div>
+                           <div class="carousel-item">
+                                <h1 class="armand">Armand Le Vallois</h1>
+                                <img src="{% static "img/background.png" %}" class="d-block w-100" alt="...">
+                                <div class="carouselIcon">
+                                    <a href="https://www.facebook.com"><i class="fa-brands fa-facebook"></i></a>
+                                    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><i class="fa-brands fa-instagram"></i></a>
+                                    <a href="https://www.linkedin.com/feed/"><i class="fa-brands fa-linkedin-in"></i></a>
+                                </div>
+                            </div>
+                      </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#carousel-évènement" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#carousel-évènement" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                  </button>
+                </div>
+
+                    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+                    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+
+
+                    <div class="texte">
+                        <div class="titre">
+                            <h1>Pôle Évènement</h1>
+                        </div>
+                        <div class="box"></div>
+                        <div class="paragraphe">
+                            <p>Le pôle soirée est comme tu l’auras deviné chargé d’organiser les soirées. Plus précisément, il s’occupe du choix du thème et des décorations, de la sécurité mais aussi du budget, et doit se coordonner avec les différents clubs qui participent à la soirée comme Déclic, INTech, les clubs de danse ou bien BPM. Il doit réaliser un dossier à présenter devant l’administration avant chaque soirée pour qu’elle la valide et sa mission est simple : émerveiller le campus.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bloc1">
+
+                <div class="prévention">
+                    <div class="cadre">
+                        <div id="carousel-prévention" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                          <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <h1>Zacharie March</h1>
+                                    <img src="{% static "img/background.png" %}" class="d-block w-100" alt="...">
+                                    <div class="carouselIcon">
+                                        <a href="https://www.facebook.com"><i class="fa-brands fa-facebook"></i></a>
+                                        <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                                        <a href="https://www.linkedin.com/feed/"><i class="fa-brands fa-linkedin-in"></i></a>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <h1>Noah Azouz</h1>
+                                    <img src="{% static "img/background.png" %}" class="d-block w-100" alt="...">
+                                    <div class="carouselIcon">
+                                        <a href="https://www.facebook.com"><i class="fa-brands fa-facebook"></i></a>
+                                        <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                                        <a href="https://www.linkedin.com/feed/"><i class="fa-brands fa-linkedin-in"></i></a>
+                                    </div>
+                                </div>
+                          </div>
+                      <button class="carousel-control-prev" type="button" data-bs-target="#carousel-prévention" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                      </button>
+                      <button class="carousel-control-next" type="button" data-bs-target="#carousel-prévention" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                      </button>
+                    </div>
+
+                        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+                        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+
+
+                        <div class="texte">
+                            <div class="titre">
+                                <h1>prévention</h1>
+                            </div>
+                            <div class="box"></div>
+                            <div class="paragraphe">
+                                <p>Le pôle soirée est comme tu l’auras deviné chargé d’organiser les soirées. Plus précisément, il s’occupe du choix du thème et des décorations, de la sécurité mais aussi du budget, et doit se coordonner avec les différents clubs qui participent à la soirée comme Déclic, INTech, les clubs de danse ou bien BPM. Il doit réaliser un dossier à présenter devant l’administration avant chaque soirée pour qu’elle la valide et sa mission est simple : émerveiller le campus.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ritz">
+                    <div class="cadre">
+                        <div class="img_ritz">
+                            <h1>Hamza Ech Chachi</h1>
+                            <img src="{% static "img/hamza2.jpg" %}" alt="presidence">
+                            <div class="icon">
+                                <a href="https://www.facebook.com/julia.sartre.5"><i class="fa-brands fa-facebook"></i></a>
+                                <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                                <a href="https://www.linkedin.com/feed/"><i class="fa-brands fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                        <div class="texte">
+                            <div class="titre">
+                                <h1>ritz</h1>
+                            </div>
+                            <div class="box"></div>
+                            <div class="paragraphe">
+                                <p>Le président a une multitude de responsabilités. La plus importante est de bien gérer son groupe en interne : être sûr que chaque pôle travaille comme il faut et superviser tous les différents projets, ce qu’il ne pourra pas faire sans l’aide de ses VP. Il faut qu’il sache s’adapter et trouver des solutions aux problèmes qu’encontre le BDE, et prendre des décisions parfois importantes. Il a également des responsabilités en externe : il est l’image et le porte parole du BDE et de la vie associative, notamment auprès des écoles.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="RE">
+                <div class="cadre">
+
+                    <div id="carousel-RE" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                      <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <h1>Alexandre Chidiac</h1>
+                                <img src="{% static "img/background.png" %}" class="d-block w-100" alt="...">
+                                <div class="carouselIcon">
+                                    <a href="https://www.facebook.com"><i class="fa-brands fa-facebook"></i></a>
+                                    <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                                    <a href="https://www.linkedin.com/feed/"><i class="fa-brands fa-linkedin-in"></i></a>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <h1>Lou-Ann Dournelle</h1>
+                                <img src="{% static "img/background.png" %}" class="d-block w-100" alt="...">
+                                <div class="carouselIcon">
+                                    <a href="https://www.facebook.com"><i class="fa-brands fa-facebook"></i></a>
+                                    <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                                    <a href="https://www.linkedin.com/feed/"><i class="fa-brands fa-linkedin-in"></i></a>
+                                </div>
+                            </div>
+                      </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#carousel-RE" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#carousel-RE" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                  </button>
+                </div>
+
+                    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+                    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+
+
+                    <div class="texte">
+                        <div class="titre">
+                            <h1>RE</h1>
+                        </div>
+                        <div class="box"></div>
+                        <div class="paragraphe">
+                            <p>Le pôle soirée est comme tu l’auras deviné chargé d’organiser les soirées. Plus précisément, il s’occupe du choix du thème et des décorations, de la sécurité mais aussi du budget, et doit se coordonner avec les différents clubs qui participent à la soirée comme Déclic, INTech, les clubs de danse ou bien BPM. Il doit réaliser un dossier à présenter devant l’administration avant chaque soirée pour qu’elle la valide et sa mission est simple : émerveiller le campus.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bloc1">
+
+                <div class="RI">
+                    <div class="cadre">
+                        <div class="img_RI">
+                            <h1>Quentin Vinzani</h1>
+                            <img src="{% static "img/background.png" %}" alt="RI">
+                            <div class="icon">
+                                <a href="https://www.facebook.com/julia.sartre.5"><i class="fa-brands fa-facebook"></i></a>
+                                <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                                <a href="https://www.linkedin.com/feed/"><i class="fa-brands fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                        <div class="texte">
+                            <div class="titre">
+                                <h1>RI</h1>
+                            </div>
+                            <div class="box"></div>
+                            <div class="paragraphe">
+                                <p>Le président a une multitude de responsabilités. La plus importante est de bien gérer son groupe en interne : être sûr que chaque pôle travaille comme il faut et superviser tous les différents projets, ce qu’il ne pourra pas faire sans l’aide de ses VP. Il faut qu’il sache s’adapter et trouver des solutions aux problèmes qu’encontre le BDE, et prendre des décisions parfois importantes. Il a également des responsabilités en externe : il est l’image et le porte parole du BDE et de la vie associative, notamment auprès des écoles.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="DD">
+                    <div class="cadre">
+                        <div class="img_DD">
+                            <h1>Rebecca Laik</h1>
+                            <img src="{% static "img/background.png" %}" alt="DD">
+                            <div class="icon">
+                                <a href="https://www.facebook.com/julia.sartre.5"><i class="fa-brands fa-facebook"></i></a>
+                                <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                                <a href="https://www.linkedin.com/feed/"><i class="fa-brands fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                        <div class="texte">
+                            <div class="titre">
+                                <h1>DD</h1>
+                            </div>
+                            <div class="box"></div>
+                            <div class="paragraphe">
+                                <p>Le président a une multitude de responsabilités. La plus importante est de bien gérer son groupe en interne : être sûr que chaque pôle travaille comme il faut et superviser tous les différents projets, ce qu’il ne pourra pas faire sans l’aide de ses VP. Il faut qu’il sache s’adapter et trouver des solutions aux problèmes qu’encontre le BDE, et prendre des décisions parfois importantes. Il a également des responsabilités en externe : il est l’image et le porte parole du BDE et de la vie associative, notamment auprès des écoles.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="bloc1">
+
+                <div class="TEMA">
+                <div class="cadre">
+                    <div class="img_TEMA">
+                        <h1>Sammy Nasr</h1>
+                        <img src="{% static "img/Capture d’écran du 2022-11-13 00-17-34.png" %}" alt="tema">
+                        <div class="icon">
+                                <a href="https://www.facebook.com/julia.sartre.5"><i class="fa-brands fa-facebook"></i></a>
+                                <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                                <a href="https://www.linkedin.com/feed/"><i class="fa-brands fa-linkedin-in"></i></a>
+                            </div>
+                    </div>
+                    <div class="texte">
+                        <div class="titre">
+                            <h1>T&MA</h1>
+                        </div>
+                        <div class="box"></div>
+                        <div class="paragraphe">
+                            <p>Le président a une multitude de responsabilités. La plus importante est de bien gérer son groupe en interne : être sûr que chaque pôle travaille comme il faut et superviser tous les différents projets, ce qu’il ne pourra pas faire sans l’aide de ses VP. Il faut qu’il sache s’adapter et trouver des solutions aux problèmes qu’encontre le BDE, et prendre des décisions parfois importantes. Il a également des responsabilités en externe : il est l’image et le porte parole du BDE et de la vie associative, notamment auprès des écoles.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            </div>
+
+
+
+        </section>
+
+
+    </section>
+
+
+
+
+    <div id="rocket">
+        <a href="#top"><img src="{% static "img/rocket-top.png" %}" alt="top"></a>
+    </div>
+
+    <div id="rocket_bottom">
+        <a href="#bottom"><img src="{% static "img/rocket-bottom.png" %}" alt="buttom"></a>
+    </div>
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+
+    <script type="text/javascript">
+    /**
+     * Animation de la fusée avec Javascript
+    **/
+    jQuery(document).ready(function($){
+        // Stockage des références des différents éléments dans des variables
+        rocket     = $('#rocket');
+        rocketBottom  = $('#rocket_bottom');
+
+
+        // Calcul de la marge entre le haut du document et #rocket
+        fixedLimit = rocket.offset().top - parseFloat(rocket.css('marginTop').replace(/auto/,0));
+
+        // On déclenche un événement scroll pour mettre à jour le positionnement au chargement de la page
+        $(window).trigger('scroll');
+
+        $(window).scroll(function(event){
+            // Valeur de défilement lors du chargement de la page
+            windowScroll = $(window).scrollTop();
+
+            // Mise à jour du positionnegment en fonction du scroll
+            if( windowScroll >= fixedLimit){
+                rocket.addClass('fixed');
+                rocketBottom.addClass('fixed');
+            } else {
+                rocket.removeClass('fixed');
+                rocketBottom.removeClass('fixed');
+
+            }
+        });
+    });
+    </script>
+
+    <a id="bottom"></a>
+
+    <footer>
+        <div class="parentIcon">
+            <a href="https://www.facebook.com/groups/campusTMSP/about/"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+        <div class="copy">
+            <p>Copyright © 2022 - Liste BDE Astro | Développé par Adrien Bonnivard & Hugo Cadet</p>
+        </div>
+    </footer>
+
+</body>
+</html>
