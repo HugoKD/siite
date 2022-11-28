@@ -129,7 +129,8 @@ body {
     margin-right: auto;
     position: relative;
     object-fit: contain;
-    border:1px solid #a51840;
+    border-left:1px solid rgb(115, 92, 92);
+    border-top:1px solid #735c5c;
     box-shadow: 20px 20px 40px -6px rgba(0,0,0,.2);
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
@@ -171,7 +172,7 @@ body {
     position: absolute;
     top: 50%; left: 50%;
     transform: translate(-50%,-50%);
-    border: 5px solid #a51840;
+    border: 2px solid #a51840;
     border-radius: 5px;
     width: 80%;
     object-fit: cover;
