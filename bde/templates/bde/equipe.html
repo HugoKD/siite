@@ -762,12 +762,12 @@
         rocket     = $('#rocket');
         rocketBottom  = $('#rocket_bottom');
 
-
         // Calcul de la marge entre le haut du document et #rocket
         fixedLimit = rocket.offset().top - parseFloat(rocket.css('marginTop').replace(/auto/,0));
 
         // On déclenche un événement scroll pour mettre à jour le positionnement au chargement de la page
         $(window).trigger('scroll');
+        $('#rocket').hide();
 
         $(window).scroll(function(event){
             // Valeur de défilement lors du chargement de la page
