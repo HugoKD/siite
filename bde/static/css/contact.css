@@ -79,6 +79,8 @@ section#contact .contact_div form{
     flex-wrap: wrap;
     justify-content: space-between;
     max-width: 600px;
+
+
 }
 
 section#contact .contact_div form input{
@@ -128,6 +130,7 @@ section#contact .contact_div form button {
     margin: 0 auto;
     transition: 0.2s;
 }
+
 
 section#contact .contact_div form button:hover {
     transform: translateY(-5px);
