@@ -92,6 +92,14 @@ body {
     margin: auto;
 }
 
+.constellation_orga {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+}
+.constellation_orga img {
+    width: 20%;
+}
 
 .organigramme {
     z-index: 10;
@@ -102,6 +110,7 @@ body {
     justify-content: center;
     align-items: center;
 }
+
 .organigramme h1 {
     display: block;
     height: 10%;
@@ -123,7 +132,6 @@ body {
     object-fit: contain;
     border:1px solid #a51840;
     box-shadow: 20px 20px 40px -6px rgba(0,0,0,.2);
-    cursor: pointer;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
     border-bottom-left-radius: 8px ;
@@ -134,6 +142,8 @@ body {
 .image-container img:hover {
     transform: scale(1.07);
     box-shadow: 20px 20px 60px -6px rgba(0,0,0,.6);
+    cursor: zoom-in;
+
 
 
 }
@@ -168,7 +178,40 @@ body {
     object-fit: cover;
 }
 
+.astro {
+    height: 10%;
+    width: 100%;
+    height: 100px;
+    margin-bottom: 0px;
+}
 
+
+.astro img {
+    z-index: 5;
+    height: 100%;
+    border: none;
+    box-shadow: none;
+}
+.astro img:hover {
+  /* Start the shake animation and make the animation last for 0.5 seconds */
+  animation: shake 0.5s;
+  /* When the animation is finished, start again */
+  animation-iteration-count: 3;
+}
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
 
 
 /* presentation */
@@ -209,43 +252,6 @@ body {
     border-radius: 10q 10q 10q 10q;
     max-width: 400px;
     max-height: 400px;
-}
-
-.astro {
-    display: flex;
-    height: 10%;
-    width: 100%;
-    height: 100px;
-    margin-bottom: 0px;
-}
-
-
-.astro img {
-    z-index: 5;
-    height: 100%;
-    border: none;
-    box-shadow: none;
-
-}
-.astro img:hover {
-  /* Start the shake animation and make the animation last for 0.5 seconds */
-  animation: shake 0.5s;
-  /* When the animation is finished, start again */
-  animation-iteration-count: 3;
-}
-
-@keyframes shake {
-  0% { transform: translate(1px, 1px) rotate(0deg); }
-  10% { transform: translate(-1px, -2px) rotate(-1deg); }
-  20% { transform: translate(-3px, 0px) rotate(1deg); }
-  30% { transform: translate(3px, 2px) rotate(0deg); }
-  40% { transform: translate(1px, -1px) rotate(1deg); }
-  50% { transform: translate(-1px, 2px) rotate(-1deg); }
-  60% { transform: translate(-3px, 1px) rotate(0deg); }
-  70% { transform: translate(3px, 1px) rotate(-1deg); }
-  80% { transform: translate(-1px, -1px) rotate(1deg); }
-  90% { transform: translate(1px, 2px) rotate(0deg); }
-  100% { transform: translate(1px, -2px) rotate(-1deg); }
 }
 
 
@@ -569,7 +575,6 @@ button.carousel-control-next {
 
 /**/
 
-
 .communication .cadre {
     padding: 1% 5%;
     border: 5px #a51840 solid;
@@ -854,6 +859,9 @@ button.carousel-control-next {
 .corentin {
     padding-left: 4%;
 }
+
+
+
 .évènement .cadre {
     padding: 1% 5%;
     border: 5px #a51840 solid;
@@ -1023,6 +1031,21 @@ button.carousel-control-next {
     margin-left: 10px;
     margin-top: 3%;
     width: 50%;
+    position: relative;
+}
+
+
+.constellation0 {
+    position : absolute;
+    top: -50px;
+    right: -300px;
+    z-index: 0;
+}
+
+.constellation0 img {
+    transform: rotate(-30deg);
+    width: 100%;
+    z-index: 0;
 }
 
 
@@ -1037,6 +1060,7 @@ button.carousel-control-next {
     background-color: #1f2121 ;
     box-shadow: 0px 10px 50px -10px #a92a37;
     border: 1px solid #a51840;
+    z-index: 5;
 
 }
 
@@ -1145,6 +1169,7 @@ button.carousel-control-next {
     margin-top: 3%;
     height: 500px;
     width: 50%;
+    z-index: 6;
 }
 
 .DD .cadre {
@@ -1158,6 +1183,7 @@ button.carousel-control-next {
     background-color: #1f2121 ;
     box-shadow: 0px 10px 50px -10px #a92a37;
     border: 1px solid #a51840;
+    z-index: 6;
 
 }
 
@@ -1311,6 +1337,20 @@ button.carousel-control-next {
         top: -170px;
         left: -10px;
     }
+
+     .constellation0 {
+    position : absolute;
+    top: -50px;
+    right: -300px;
+    z-index: 0;
+    }
+
+    .constellation0 img {
+        transform: rotate(-30deg);
+        width: 100%;
+        z-index: 0;
+    }
+
 }
 
 @media screen and  (max-width:1900px) and (min-width: 1500px) {
@@ -1318,18 +1358,51 @@ button.carousel-control-next {
         left: 0;
         top: -140px;
     }
+     .constellation0 {
+    position : absolute;
+    top: -50px;
+    right: -300px;
+    z-index: 0;
+    }
+
+    .constellation0 img {
+        transform: rotate(-30deg);
+        width: 100%;
+        z-index: 0;
+    }
 
 }
 @media screen and  (max-width:1500px) and (min-width: 1300px) {
+
     .astro_pres {
         left: 0;
         top: -100px;
     }
 
+    .constellation0 {
+    position : absolute;
+    top: -50px;
+    right: -300px;
+    z-index: 0;
+    }
+
+    .constellation0 img {
+        transform: rotate(-30deg);
+        width: 100%;
+        z-index: 0;
+    }
 }
 
 @media screen and  (max-width:1300px) and (min-width: 700px) {
 
+    .constellation_orga {
+    position: absolute;
+    top: 6%;
+    left: 0%;
+    }
+    .constellation_orga img {
+        width: 20%;
+    }
     .astro_pres {
         top: -80px;
         left: 0px;
@@ -1405,9 +1478,43 @@ button.carousel-control-next {
         max-height: 410px;
     }
 
+    .constellation0 {
+    position : absolute;
+    top: -150px;
+    right: -100px;
+    z-index: 0;
+    }
+
+    .constellation0 img {
+        transform: rotate(-30deg);
+        width: 100%;
+        z-index: 0;
+    }
+
 }
 
 @media (hover: none) and (orientation: portrait), (max-width:700px) {
+
+    .constellation_orga {
+    position: absolute;
+    top: 5%;
+    left: 0%;
+    }
+    .constellation_orga img {
+        width: 40%;
+    }
+    .constellation0 {
+    position : absolute;
+    top: -200px;
+    right: -50px;
+    z-index: 0;
+    }
+
+    .constellation0 img {
+        transform: rotate(-30deg);
+        width: 100%;
+        z-index: 0;
+    }
 
     .astro_pres {
         top: -60px;
