@@ -43,7 +43,6 @@ body {
     justify-content: center;
 }
 
-
 .loader img{
     position: relative;
     transform: scale(0.4) ;
@@ -71,7 +70,6 @@ body {
     z-index: -99;
 }
 
-
 .presentation h1 {
     color: #f1d0a4;
     text-align: center;
@@ -92,28 +90,41 @@ body {
     margin: auto;
 }
 
-.main {
-    position: relative;
-}
-
-.constellation_orga {
-    position: absolute;
-    top: -100px;
-    left: -100px;
-}
-.constellation_orga img {
-    width: 20%;
-}
-
-
 .organigramme {
     z-index: 10;
-    padding:70px;
+    padding-top:5%;
     border-bottom-left-radius: 1000px 50px;
     border-bottom-right-radius: 1000px 50px;
     background-image: linear-gradient(to bottom, rgb(143, 38, 44), rgba(52, 4, 48, 0.84));
     justify-content: center;
     align-items: center;
+    position: relative;
+
+}
+
+.constellation_orga {
+    position : absolute;
+    display: flex;
+    z-index: -20;
+}
+
+.constellation_orga img {
+    transform: rotate(-30deg);
+    width: 100%;
+}
+
+.constellation_orga2 {
+    display: flex;
+
+}
+
+.constellation_orga2 img {
+    position : absolute;
+    transform: rotate(-30deg);
+    width: 20%;
+    right: -10%;
+    top: 60%;
+
 }
 
 
@@ -127,13 +138,15 @@ body {
     text-shadow: 5px 5px 3px rgba(0, 0, 0, .5);
 }
 
+.organigramme .image-container {
+    z-index: 50;
+}
 
-.organigramme img {
+.organigramme .image-container img {
     width: 60%;
-    display: block;
+    display: flex;
     margin-left: auto;
     margin-right: auto;
-    position: relative;
     object-fit: contain;
     border-left:1px solid rgb(115, 92, 92);
     border-top:1px solid #735c5c;
@@ -143,12 +156,14 @@ body {
     border-bottom-left-radius: 8px ;
     border-bottom-right-radius: 8px;
     transition: .2s linear;
+    z-index: 1000;
 }
 
 .image-container img:hover {
     transform: scale(1.07);
     box-shadow: 20px 20px 60px -6px rgba(0,0,0,.6);
     cursor: zoom-in;
+    z-index: 500;
 
 }
 
@@ -158,9 +173,10 @@ body {
     top: 0; left: 0;
     height: 100%;
     width: 100%;
-    z-index: 100;
+    z-index: 1000;
     display: none;
 }
+
 
 .organigramme .popup-img span {
     position: absolute;
@@ -169,7 +185,7 @@ body {
     font-weight: bolder;
     color: #a51840;
     cursor: pointer;
-    z-index: 120;
+    z-index: 200;
 }
 
 .organigramme .popup-img img {
@@ -187,14 +203,21 @@ body {
     width: 100%;
     height: 100px;
     margin-bottom: 0px;
+    justify-items: center;
+    align-items: center;
+    display: block;
 }
 
+.astro a:hover {
+    cursor: pointer;
+}
 
 .astro img {
     z-index: 5;
     height: 100%;
-    border: none;
-    box-shadow: none;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
 }
 .astro img:hover {
   /* Start the shake animation and make the animation last for 0.5 seconds */
@@ -1269,10 +1292,9 @@ button.carousel-control-next {
 
 
 #rocket{
-    z-index: 100;
+    z-index: 5;
     position:absolute; bottom:10%; right:0;
     width: 6%;
-    z-index: 10;
     display: flex;
     margin-top: 10%;
 }
@@ -1280,13 +1302,16 @@ button.carousel-control-next {
 #rocket.fixed:hover {
     transform: scale(1.05);
     animation: bounce 0.8s ease infinite;
+    z-index: 5;
 }
 
 #rocket img {
     width: 100%;
+    z-index: 5;
 }
 
-#rocket.fixed{position:fixed; top:0;}
+#rocket.fixed{position:fixed; top:0;
+    z-index: 5;}
 
 
 @keyframes bounce{
@@ -1427,6 +1452,9 @@ button.carousel-control-next {
 
 @media screen and  (max-width:1300px) and (min-width: 700px) {
 
+    .organigramme {
+        padding-top: 10%;
+    }
     .constellation_orga {
     position: absolute;
     top: 6%;
@@ -1527,6 +1555,9 @@ button.carousel-control-next {
 
 @media (hover: none) and (orientation: portrait), (max-width:700px) {
 
+    .organigramme {
+        padding-top: 18%;
+    }
     .constellation_orga {
     position: absolute;
     top: 5%;
@@ -1554,10 +1585,9 @@ button.carousel-control-next {
         width: 25%;
     }
 
-    .astro_pres img {
-
+    .astro img {
+        height: 80%;
     }
-
     .organigramme h1 {
         display: block;
         text-align: center;

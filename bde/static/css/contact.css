@@ -23,14 +23,12 @@ html, body {
 }
 
 #contact{
-    padding: 10% 15px;
-    margin: 0 auto;
+    padding: 10%;
     height: 100%;
     background-image: url("../img/contact6.jpg");
     background-repeat: no-repeat;
     background-position: -300px -300px;
-    justify-items: center;
-    align-items: center;
+    min-height: 700px;
 }
 
 #contact .contact_div {
@@ -65,6 +63,9 @@ html, body {
   }
 }
 
+section#contact .contact_div .texte {
+    height: 20%;
+}
 section#contact .contact_div .texte h3{
     font-size: 1.2em;
 }
@@ -78,9 +79,7 @@ section#contact .contact_div form{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    max-width: 600px;
-
-
+    height: 80%;
 }
 
 section#contact .contact_div form input{
