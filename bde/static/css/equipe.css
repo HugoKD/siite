@@ -49,7 +49,6 @@ body {
     transform: scale(0.4) ;
     -webkit-animation: flash linear 1.3s infinite;
 	animation: flash linear 1.3s infinite;
-
 }
 
 
@@ -58,6 +57,7 @@ body {
 	50% { opacity: .7; }
 	100% { opacity: 1; }
 }
+
 @keyframes flash {
 
 	0% { opacity: 1; }
@@ -92,14 +92,19 @@ body {
     margin: auto;
 }
 
+.main {
+    position: relative;
+}
+
 .constellation_orga {
     position: absolute;
-    top: 0%;
-    left: 0%;
+    top: -100px;
+    left: -100px;
 }
 .constellation_orga img {
     width: 20%;
 }
+
 
 .organigramme {
     z-index: 10;
@@ -110,6 +115,7 @@ body {
     justify-content: center;
     align-items: center;
 }
+
 
 .organigramme h1 {
     display: block;
@@ -143,8 +149,6 @@ body {
     transform: scale(1.07);
     box-shadow: 20px 20px 60px -6px rgba(0,0,0,.6);
     cursor: zoom-in;
-
-
 
 }
 
@@ -1352,6 +1356,15 @@ button.carousel-control-next {
         z-index: 0;
     }
 
+    .constellation_orga {
+    position: absolute;
+    top: 6%;
+    left: 0%;
+    }
+    .constellation_orga img {
+        width: 20%;
+    }
+
 }
 
 @media screen and  (max-width:1900px) and (min-width: 1500px) {
@@ -1371,9 +1384,27 @@ button.carousel-control-next {
         width: 100%;
         z-index: 0;
     }
+    .constellation_orga {
+    position: absolute;
+    top: 6%;
+    left: 0%;
+    }
+    .constellation_orga img {
+        width: 20%;
+    }
 
 }
 @media screen and  (max-width:1500px) and (min-width: 1300px) {
+
+
+    .constellation_orga {
+    position: absolute;
+    top: 6%;
+    left: 0%;
+    }
+    .constellation_orga img {
+        width: 20%;
+    }
 
     .astro_pres {
         left: 0;
