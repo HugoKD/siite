@@ -1,6 +1,7 @@
 {% load static %}
 <header>
-<nav class="navbar fixed-top navbar-expand-lg navbar-dark "style="background-color:black ; padding: 0">
+
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark "style="background-color:black ; padding: 0 ; position: fixed">
         <div class="container" style="padding-left: 0">
         <a href="../" class="navbar-brand mb-0 h1" style="padding: 0 ; text-align: center ; justify-content: center">
             <img src="{% static "img/astro.png" %}" style="height: 60px ; width: 60px ; margin-left: 20px ; margin-top: 0 ; margin-left: 0 ; margin-bottom: 5px ; margin-right: 50px" >
@@ -51,4 +52,9 @@
         </div>
         </div>
     </nav>
+    <!-- style du navbar
+        .navbar.fixed-top {
+            posistion : fixed ;
+        }
+    -->
 </header>

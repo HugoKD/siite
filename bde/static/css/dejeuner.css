@@ -1,58 +1,13 @@
 * {
   margin: 0;
   padding: 0;
-  outline: 0;
-  border: 0;
-  border-spacing: 0;
   box-sizing: border-box;
-}
-
-html, body {
-    height: 100%;
-    margin: 0;
-    border: 0;
     font-family: 'Lato', sans-serif;
+
 }
 
-
-.main {
-    height: 100%;
-    width: 100%;
-    background-color: #1f2121;
-    padding-top: 50px;
+body {
+    height: 200vh;
+    background: rgba(225, 57, 57, 0.8);
 }
 
-
-.parentIcon {
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
-    width: 100%;
-    background-color: black;
-    height: 4%;
-}
-
-
-.parentIcon a {
-    text-align: center;
-    width: 12%;
-    padding: 10px;
-    color: #a51840;
-    font-size: 35px;
-    transition: all .4s;
-}
-.parentIcon a:hover {
-    color: #1f2121;
-}
-
-
-.copy {
-    height: 5vh;
-    background-color: black;
-    color: white;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
-}

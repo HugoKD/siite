@@ -6,7 +6,6 @@
   outline: 0;
   border: 0;
   border-spacing: 0;
-  box-sizing: border-box;
 }
 
 @font-face {
@@ -23,30 +22,30 @@ html, body {
 }
 
 
-
-.container {
-    overflow: hidden;
-    width: 100%;
-    margin:0;
-}
-
-section#main {
-    padding: 15px 15px;
+#main {
+    padding: 15px 0;
     height: 100vh;
     margin: 0 auto;
-    background-image: url("../img/programme.jpg");
+    background-image: url("../img/image_fond.jpeg");
     background-repeat: no-repeat;
     background-position: 50% 30%;
+    align-items: center;
+    justify-content: center;
+    z-index: 0;
 }
 
 #container {
     padding: 50px;
+    justify-items: center;
+    align-items: center;
 }
 
 .title {
+    position: relative;
     font-size: 4rem;
     color: white;
     text-align: center;
+    z-index: 2;
 }
 
 .line {
@@ -58,85 +57,158 @@ section#main {
     margin-top: 20px;
 }
 
+.asteroide1 {
+    position: absolute;
+    display: flex;
+    top: -20%;
+    left: -1%;
+    z-index: 0;
+}
+
+.asteroide1 img {
+    width: 80%;
+    z-index: 0;
+    animation: float2 200s ease 1;
+}
+
+@keyframes float2 {
+	0% {
+		transform: translate(-500px , -500px);
+	}
+    50% {
+        transform: translate(-500px , -500px);
+    }
+	100% {
+		transform: translate(0px , 0px);
+	}
+}
+
+.asteroide2 {
+    position: absolute;
+    display: flex;
+    top: -20%;
+    left: -1%;
+    z-index: 0;
+}
+
+.asteroide2 img {
+    width: 80%;
+    z-index: 0;
+    animation: float3 200s ease;
+    animation-iteration-count: 1;
+}
+
+@keyframes float3 {
+	0% {
+		transform: translate(-1200px , 800px);
+	}
+	100% {
+        transform: translate(750px, -600px);
+        display: none;
+    }
+}
+
+
 .texte {
+    position: relative;
+    z-index: 100;
     color:white;
     margin: 0 auto;
     margin-bottom: 50px;
-}
-
-.item__body {
-    padding: 50px;
-    border: solid 5px #a51840;
-    border-radius: 10px;
-    box-shadow: 0px 10px 10px -10px #1f2121;
-    width: 60%;
-    margin: 0 auto;
-}
-
-.item__title {
-    color: white;
-    font-size: 3rem;
-    margin-bottom: 10px;
     text-align: center;
+    font-size: 1.2em;
+    padding-left: 50%;
+    animation-duration: 1.5s;
+    animation-name: slidein;
+}
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
 }
 
 
-.item__description {
-    color: white;
-    font-size: 30px;
-    text-align: left;
 
+.bloc1 {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    animation: slidein2;
+    animation-duration: 2s;
 }
 
-.items {
-    position: relative;
+@keyframes slidein2 {
+  from {
+    margin-top: 100%;
+  }
+  50% {
+      margin-top: 50%;
+  }
+  to {
+    margin-top: 3%;
+  }
+}
+.astro img {
+    width: 60%;
+    animation: float 6s ease-in-out infinite;
 }
 
-.carousel {
-    position: relative;
-    overflow: hidden;
+@keyframes float {
+	0% {
+		transform: translatey(0px);
+	}
+	50% {
+		transform: translatey(-20px);
+	}
+	100% {
+		transform: translatey(0px);
+	}
 }
 
-.carousel__container {
-    transition: 0.3s;
+.astro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.carousel__container::after {
-    content:'';
-    clear:both;
-    display: table;
+#carousel {
+    height: 50%;
+    display: flex;
+    color: #ffffff;
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    width: 50%;
+    border-radius: 90%;
 }
 
 .carousel-item {
-    float:left;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
-
-.carousel__next{
-    position: absolute;
-    width: 40px;
-    height: 40px;
-    background: url("../img/circle-right-solid.svg") center center no-repeat;
-    background-size: 20px 20px;
-    border-radius: 50%;
-    top:50%;
-    cursor: pointer;
-    margin-top:-20px;
-    transition: 0.3s;
+.carousel-item li {
+    size: 50px;
+}
+.carousel-item h1 {
+    padding-top: 3%;
+    padding-bottom: 3% ;
 }
 
-.carousel__prev {
-    width: 40px;
-    height: 40px;
-    background: url("../img/circle-left-solid.svg") center center no-repeat;
-    border-radius: 50%;
-    background-size: 50px 50px;
-    cursor: pointer;
-    top:50%;
-    margin-left: 300px;
-    transition: 0.3s;
+.carouselIcon {
     position: absolute;
 }
+
 
 
 .parentIcon {

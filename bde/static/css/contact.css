@@ -27,7 +27,7 @@ html, body {
     height: 100%;
     background-image: url("../img/contact6.jpg");
     background-repeat: no-repeat;
-    background-position: -300px -300px;
+    background-position: 30% 30%;
     min-height: 700px;
 }
 
