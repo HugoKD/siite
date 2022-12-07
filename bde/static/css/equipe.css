@@ -86,8 +86,9 @@ body {
 }
 
 .carousel-item img {
-    display: block;
     margin: auto;
+    align-items: center;
+    justify-content: center;
 }
 
 .organigramme {
@@ -293,7 +294,7 @@ body {
     display: flex;
     width: 86%;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;;
     margin-left: 7%;
     background-color: #1f2121 ;
     box-shadow: 0px 10px 50px -10px #a51840;
@@ -319,26 +320,25 @@ body {
 .président {
     position: relative;
 }
+
 .président .img_président {
-    width: 50%;
+
     align-items: center;
     justify-content: center;
     display: flex;
     flex-direction: column;
+}
 
+.président .img_président img {
+    width: 90%;
+    height: 100%;
+    border-radius: 100%;
+    box-shadow: 6px 6px 40px -15px rgba(225, 57, 57, 0.8);
 }
 
 .président .texte {
     width: 50%;
     color: #ece0d2;
-}
-
-.président .img_président img {
-    width: 100%;
-    height: 100%;
-    box-shadow: 0px 10px 30px -10px rgb(69, 72, 72);
-
-
 }
 
 .président .titre {
@@ -361,7 +361,6 @@ body {
     flex-direction: column;
     text-align: center;
     width: 100%;
-    background-color:  #1f2121;
 }
 .icon a {
     text-align: center;
@@ -378,10 +377,6 @@ body {
 /*vp*/
 
 
-.carousel-item img{
-    align-items: center;
-    justify-content: center;
-}
 
 
 .vice-présidents .cadre {
@@ -430,10 +425,14 @@ body {
 }
 
 #carousel-vp{
-    max-height: 450px;
     width: 50%;
     display: flex;
     margin-right: 20px;
+}
+
+#carousel-vp img {
+    border-radius: 100%;
+    box-shadow: 6px 6px 40px -15px rgba(225, 57, 57, 0.8);
 }
 
 .presentation .carousel-item h3 {
@@ -455,7 +454,6 @@ button.carousel-control-next {
 
 .carouselIcon {
     position: relative;
-    background-color: #1f2121;
     height: 40px;
     width: 100%;
     align-items: center;
@@ -473,8 +471,8 @@ button.carousel-control-next {
     font-size: 30px;
     padding: 10px;
     transition: all .4s;
-
 }
+
 .carouselIcon a:hover {
     color: #421114;
 }
@@ -501,13 +499,9 @@ button.carousel-control-next {
     background-color: #1f2121 ;
     box-shadow: 0px 10px 50px -10px #a92a37;
     border: 1px solid #a51840;
-
-
-
 }
 
 #carousel-secrétariat{
-    max-height: 450px;
     width: 50%;
     display: flex;
 }
@@ -525,11 +519,13 @@ button.carousel-control-next {
 .secrétariat .texte {
     width: 50%;
     color: #ece0d2;
+    padding-right: 3%;
 }
 
 .secrétariat .img_secrétariat img {
-    width: 70%;
-    height: 70%;
+    width: 90%;
+    border-radius: 100%;
+    box-shadow: 6px 6px 40px -15px rgba(225, 57, 57, 0.8);
 }
 
 .secrétariat .titre {
@@ -556,6 +552,12 @@ button.carousel-control-next {
     width: 50%;
 }
 
+.trésorerie img {
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 100%;
+    box-shadow: 6px 6px 40px -15px rgba(225, 57, 57, 0.8);
+}
 
 .trésorerie .cadre {
     border: 5px #a51840 solid;
@@ -569,12 +571,9 @@ button.carousel-control-next {
     box-shadow: 0px 10px 50px -10px #a92a37;
     border: 1px solid #a51840;
 
-
-
 }
 
 #carousel-trésorerie{
-    max-height: 450px;
     width: 50%;
     display: flex;
 }
@@ -583,7 +582,7 @@ button.carousel-control-next {
 .trésorerie .texte {
     width: 50%;
     color: #ece0d2;
-
+    padding-right: 3%;
 }
 
 .trésorerie .titre {
@@ -599,6 +598,8 @@ button.carousel-control-next {
     margin-left: 37.5%;
     background-color: #a51840;
 }
+
+
 
 /**/
 
@@ -631,11 +632,14 @@ button.carousel-control-next {
 }
 
 #carousel-communication{
-    max-height: 450px;
-    width: 50%;
+    width: 40%;
     display: flex;
 }
 
+#carousel-communication img {
+    border-radius: 100%;
+    box-shadow: 6px 6px 40px -15px rgba(225, 57, 57, 0.8);
+}
 
 
 .communication .texte {
@@ -674,15 +678,17 @@ button.carousel-control-next {
     box-shadow: 0px 10px 50px -10px #a92a37;
     border: 1px solid #a51840;
 
-
 }
+
 
 #carousel-RE{
-    max-height: 450px;
-    width: 50%;
+    width: 40%;
     display: flex;
 }
-
+#carousel-RE img {
+    border-radius: 100%;
+    box-shadow: 6px 6px 40px -15px rgba(225, 57, 57, 0.8);
+}
 
 
 
@@ -705,6 +711,7 @@ button.carousel-control-next {
     background-color: #a51840;
 }
 
+
 /**/
 
 
@@ -725,10 +732,14 @@ button.carousel-control-next {
 }
 
 #carousel-soirée {
-    max-height: 450px;
-    width: 50%;
+    width: 40%;
     display: flex;
+}
 
+
+#carousel-soirée img {
+    border-radius: 100%;
+    box-shadow: 6px 6px 40px -15px rgba(225, 57, 57, 0.8);
 }
 
 .soirée .texte {
@@ -765,7 +776,6 @@ button.carousel-control-next {
     margin-right: 0.7%;
     height: 500px;
     width: 50%;
-
 }
 
 .numérique .cadre {
@@ -779,23 +789,25 @@ button.carousel-control-next {
     background-color: #1f2121 ;
     box-shadow: 0px 10px 50px -10px #a92a37;
     border: 1px solid #a51840;
-
-
 }
 
 #carousel-numérique {
-    max-height: 450px;
     width: 50%;
     display: flex;
     padding-right: 5px;
+}
 
+#carousel-numérique img {
+    padding-left: 10px;
+    border-radius: 100%;
+    box-shadow: 6px 6px 40px -15px rgba(225, 57, 57, 0.8);
 }
 
 
 .numérique .texte {
     width: 50%;
     color: #ece0d2;
-    padding-left: 5px;
+    padding-right: 3%;
 }
 
 
@@ -833,7 +845,6 @@ button.carousel-control-next {
     background-color: #1f2121 ;
     box-shadow: 0px 10px 50px -10px #a92a37;
     border: 1px solid #a51840;
-
 }
 
 
@@ -848,12 +859,14 @@ button.carousel-control-next {
 .seculog .texte {
     width: 50%;
     color: #ece0d2;
-    padding-left: 5px;
+    padding-left: 3%;
 }
 
 .seculog .img_seculog img {
     width: 70%;
     height: 70%;
+    border-radius: 100%;
+    box-shadow: 6px 6px 40px -15px rgba(225, 57, 57, 0.8);
 }
 
 .seculog .titre {
@@ -888,9 +901,8 @@ button.carousel-control-next {
 }
 
 
-
 .évènement .cadre {
-    padding: 1% 5%;
+    padding: 1% 1%;
     border: 5px #a51840 solid;
     border-radius: 10px;
     display: flex;
@@ -902,18 +914,22 @@ button.carousel-control-next {
     margin-top: 50px;
     box-shadow: 0px 10px 50px -10px #a51840;
     border: 1px solid #a51840;
-
-
 }
 
-#carousel-évènement {
-    max-height: 450px;
-    width: 50%;
+
+
+#carousel-évènement  {
+    width: 40%;
     display: flex;
 }
 
 
 
+#carousel-évènement img {
+    border-radius: 100%;
+    box-shadow: 6px 6px 40px -15px rgba(225, 57, 57, 0.8);
+
+}
 
 .évènement .texte {
     width: 50%;
@@ -955,21 +971,26 @@ button.carousel-control-next {
     background-color: #1f2121 ;
     box-shadow: 0px 10px 50px -10px #a92a37;
     border: 1px solid #a51840;
+}
 
-
+.prévention img {
+    padding-right: 5px;
+    padding-left: 5px;
+    box-shadow: 6px 6px 40px -15px rgba(225, 57, 57, 0.8);
+    border-radius: 100%;
+    height: 5%;
 }
 
 #carousel-prévention {
-    max-height: 450px;
     width: 50%;
     display: flex;
 }
 
 
-
 .prévention .texte {
     width: 50%;
     color: #ece0d2;
+    padding-right: 3%;
 }
 
 .prévention .titre {
@@ -1020,16 +1041,20 @@ button.carousel-control-next {
     justify-content: center;
     display: flex;
     flex-direction: column;
+
+}
+.RI .img_RI img {
+    border-radius: 100%;
 }
 
 .RI .texte {
     width: 50%;
     color: #ece0d2;
+    padding-right: 3%;
 }
 
 .RI .img_RI img {
-    width: 70%;
-    height: 70%;
+    width: 90%;
     box-shadow: 0px 10px 50px -10px #a92a37;
 
 
@@ -1088,28 +1113,28 @@ button.carousel-control-next {
     box-shadow: 0px 10px 50px -10px #a92a37;
     border: 1px solid #a51840;
     z-index: 5;
-
 }
 
 .TEMA .img_TEMA {
     flex-direction: column;
-    width: 50%;
+    width: 40%;
     align-items: center;
     justify-content: center;
     display: flex;
 }
 
+.TEMA .img_TEMA img {
+    width: 90%;
+    box-shadow: 6px 6px 40px -15px rgba(225, 57, 57, 0.8);
+    border-radius: 100%;
+}
+
 .TEMA .texte {
     width: 50%;
     color:#ece0d2;
+    padding-right: 3%;
 }
 
-.TEMA .img_TEMA img {
-    width: 70%;
-    height: 70%;
-    box-shadow: 0px 10px 50px -10px #a92a37;
-
-}
 
 .TEMA .titre {
     text-align: center;
@@ -1130,7 +1155,7 @@ button.carousel-control-next {
 
 .ritz {
     margin-top: 2%;
-    margin-right: 7% ;
+    margin-right: 7%;
     height: 500px;
     width: 50%;
     margin-left: 0.7%;
@@ -1162,12 +1187,12 @@ button.carousel-control-next {
 .ritz .texte {
     width: 50%;
     color: #ece0d2;
+    padding-right: 2%;
 }
 
 .ritz .img_ritz img {
     border-radius: 100%;
-    width: 70%;
-    height: 70%;
+    width: 90%;
     box-shadow: 0px 10px 50px -10px #a92a37;
 
 }
@@ -1225,12 +1250,13 @@ button.carousel-control-next {
 .DD .texte {
     width: 50%;
     color: #ece0d2;
+    padding-right: 3%;
 }
 
 .DD .img_DD img {
-    width: 70%;
-    height: 70%;
-    box-shadow: 0px 10px 50px -10px #a92a37;
+    width: 90%;
+    border-radius: 100%;
+    box-shadow: 6px 6px 40px -15px rgba(225, 57, 57, 0.8);
 
 }
 
@@ -1287,7 +1313,8 @@ button.carousel-control-next {
 
 .popup-img {
     height: 2000px ;
-    width : 1000px;
+    width : inherit;
+    overflow: hidden;
 }
 
 
@@ -1393,6 +1420,8 @@ button.carousel-control-next {
 }
 
 @media screen and  (max-width:1900px) and (min-width: 1500px) {
+
+
     .astro_pres {
         left: 0;
         top: -140px;
@@ -1421,6 +1450,21 @@ button.carousel-control-next {
 }
 @media screen and  (max-width:1500px) and (min-width: 1300px) {
 
+    #carousel-évènement {
+        width: 50%;
+    }
+
+    #carousel-communication {
+        width: 50%;
+    }
+
+    #carousel-soirée {
+        width: 50%;
+    }
+
+    #carousel-RE {
+        width: 50%;
+    }
 
     .constellation_orga {
     position: absolute;
@@ -1451,6 +1495,22 @@ button.carousel-control-next {
 }
 
 @media screen and  (max-width:1300px) and (min-width: 700px) {
+
+    #carousel-évènement {
+        width: 50%;
+    }
+
+    #carousel-soirée {
+        width: 50%;
+    }
+
+    #carousel-communication {
+        width: 50%;
+    }
+
+    #carousel-RE {
+        width: 50%;
+    }
 
     .organigramme {
         padding-top: 10%;
@@ -1555,6 +1615,8 @@ button.carousel-control-next {
 
 @media (hover: none) and (orientation: portrait), (max-width:700px) {
 
+
+
     .organigramme {
         padding-top: 18%;
     }
@@ -1607,6 +1669,7 @@ button.carousel-control-next {
     .organigramme .popup-img {
         height: 100%;
         width: 100%;
+        overflow: hidden;
     }
 
     .organigramme .popup-img img {
@@ -1616,6 +1679,7 @@ button.carousel-control-next {
         left: 0px;
         top: 35%;
         width: 120%;
+        overflow: hidden;
     }
 
     .container .popup-img img {
