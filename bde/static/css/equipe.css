@@ -51,12 +51,6 @@ body {
 }
 
 
-@-webkit-keyframes flash {
-	0% { opacity: 1; }
-	50% { opacity: .7; }
-	100% { opacity: 1; }
-}
-
 @keyframes flash {
 
 	0% { opacity: 1; }
@@ -421,7 +415,6 @@ body {
     width: 25%;
     height: 5px;
     margin-left: 37.5%;
-    background-color: #a51840;
 }
 
 #carousel-vp{
@@ -596,7 +589,6 @@ button.carousel-control-next {
     width: 25%;
     height: 5px;
     margin-left: 37.5%;
-    background-color: #a51840;
 }
 
 
@@ -659,7 +651,6 @@ button.carousel-control-next {
     width: 30%;
     height: 5px;
     margin-left: 35%;
-    background-color: #a51840;
 }
 /**/
 
@@ -708,7 +699,6 @@ button.carousel-control-next {
     width: 10%;
     height: 5px;
     margin-left: 45%;
-    background-color: #a51840;
 }
 
 
@@ -758,7 +748,6 @@ button.carousel-control-next {
     width: 25%;
     height: 5px;
     margin-left: 37.5%;
-    background-color: #a51840;
 }
 /**/
 
@@ -822,7 +811,6 @@ button.carousel-control-next {
     width: 25%;
     height: 5px;
     margin-left: 37.5%;
-    background-color: #a51840;
 }
 /**/
 
@@ -864,7 +852,6 @@ button.carousel-control-next {
 
 .seculog .img_seculog img {
     width: 70%;
-    height: 70%;
     border-radius: 100%;
     box-shadow: 6px 6px 40px -15px rgba(225, 57, 57, 0.8);
 }
@@ -880,7 +867,6 @@ button.carousel-control-next {
     width: 25%;
     height: 5px;
     margin-left: 37.5%;
-    background-color: #a51840;
 }
 /**/
 
@@ -948,7 +934,6 @@ button.carousel-control-next {
     width: 35%;
     height: 5px;
     margin-left: 30%;
-    background-color: #a51840;
 }
 /**/
 
@@ -1004,7 +989,6 @@ button.carousel-control-next {
     width: 25%;
     height: 5px;
     margin-left: 37.5%;
-    background-color: #a51840;
 }
 /**/
 
@@ -1071,7 +1055,6 @@ button.carousel-control-next {
     width: 10%;
     height: 5px;
     margin-left: 45%;
-    background-color: #a51840;
 }
 
 
@@ -1147,7 +1130,6 @@ button.carousel-control-next {
     width: 10%;
     height: 5px;
     margin-left: 45%;
-    background-color: #a51840;
 }
 
 
@@ -1208,7 +1190,6 @@ button.carousel-control-next {
     width: 10%;
     height: 5px;
     margin-left: 45%;
-    background-color: #a51840;
 }
 
 
@@ -1271,7 +1252,6 @@ button.carousel-control-next {
     width: 10%;
     margin-left: 45%;
     height: 5px;
-    background-color: #a51840;
 }
 /**/
 
@@ -1615,19 +1595,20 @@ button.carousel-control-next {
 
 @media (hover: none) and (orientation: portrait), (max-width:700px) {
 
-
-
     .organigramme {
         padding-top: 18%;
     }
+
     .constellation_orga {
     position: absolute;
     top: 5%;
     left: 0%;
     }
+
     .constellation_orga img {
         width: 40%;
     }
+
     .constellation0 {
     position : absolute;
     top: -200px;
@@ -1650,6 +1631,7 @@ button.carousel-control-next {
     .astro img {
         height: 80%;
     }
+
     .organigramme h1 {
         display: block;
         text-align: center;
@@ -1660,7 +1642,6 @@ button.carousel-control-next {
     .image-container {
         width: 100%;
     }
-
 
     .image-container img  {
         width: 100%;
@@ -1686,14 +1667,14 @@ button.carousel-control-next {
         width: 95px;
     }
 
-    /*-----------*/
 
-    .cadre {
-        padding: 5% 5%;
-    }
+    /*-----------*/
+    
+
     .cadre img {
         width: 100%;
     }
+
     .carousel-item {
         width: 100%
     }
@@ -1701,35 +1682,44 @@ button.carousel-control-next {
     .presentation .texte {
         width: 100%;
         text-align: center;
-
     }
+
     .président img {
         width: 90%;
     }
+
     #carousel-communication {
         width: 90%;
     }
+
     #carousel-numérique {
         width: 90%;
     }
+
     #carousel-vp {
         width: 90%;
     }
+
     #carousel-prévention {
         width: 90%;
     }
+
     #carousel-secrétariat {
         width: 90%;
     }
+
     #carousel-RE {
         width: 90%;
     }
+
     #carousel-soirée {
         width: 90%;
     }
+
     #carousel-trésorerie {
         width: 90%;
     }
+
     #carousel-évènement {
         width: 90%;
     }
