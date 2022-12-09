@@ -94,13 +94,17 @@ body {
     justify-content: center;
     align-items: center;
     position: relative;
+    text-align: center;
+}
 
+.navabr span {
+    z-index: 100000;
 }
 
 .constellation_orga {
     position : absolute;
     display: flex;
-    z-index: -20;
+     z-index: -20;
 }
 
 .constellation_orga img {
@@ -110,25 +114,25 @@ body {
 
 .constellation_orga2 {
     display: flex;
+    z-index: -20;
+
 
 }
 
 .constellation_orga2 img {
     position : absolute;
-    transform: rotate(-30deg);
     width: 20%;
-    right: -10%;
+    right: 0;
     top: 60%;
-
+    overflow: hidden;
 }
 
 
 .organigramme h1 {
-    display: block;
+    display: flex;
     height: 10%;
     text-align: center;
     color: #efd7b7;
-    text-align: center;
     font-family: Astro, Vemana2000;
     text-shadow: 5px 5px 3px rgba(0, 0, 0, .5);
 }
@@ -357,7 +361,6 @@ body {
     width: 100%;
 }
 .icon a {
-    text-align: center;
     width: 12%;
     padding: 10px;
     color: #a51840;
@@ -458,7 +461,6 @@ button.carousel-control-next {
 }
 
 .carouselIcon a {
-    text-align: center;
     width: 12%;
     color: #a51840;
     font-size: 30px;
@@ -1192,9 +1194,65 @@ button.carousel-control-next {
     margin-left: 45%;
 }
 
+/**/
 
+
+.pougne {
+    margin-left: 7%;
+    margin-top: 2%;
+    height: 500px;
+    width: 50%;
+    margin-right: 0.7%;
+}
+
+.pougne .cadre {
+    border: 5px #a51840 solid;
+    border-radius: 10px;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #1f2121 ;
+    box-shadow: 0px 10px 50px -10px #a92a37;
+    border: 1px solid #a51840;
+}
+
+.pougne img {
+    padding-right: 5px;
+    padding-left: 5px;
+    box-shadow: 6px 6px 40px -15px rgba(225, 57, 57, 0.8);
+    border-radius: 100%;
+    height: 5%;
+}
+
+#carousel-pougne {
+    width: 50%;
+    display: flex;
+}
+
+
+.pougne .texte {
+    width: 50%;
+    color: #ece0d2;
+    padding-right: 3%;
+}
+
+.pougne .titre {
+    text-align: center;
+}
+.pougne .paragraphe {
+    margin-top: 5%;
+}
+
+.pougne .box {
+    width: 25%;
+    height: 5px;
+    margin-left: 37.5%;
+}
 
 /**/
+
 
 .DD {
     margin-right: 7% ;
@@ -1593,7 +1651,12 @@ button.carousel-control-next {
 
 }
 
-@media (hover: none) and (orientation: portrait), (max-width:700px) {
+@media (orientation: portrait), (max-width:700px) {
+
+    nav.navbar {
+        max-height: 60px;
+        overflow: hidden;
+    }
 
     .organigramme {
         padding-top: 18%;
@@ -1697,7 +1760,7 @@ button.carousel-control-next {
     }
 
     #carousel-vp {
-        width: 90%;
+        width: 100%;
     }
 
     #carousel-prévention {
@@ -1890,3 +1953,10 @@ button.carousel-control-next {
         padding-bottom: 10px;
     }
 }
+
+@media not all and (hover: none){
+    .popup-img {
+        display: none;
+    }
+}
+

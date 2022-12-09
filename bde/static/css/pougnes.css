@@ -94,6 +94,7 @@ canvas {
 }
 
 .tsp .cadre {
+    min-height: 502px;
     backdrop-filter: blur(2px);
     flex-wrap: wrap;
     border: 3px #a51840 groove;
@@ -155,7 +156,6 @@ canvas {
     flex-direction: column;
     text-align: center;
     width: 100%;
-    background-color: #17182f;
 
 }
 
@@ -212,6 +212,7 @@ canvas {
 }
 
 .imt .cadre {
+    min-height: 502px;
     backdrop-filter: blur(2px);
     flex-wrap: wrap;
     border: 3px #a51840 groove;

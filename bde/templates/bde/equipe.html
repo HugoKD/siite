@@ -35,10 +35,10 @@
 
 
             <div class="organigramme">
-                <div class="constellation_orga"><img src="{% static "img/constellation0.png" %}" alt=""></div>
-
-
-                <h1>L'équipage :</h1>
+                <div class="constellation_orga"><img src="{% static "img/constellation0.png" %}" alt="constellation"></div>
+                <div class="titre_page">
+                    <h1>L'équipage :</h1>
+                </div>
 
                 <div class="image-container">
                     <img src="{% static "img/orga.jpg" %}" alt="organigramme">
@@ -52,14 +52,14 @@
                 <script>
                     document.querySelectorAll('.image-container img').forEach( img => {
                         img.onclick =  () => {
-                            document.querySelector('.popup-img').style.display= 'block';
+                            document.querySelector('.popup-img').style.display= 'flex';
                         }
                 });
                 document.querySelector('.popup-img span').onclick = () => {
                     document.querySelector('.popup-img').style.display= 'none';}
 
                 </script>
-                <div class="constellation_orga2"><img src="{% static "img/constellation0.png" %}" alt=""></div>
+                <div class="constellation_orga2"><img src="{% static "img/constellation0_tronqué.png" %}" alt=""></div>
                 <div class="astro"><a href="https://www.youtube.com/watch?v=m6S_87ELniA" target="_blank" rel="noopener noreferrer"><img src="{% static "img/astronaute_detouré.png" %}" alt="astro"></a></div>
 
             </div>
@@ -79,7 +79,7 @@
                 <div class="cadre">
                     <div class="img_président">
                         <h1>Julia Sartre</h1>
-                        <img src="{% static "img/Julia.png" %}" alt="presidence">
+                        <img src="{% static "img/Julia.png" %}" alt="julia sartre">
                         <div class="icon">
                             <a href="https://www.facebook.com/julia.sartre.5" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook"></i></a>
                             <a href="https://www.instagram.com/juliasartre/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
@@ -89,7 +89,7 @@
 
                     <div class="texte">
                         <div class="titre">
-                            <h1>Le mot de la président</h1>
+                            <h1>Le mot de la présidente</h1>
                         </div>
                         <div class="trait"></div>
                         <div class="paragraphe">
@@ -162,7 +162,7 @@
                       <div class="carousel-inner">
                             <div class="carousel-item active">
                                 <h1 class="valentine">Valentine D.</h1>
-                                <img src="{% static "img/background.png" %}" class="d-block w-100" alt="...">
+                                <img src="{% static "img/valentine.png" %}" class="d-block w-100" alt="...">
                                 <div class="carouselIcon">
                                     <a href="https://www.facebook.com/valentine.delhome.5" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook"></i></a>
                                     <a href="https://www.instagram.com/valdelhome/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
@@ -171,7 +171,7 @@
                             </div>
                             <div class="carousel-item">
                                 <h1 class="sinoué">Sinoué Gad</h1>
-                                <img src="{% static "img/background.png" %}" class="d-block w-100" alt="...">
+                                <img src="{% static "img/sinoué.png" %}" class="d-block w-100" alt="...">
                                 <div class="carouselIcon">
                                     <a href="https://www.facebook.com/sinoue.gad" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook"></i></a>
                                     <a href="https://www.instagram.com/sinoue_gd/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
@@ -187,11 +187,12 @@
                                 </div>
                             </div>
                           <div class="carousel-item">
-                                <h1 class="enola">Enola C.</h1>
-                                <img src="{% static "img/background.png" %}" class="d-block w-100" alt="...">
+                                <h1 class="lou-anne">Lou-Ann D.</h1>
+                                <img src="{% static "img/lou-Ann.png" %}" class="d-block w-100" alt="...">
                                 <div class="carouselIcon">
-                                    <a href="https://www.facebook.com/enola.courbet" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook"></i></a>
-                                    <a href="https://www.instagram.com/enola_cbt/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
+                                    <a href="https://www.facebook.com/profile.php?id=100009188968520" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook"></i></a>
+                                    <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
+                                    <a href="https://www.linkedin.com/feed/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin-in"></i></a>
                                 </div>
                             </div>
                       </div>
@@ -230,7 +231,7 @@
                           <div class="carousel-inner">
                                 <div class="carousel-item active">
                                     <h1 class="hugo">Hugo Cadet</h1>
-                                    <img src="{% static "img/hugo.png" %}" class="d-block w-100" alt="...">
+                                    <img src="{% static "img/hugo.png" %}" class="d-block w-100" alt="hugo cadet">
                                     <div class="carouselIcon">
                                         <a href="https://www.facebook.com/hugo.cadet.71" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook"></i></a>
                                         <a href="https://www.instagram.com/hug0_cdt/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
@@ -239,7 +240,7 @@
                                 </div>
                                 <div class="carousel-item">
                                     <h1 class="adrien">Adrien B.</h1>
-                                    <img src="{% static "img/adrien.png" %}" class="d-block w-100" alt="...">
+                                    <img src="{% static "img/adrien.png" %}" class="d-block w-100" alt="adrien Bonnivard">
                                     <div class="carouselIcon">
                                         <a href="https://www.facebook.com/adrien.bonni" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook"></i></a>
                                         <a href="https://www.instagram.com/adrien.bnvd/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
@@ -312,7 +313,7 @@
                                 </div>
                             </div>
                             <div class="carousel-item">
-                                <h1>Lou-Ann Dournelle</h1>
+                                <h1>Lou-Ann D.</h1>
                                 <img src="{% static "img/lou-Ann.png" %}" class="d-block w-100" alt="...">
                                 <div class="carouselIcon">
                                     <a href="https://www.facebook.com/profile.php?id=100009188968520" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook"></i></a>
@@ -454,7 +455,7 @@
                             </div>
                             <div class="carousel-item">
                                 <h1 class="juliette">Juliette G.</h1>
-                                <img src="{% static "img/juliette.png" %}" class="d-block w-100" alt="...">
+                                <img src="{% static "img/juliette.png" %}" class="d-block w-100" alt="juliette gantzer">
                                 <div class="carouselIcon">
                                     <a href="https://www.facebook.com/profile.php?id=100084941739471" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook"></i></a>
                                     <a href="https://www.instagram.com/juliettegtzr/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
