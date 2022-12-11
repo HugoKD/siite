@@ -35,7 +35,43 @@
                 <button type="submit">Envoyer</button>
             </form>
         </div>
-
+        <div class="entreprise">
+            <div class="cadre">
+                <div class="texte">
+                    <h1>Faites comme ces entreprises et faites-nous confiance !</h1>
+                </div>
+                <div id="carousel-entreprise" class="carousel slide carousel-fade" data-bs-ride="carousel" >
+                          <div class="carousel-inner">
+                                <div class="carousel-item active " data-interval="10">
+                                    <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer"><img src="{% static "img/background.png" %}" class="d-block w-100" alt="..."></a>
+                                    <div class="carousel-caption d-none d-md-block">
+                                        <p>entreprise 1</p>
+                                    </div>
+                                </div>
+                                <div class="carousel-item" data-interval="10" >
+                                    <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer"><img src="{% static "img/background.png" %}" class="d-block w-100" alt="..."></a>
+                                <div class="carousel-caption d-none d-md-block">
+                                    <p>entreprise 2</p>
+                                </div>
+                                </div>
+                                <div class="carousel-item" data-interval="10">
+                                    <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer"><img src="{% static "img/background.png" %}" class="d-block w-100" alt="..."></a>
+                                <div class="carousel-caption d-none d-md-block">
+                                        <p>entreprise 3</p>
+                                </div>
+                                </div>
+                          </div>
+                      <button class="carousel-control-prev" type="button" data-bs-target="#carousel-entreprise" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                      </button>
+                      <button class="carousel-control-next" type="button" data-bs-target="#carousel-entreprise" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                      </button>
+                    </div>
+            </div>
+        </div>
     </section>
 
     <footer>

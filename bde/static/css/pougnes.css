@@ -162,8 +162,6 @@ canvas {
 .drive a {
     text-align: center;
     width: 12%;
-    padding-top: 5%;
-    padding-bottom: 15%;
     color: #a51840;
     font-size: 35px;
 
@@ -183,6 +181,7 @@ canvas {
 
 @keyframes stretch {
             0% {
+                transform: scale(1);
                 transform: scale(1);
                 border-radius: 100%;
             }

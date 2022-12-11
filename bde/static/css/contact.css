@@ -53,15 +53,19 @@ html, body {
 }
 
 #contact{
-    padding: 10%;
+    display: flex;
+    padding-top: 5%;
     height: 100%;
     background-image: url("../img/contact6.jpg");
     background-repeat: no-repeat;
     background-position: 30% 30%;
-    min-height: 700px;
+    min-height: 1400px;
+    align-items: center ;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 
-#contact .contact_div {
+.contact_div {
     backdrop-filter: blur(6px);
     -webkit-backdrop-filter: blur(6px); /* compatibilité avec safari */
     display: flex;
@@ -79,7 +83,6 @@ html, body {
     color: white;
     animation-duration: 2s;
     animation-name: slidein;
-    height: 100%;
 }
 
 @keyframes slidein {
@@ -165,6 +168,37 @@ section#contact .contact_div form button:hover {
     transform: translateY(-5px);
     box-shadow: 0px 10px 40px -10px #1f2121;
 }
+
+.entreprise {
+    height: 500px;
+    display: block;
+}
+
+.entreprise .cadre {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%; height: 100%;
+    flex-direction: column;
+}
+
+.entreprise h1 {
+    display: flex;
+    text-align: left;
+    color: #ffffff;
+}
+
+#carousel-entreprise {
+    width: 50%;
+    display: flex;
+    margin-right: 20px;
+}
+
+#carousel-entreprise img {
+    border-radius: 5%;
+    box-shadow: 6px 6px 40px -15px #000000;
+}
+
 
 footer {
     z-index: 1;

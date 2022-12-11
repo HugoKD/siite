@@ -260,6 +260,7 @@ body {
     height: 2px;
     width: 98%;
     background-color: #a51840;
+    border-radius: 20%;
 
 }
 .effet {
@@ -426,6 +427,7 @@ body {
     width: 25%;
     height: 5px;
     margin-left: 37.5%;
+    background-color: #a51840;
 }
 
 #carousel-vp{
@@ -435,7 +437,6 @@ body {
 }
 
 #carousel-vp img {
-    border-radius: 100%;
     box-shadow: 6px 6px 40px -15px rgba(225, 57, 57, 0.8);
 }
 
@@ -599,6 +600,7 @@ button.carousel-control-next {
     width: 25%;
     height: 5px;
     margin-left: 37.5%;
+    background-color: #a51840;
 }
 
 
@@ -661,6 +663,7 @@ button.carousel-control-next {
     width: 30%;
     height: 5px;
     margin-left: 35%;
+    background-color: #a51840;
 }
 /**/
 
@@ -709,6 +712,7 @@ button.carousel-control-next {
     width: 10%;
     height: 5px;
     margin-left: 45%;
+    background-color: #a51840;
 }
 
 
@@ -757,6 +761,7 @@ button.carousel-control-next {
     width: 25%;
     height: 5px;
     margin-left: 37.5%;
+    background-color: #a51840;
 }
 /**/
 
@@ -820,6 +825,7 @@ button.carousel-control-next {
     width: 25%;
     height: 5px;
     margin-left: 37.5%;
+    background-color: #a51840;
 }
 /**/
 
@@ -876,6 +882,7 @@ button.carousel-control-next {
     width: 25%;
     height: 5px;
     margin-left: 37.5%;
+    background-color: #a51840;
 }
 /**/
 
@@ -943,6 +950,7 @@ button.carousel-control-next {
     width: 35%;
     height: 5px;
     margin-left: 30%;
+    background-color: #a51840;
 }
 /**/
 
@@ -998,6 +1006,7 @@ button.carousel-control-next {
     width: 25%;
     height: 5px;
     margin-left: 37.5%;
+    background-color: #a51840;
 }
 /**/
 
@@ -1063,6 +1072,7 @@ button.carousel-control-next {
     width: 10%;
     height: 5px;
     margin-left: 45%;
+    background-color: #a51840;
 }
 
 
@@ -1138,6 +1148,7 @@ button.carousel-control-next {
     width: 10%;
     height: 5px;
     margin-left: 45%;
+    background-color: #a51840;
 }
 
 
@@ -1198,6 +1209,7 @@ button.carousel-control-next {
     width: 10%;
     height: 5px;
     margin-left: 45%;
+    background-color: #a51840;
 }
 
 /**/
@@ -1257,6 +1269,7 @@ button.carousel-control-next {
     width: 25%;
     height: 5px;
     margin-left: 37.5%;
+    background-color: #a51840;
 }
 
 /**/
@@ -1321,6 +1334,7 @@ button.carousel-control-next {
     width: 10%;
     margin-left: 45%;
     height: 5px;
+    background-color: #a51840;
 }
 /**/
 
