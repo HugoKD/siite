@@ -130,13 +130,22 @@ html, body {
 }
 
 #video .bandeau-droit {
-    height: 70%; width: 46%;
+    overflow: auto;
+    height: 70%; width: 45%;
     background-color: #191a1a;
     transform: skew(20deg);
-    right: -10px;
+    right: 4.5px;
     position: absolute;
     border-radius: 10% 0% 0% 10%;
     box-shadow: -8px 4px 10px rgba(178, 0, 0, 0.79);
+}
+#video .bandeau-droit2 {
+    overflow: auto;
+    height: 70%; width: 20%;
+    background-color: #191a1a;
+    right: 0;
+    position: absolute;
+    border-radius: 10% 0% 0% 10%;
 }
 
 #video .A {
