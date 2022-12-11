@@ -437,6 +437,7 @@ body {
 }
 
 #carousel-vp img {
+    border-radius: 100%;
     box-shadow: 6px 6px 40px -15px rgba(225, 57, 57, 0.8);
 }
 
