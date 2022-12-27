@@ -24,7 +24,6 @@ html, body {
 
 #main {
     padding: 15px 0;
-    height: 100vh;
     margin: 0 auto;
     background: #1f2121;
     align-items: center;
@@ -62,13 +61,14 @@ html, body {
     z-index: -99;
 }
 
-#container {
+#container2 {
     padding: 50px 50px 0px 50px;
     justify-items: center;
     align-items: center;
 }
 
 .title {
+    margin-top: 20px;
     position: relative;
     font-size: 4rem;
     color: white;
@@ -150,10 +150,11 @@ html, body {
 
 .bloc1 {
     display: flex;
-    flex-wrap: wrap;
+    overflow: hidden;
+    flex-wrap: nowrap;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     animation: slidein2;
     animation-duration: 2s;
     margin-bottom: 5%;
@@ -170,6 +171,12 @@ html, body {
     margin-top: 3%;
   }
 }
+.astro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .astro img {
     width: 60%;
     animation: float 6s ease-in-out infinite;
@@ -187,11 +194,7 @@ html, body {
 	}
 }
 
-.astro {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+
 
 #carousel {
     height: 50%;
@@ -201,7 +204,7 @@ html, body {
     -webkit-backdrop-filter: blur(6px);
     width: 50%;
     border-radius: 90%;
-    z-index: 10;
+    z-index: 50;
 }
 
 .carousel-item {
@@ -230,6 +233,9 @@ html, body {
     left: 0;
     z-index: auto;
 }
+
+
+
 .constellation2 {
     position: absolute;
     right: 0;
@@ -282,20 +288,58 @@ html, body {
     z-index: 10;
 }
 
-@media screen and (max-width: 700px) {
+@media (max-width: 700px) {
 
-    .copy {
-        height: 110%;
-}
+    .astro {
+        display: none;
+    }
+
+    #carousel {
+        width: 85%;
+    }
+
+    carousel-control-prev span {
+        position: absolute; bottom: 0;
+    }
 
     .title {
-        font-size: 1.5rem;
+        margin-top: 5%;
+    }
+
+    .line {
+        margin-bottom: 10%;
+    }
+    #container2 {
+        padding-left: 2%; padding-right: 2%;
+    }
+    .copy p{
+        margin-bottom: 0;
+    }
+    .copy {
+        padding-bottom: 10px;
+    }
+
+    .constellation2 {
+        display: none;
+    }
+
+    .constellation3 img {
+        width: 100%;
+    }
+
+    .constellation {
+        height: 34%;
+    }
+    .constellation img {
+        height: 100%;
     }
 
     .texte {
-        font-size: 10px;
-        margin-bottom: 50px;
+        padding: 1% 5% 1% 5%;
+    }
+    .texte p {
+        padding: 0 ;
     }
 
-}
 
+}

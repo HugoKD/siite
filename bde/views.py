@@ -22,3 +22,6 @@ def dejeuner(request):
 
 def clique(request):
     return render(request, "bde/clique.html")
+
+def partenaire(request):
+    return render(request, "bde/partenaire.html")

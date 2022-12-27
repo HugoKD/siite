@@ -4,7 +4,7 @@
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark" style="background-color:black ; padding: 0 ">
         <div class="container" style="padding-left: 0">
         <a href="../" class="navbar-brand mb-0 h1" style="padding: 0 ; justify-content: left">
-            <img src="{% static "img/astro.png" %}" style="height: 60px ; width: 60px  ; width: 60px ; margin-bottom: 5px ; margin-right: 200px" >
+            <img src="{% static "img/astro.png" %}" style="height: 60px ; width: 60px  ; width: 60px ; margin-bottom: 5px " >
         </a>
         <button type="button"
                 data-bs-toggle="collapse"
@@ -38,13 +38,15 @@
                         Notre programme
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a href="../devenir-partenaire/" class="nav-link" style="transition: all .4s;">
-                        Devenir Partenaire
-                    </a>
+                <li class="nav-item dropdown" style=" position: relative " >
+                    <a class="nav-link dropdown-toggle" href="../devenir-partenaire/" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Partenaires</a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style=" position: absolute ; overflow: visible ; background-color: #1f2121 ; color: white "  >
+                      <li class="dropdown-item"  style=" transition: .4s ; overflow: visible;"><a href="../devenir-partenaire/" style="color: white ; text-decoration: none ;">devenir-partenaire</a></li>
+                      <li class="dropdown-item"  style="color: white" style=" overflow: visible; transition: .4s"><a href="../nos-partenaires/" style="color: white ; text-decoration: none ;">Nos partenaires</a></li>
+                    </ul>
                 </li>
                 <li class="nav-item">
-                    <a href="../dejeuner/" class="nav-link" style="transition: all .4s; position: absolute ; right: 5%">
+                    <a href="../dejeuner/" class="nav-link" style="transition: all .4s; position: absolute;">
                         Déjeuner
                     </a>
                 </li>
@@ -52,9 +54,4 @@
         </div>
         </div>
     </nav>
-    <!-- style du navbar
-        .navbar.fixed-top {
-            posistion : fixed ;
-        }
-    -->
 </header>
