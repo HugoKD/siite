@@ -604,7 +604,61 @@ button.carousel-control-next {
     background-color: #a51840;
 }
 
+/**/
 
+.seculog {
+    margin-top: 2%;
+    margin-right: 7%;
+    height: 500px;
+    width: 50%;
+}
+
+.seculog img {
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 100%;
+    box-shadow: 6px 6px 40px -15px rgba(225, 57, 57, 0.8);
+}
+
+.seculog .cadre {
+    border: 5px #a51840 solid;
+    border-radius: 10px;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #1f2121 ;
+    box-shadow: 0px 10px 50px -10px #a92a37;
+    border: 1px solid #a51840;
+
+}
+
+#carousel-seculog {
+    width: 50%;
+    display: flex;
+}
+
+
+.seculog .texte {
+    width: 50%;
+    color: #ece0d2;
+    padding-right: 3%;
+}
+
+.seculog .titre {
+    text-align: center;
+}
+.seculog .paragraphe {
+    margin-top: 5%;
+}
+
+.seculog .box {
+    width: 25%;
+    height: 5px;
+    margin-left: 37.5%;
+    background-color: #a51840;
+}
 
 /**/
 
@@ -782,6 +836,10 @@ button.carousel-control-next {
     width: 50%;
 }
 
+    .numérique .hugo {
+        transform: translateX(-20px);
+    }
+
 .numérique .cadre {
     border: 5px #a51840 solid;
     border-radius: 10px;
@@ -830,61 +888,7 @@ button.carousel-control-next {
 }
 /**/
 
-.seculog {
-    margin-right: 7% ;
-    margin-left: 10px;
-    margin-top: 2%;
-    height: 500px;
-    width: 50%;
-}
 
-.seculog .cadre {
-    border: 5px #a51840 solid;
-    border-radius: 10px;
-    display: flex;
-    width: 100%;
-    height: 100%;
-    align-items: center;
-    justify-content: space-evenly;
-    background-color: #1f2121 ;
-    box-shadow: 0px 10px 50px -10px #a92a37;
-    border: 1px solid #a51840;
-}
-
-
-.seculog .img_seculog {
-    flex-direction: column;
-    width: 50%;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-}
-
-.seculog .texte {
-    width: 50%;
-    color: #ece0d2;
-    padding-left: 3%;
-}
-
-.seculog .img_seculog img {
-    width: 100%;
-    border-radius: 100%;
-    box-shadow: 6px 6px 40px -15px rgba(225, 57, 57, 0.8);
-}
-
-.seculog .titre {
-    text-align: center;
-}
-.seculog .paragraphe {
-    margin-top: 5%;
-}
-
-.seculog .box {
-    width: 25%;
-    height: 5px;
-    margin-left: 37.5%;
-    background-color: #a51840;
-}
 /**/
 
 .juliette {
@@ -1158,15 +1162,14 @@ button.carousel-control-next {
 /**/
 
 .ritz {
-    margin-top: 2%;
     margin-right: 7%;
+    margin-top: 2%;
+    margin-left: 0.7%;
     height: 500px;
     width: 50%;
-    margin-left: 0.7%;
 }
 
 .ritz .cadre {
-    overflow: hidden;
     border: 5px #a51840 solid;
     border-radius: 10px;
     display: flex;
@@ -1177,28 +1180,26 @@ button.carousel-control-next {
     background-color: #1f2121 ;
     box-shadow: 0px 10px 50px -10px #a92a37;
     border: 1px solid #a51840;
-
 }
 
-.ritz .img_ritz {
+.ritz img {
+    padding-right: 5px;
+    padding-left: 5px;
+    box-shadow: 6px 6px 40px -15px rgba(225, 57, 57, 0.8);
+    border-radius: 100%;
+    height: 5%;
+}
+
+#carousel-ritz {
     width: 50%;
-    align-items: center;
-    justify-content: center;
     display: flex;
-    flex-direction: column;
 }
+
 
 .ritz .texte {
     width: 50%;
     color: #ece0d2;
-    padding-right: 2%;
-}
-
-.ritz .img_ritz img {
-    border-radius: 100%;
-    width: 90%;
-    box-shadow: 0px 10px 50px -10px #a92a37;
-
+    padding-right: 3%;
 }
 
 .ritz .titre {
@@ -1209,9 +1210,9 @@ button.carousel-control-next {
 }
 
 .ritz .box {
-    width: 10%;
+    width: 25%;
     height: 5px;
-    margin-left: 45%;
+    margin-left: 37.5%;
     background-color: #a51840;
 }
 
@@ -1225,11 +1226,16 @@ button.carousel-control-next {
     min-height: 730px;
 }
 
+.pougne .hugo {
+    transform: translateX(-20px);
+}
+
+
+
 .pougne .cadre {
     border: 5px #a51840 solid;
     border-radius: 10px;
     display: flex;
-    flex-direction: column;
     flex-direction: column;
     width: 100%;
     height: 100%;
@@ -1241,8 +1247,6 @@ button.carousel-control-next {
 }
 
 .pougne img {
-    padding-right: 5px;
-    padding-left: 5px;
     box-shadow: 6px 6px 40px -15px rgba(225, 57, 57, 0.8);
     border-radius: 100%;
     height: 5%;
@@ -1904,6 +1908,9 @@ button.carousel-control-next {
     #carousel-prévention {
         width: 90%;
     }
+    #carousel-ritz {
+        width: 90%;
+    }
 
     #carousel-secrétariat {
         width: 90%;
@@ -1918,6 +1925,9 @@ button.carousel-control-next {
     }
 
     #carousel-trésorerie {
+        width: 90%;
+    }
+    #carousel-seculog {
         width: 90%;
     }
 
@@ -1954,6 +1964,7 @@ button.carousel-control-next {
         margin-top: 10%;
     }
 
+
     .secrétariat {
         margin: auto;
         width: 85%;
@@ -1984,11 +1995,8 @@ button.carousel-control-next {
     .seculog {
         width: 85%;
         min-height: 800px;
+        margin: auto;
         margin-top: 10%;
-    }
-    .seculog .img_seculog {
-        width: 90%;
-        height: 50%;
     }
 
 
@@ -2012,6 +2020,7 @@ button.carousel-control-next {
         margin: auto;
         margin-top: 10%;
     }
+
 
     .DD {
         width: 85%;
