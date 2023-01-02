@@ -230,7 +230,7 @@ canvas {
     justify-content: center;
     display: flex;
     flex-direction: column;
-
+    transform: translateY(-20px);
 }
 
 
