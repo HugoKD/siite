@@ -1084,7 +1084,7 @@ button.carousel-control-next {
     margin-left: 10px;
     margin-top: 3%;
     width: 50%;
-    position: relative;
+
 }
 
 
@@ -1113,7 +1113,6 @@ button.carousel-control-next {
     background-color: #1f2121 ;
     box-shadow: 0px 10px 50px -10px #a92a37;
     border: 1px solid #a51840;
-    z-index: 5;
 }
 
 .TEMA .img_TEMA {
