@@ -17,7 +17,6 @@
 
 
 html, body {
-    height: 100%;
     margin: 0;
     border: 0;
     font-family: 'Lato', sans-serif;
@@ -25,14 +24,25 @@ html, body {
 
 
 .main {
-    height: 100vh;
     padding: 15px 0;
     margin: 0 auto;
     background: #1f2121;
     align-items: center;
     justify-content: center;
     z-index: 0;
+    height: 100vh;
 }
+
+.page_title {
+    display: flex;
+    text-align: center;
+    color: white;
+    position: absolute;
+    align-content: center;
+    margin-top: 100px;
+    margin-left: 38%;
+}
+
 
 .loader {
     position: absolute;
@@ -66,11 +76,12 @@ html, body {
 
 /* ---------- Container for the orbiting circles animation ---------- */
 #circle-orbit-container {
-  position: relative; display: flex;
-  top: 10%;
-  left: 25%;
+  position: relative;display: flex;
+  top: 20%;
+  left: 20%;
   height: 60%;
   width: 60%;
+    margin-bottom: -10%
 }
 
 /* ---------- Inner orbit - This is the circles closest to the central point ---------- */
@@ -157,6 +168,110 @@ html, body {
   }
 }
 
+.bloc1 {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+
+
+.numérique {
+    height: 400px;
+    width: 400px;
+    margin-right: 1%;
+}
+
+
+.numérique .cadre {
+    border-radius: 10px;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #1f2121 ;
+    box-shadow: 0px 10px 50px -10px #a92a37;
+    flex-direction: column;
+    -webkit-backdrop-filter: blur(15px); /* assure la compatibilité avec safari */
+    backdrop-filter: blur(15px);
+    background-color: rgba(182, 182, 182, 0.2);
+}
+
+
+.img_essaion {
+    text-align: center;
+}
+
+.img_essaion h1 {
+    margin-top: -20px;
+}
+
+
+.img_essaion img {
+    padding-left: 10px;
+    border-radius: 100%;
+}
+
+
+.numérique .box {
+    width: 25%;
+    height: 5px;
+    margin-left: 37.5%;
+    background-color: #a51840;
+}
+
+
+
+.secrétariat {
+    height: 400px;
+    width: 400px;
+    margin-left: 1%;
+}
+
+.secrétariat .cadre {
+    border-radius: 10px;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #1f2121 ;
+    box-shadow: 0px 10px 50px -10px #a92a37;
+    flex-direction: column;
+    -webkit-backdrop-filter: blur(15px); /* assure la compatibilité avec safari */
+    backdrop-filter: blur(15px);
+    background-color: rgba(182, 182, 182, 0.2);
+}
+
+
+
+
+
+.secrétariat .img_secrétariat {
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.secrétariat .img_secrétariat img {
+    width: 90%;
+    border-radius: 100%;
+}
+
+
+
+.secrétariat .box {
+    width: 25%;
+    height: 5px;
+    margin-left: 37.5%;
+    background-color: #a51840;
+}
 
 footer {
     z-index: 1;
@@ -192,4 +307,149 @@ footer {
 .copy p {
     margin-bottom: 0;
     padding-bottom: 10px;
+}
+
+@media screen and (max-width: 700px) {
+
+.page_title {
+    margin-top: 100px;
+    margin-left: 14%;
+    z-index: 100;
+}
+
+
+    #circle-orbit-container {
+      top: 15%;
+      left: 10%;
+      height: 30%;
+      width: 30%;
+    }
+
+    #inner-orbit {
+      top: 45px;
+      left: 55px;
+      width: 100px;
+      height: 100px;
+
+}
+
+    #middle-orbit {
+      top: 20px;
+      left: 20px;
+      width: 160px;
+      height: 160px;
+}
+
+    #outer-orbit {
+      width: 200px;
+      height: 200px;
+
+}
+    .bloc1 {
+        flex-direction: column;
+    }
+
+.numérique {
+    height: 300px;
+    width: 300px;
+    margin-right: 1%;
+}
+
+
+.numérique .cadre {
+    width: 100%;
+    height: 100%;
+}
+
+.img_essaion h1 {
+    margin-top: -20px;
+}
+
+
+.img_essaion img {
+    width: 80%;
+    height: 80%;
+}
+
+
+.secrétariat {
+    height: 300px;
+    width: 300px;
+}
+
+.secrétariat .cadre {
+    width: 100%;
+    height: 100%;
+    margin-top: 5%;
+}
+
+
+.secrétariat .img_secrétariat img {
+    width: 80%;
+    height: 80%;
+}
+
+}
+
+@media screen and (max-height: 820px) {
+    .numérique {
+        width: 250px;
+        height: 250px;
+    }
+
+    .secrétariat {
+        width: 250px;
+        height: 250px;
+    }
+
+    .img_essaion h1 {
+        font-size: 1.5rem;
+    }
+
+    .img_secrétariat h1 {
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-height: 700px) {
+    .numérique {
+        width: 225px;
+        height: 225px;
+    }
+
+    .secrétariat {
+        width: 225px;
+        height: 225px;
+    }
+
+}
+
+
+@media screen and (min-width: 500px) and (max-width: 1200px) {
+    .numérique {
+        margin-left: 5%;
+    }
+
+    .secrétariat {
+        margin-right: 5%;
+    }
+
+    .bloc1 {
+        top:-15%;
+    }
+
+    .page_title {
+        margin-top: 100px;
+        margin-left: 30%;
+        z-index: 100;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .page_title h1 {
+        font-size: 1.4rem;
+    }
+    .page_title {
+        margin-left: 10%;
+    }
 }
