@@ -432,4 +432,14 @@ html, body {
     }
 }
 
+@media  screen and (max-height:450px) and (min-width:600px ){
+    .above {
+        transform: translateY(-30px);
+    }
+
+    .above h3 {
+        transform: translateY(60px);
+    }
+}
+
 

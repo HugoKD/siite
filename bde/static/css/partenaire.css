@@ -39,7 +39,7 @@ html, body {
     color: white;
     position: absolute;
     align-content: center;
-    margin-top: 100px;
+    margin-top: 150px;
     margin-left: 38%;
 }
 
@@ -451,5 +451,25 @@ footer {
     }
     .page_title {
         margin-left: 10%;
+    }
+}
+
+@media  screen and (max-height:450px) and (min-width:600px ){
+
+    .main {
+        height: 150vh;
+    }
+
+    .bloc1 {
+        transform: translateY(40%);
+    }
+
+    .bloc1 h1 {
+        font-size: 1rem;
+    }
+
+    img {
+        height: 80%;
+        width: 80%;
     }
 }

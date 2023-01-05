@@ -592,6 +592,7 @@ button.carousel-control-next {
 
 .trésorerie .titre {
     text-align: center;
+    transform: translateY(-65px);
 }
 .trésorerie .paragraphe {
     margin-top: 5%;
@@ -999,6 +1000,7 @@ button.carousel-control-next {
     width: 50%;
     color: #ece0d2;
     padding-right: 3%;
+    transform: translateY(-5%);
 }
 
 .prévention .titre {
@@ -1057,6 +1059,7 @@ button.carousel-control-next {
     width: 90%;
     color: #ece0d2;
     text-align: center;
+    transform: translateY(-18%);
 }
 
 .RI .img_RI img {
@@ -1149,6 +1152,7 @@ button.carousel-control-next {
 }
 .TEMA .paragraphe {
     margin-top: 5%;
+    text-align: center;
 }
 
 .TEMA .box {
@@ -1263,6 +1267,7 @@ button.carousel-control-next {
     width: 90%;
     color: #ece0d2;
     text-align: center;
+    transform: translateY(-7%);
 }
 
 .pougne .titre {
@@ -1588,6 +1593,7 @@ button.carousel-control-next {
     .RI .texte {
         padding: 2% 3% 2% 3%;
         max-width: 50%;
+        transform: translateY(0%);
     }
     .RI .img_RI {
         width: 50%;
@@ -1640,6 +1646,7 @@ button.carousel-control-next {
     .pougne .texte {
         padding: 2% 3% 2% 3%;
         max-width: 50%;
+        transform: translateY(0%);
     }
 
     #carousel-évènement {
@@ -1964,6 +1971,10 @@ button.carousel-control-next {
         margin-top: 10%;
     }
 
+    .numérique .texte {
+        transform: translateY(-25%);
+    }
+
 
     .secrétariat {
         margin: auto;
@@ -1983,6 +1994,10 @@ button.carousel-control-next {
     }
     .secrétariat .icon a {
 
+    }
+
+    .secrétariat .texte {
+        transform: translateY(-10%);
     }
 
     .trésorerie {

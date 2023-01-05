@@ -1,5 +1,6 @@
-from django.shortcuts import render
-from datetime import datetime
+from django.shortcuts import render, redirect
+from django.core.mail import send_mail, BadHeaderError
+from django.http import HttpResponse, HttpResponseRedirect
 
 
 def index(request):
