@@ -246,7 +246,7 @@ html, body {
 .image {
     display: flex;
     flex-direction: column;
-    width: 50%;
+    width: 45%;
     align-items: center;
     justify-content: center;
     padding-left: 3%;
@@ -261,16 +261,17 @@ html, body {
 }
 
 .parentIcon {
+    display: flex; height: 45px;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
+    flex-direction: row;
     text-align: center;
     width: 100%;
     background-color: black;
 }
 .parentIcon a {
     text-align: center;
-    width: 12%;
+
     padding: 0 10px 0px 10px;
     color: #a51840;
     font-size: 35px;
