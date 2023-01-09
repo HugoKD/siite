@@ -80,6 +80,7 @@ canvas {
     text-align: center;
     position: absolute;
     margin-top: 15%;
+    transform: translateY(-30px);
 
 }
 
@@ -95,6 +96,7 @@ canvas {
 
 .tsp .cadre {
     min-height: 502px;
+    -webkit-backdrop-filter: blur(2px);
     backdrop-filter: blur(2px);
     flex-wrap: wrap;
     border: 3px #a51840 groove;
@@ -212,6 +214,7 @@ canvas {
 
 .imt .cadre {
     min-height: 502px;
+    -webkit-backdrop-filter: blur(2px);
     backdrop-filter: blur(2px);
     flex-wrap: wrap;
     border: 3px #a51840 groove;
@@ -238,6 +241,8 @@ canvas {
     width: 50%;
     color: #ece0d2;
 }
+
+
 
 .imt .img_ img {
     border-radius: 100%;
@@ -375,6 +380,7 @@ canvas {
         width: 90%;
     }
 
+
     .parentIcon {
         align-items: center;/**/
         justify-content: center;
@@ -405,5 +411,11 @@ canvas {
     }
     .copy p {
         margin-bottom: 0;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .imt .img_ h1 {
+        transform: translateY(20%);
     }
 }

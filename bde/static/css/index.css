@@ -340,7 +340,7 @@ html, body {
     }
     #video .bandeau-droit2 {
         width: 5%; position: absolute;
-        box-shadow: -10px 10px 10px rgba(178, 0, 0, 0.79);
+        box-shadow: 30px 10px 10px rgba(178, 0, 0, 0.79);
 
     }
 

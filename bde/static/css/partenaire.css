@@ -438,11 +438,19 @@ footer {
         top:-15%;
     }
 
+
     .page_title {
         margin-top: 100px;
         margin-left: 30%;
         z-index: 100;
     }
+}
+
+@media screen and (max-width: 400px) and (min-width: 300px) {
+    .bloc1 h1 {
+        font-size: 1.3rem;
+    }
+
 }
 
 @media screen and (max-width: 300px) {

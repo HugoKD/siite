@@ -494,6 +494,7 @@ button.carousel-control-next {
 }
 
 .secrétariat .cadre {
+    padding: 1% 5%;
     border: 5px #a51840 solid;
     border-radius: 10px;
     display: flex;
@@ -514,7 +515,7 @@ button.carousel-control-next {
 
 
 .secrétariat .img_secrétariat {
-    width: 50%;
+    width: 85%;
     align-items: center;
     justify-content: center;
     display: flex;
@@ -622,6 +623,7 @@ button.carousel-control-next {
 }
 
 .seculog .cadre {
+    padding: 1% 5%;
     border: 5px #a51840 solid;
     border-radius: 10px;
     display: flex;
@@ -842,6 +844,7 @@ button.carousel-control-next {
     }
 
 .numérique .cadre {
+    padding: 1% 5%;
     border: 5px #a51840 solid;
     border-radius: 10px;
     display: flex;
@@ -911,7 +914,7 @@ button.carousel-control-next {
 
 
 .évènement .cadre {
-    padding: 1% 1%;
+    padding: 1% 5%;
     border: 5px #a51840 solid;
     border-radius: 10px;
     display: flex;
@@ -970,6 +973,7 @@ button.carousel-control-next {
 }
 
 .prévention .cadre {
+    padding: 1% 5%;
     border: 5px #a51840 solid;
     border-radius: 10px;
     display: flex;
@@ -1028,6 +1032,7 @@ button.carousel-control-next {
 }
 
 .RI .cadre {
+    padding: 1% 5%;
     border: 5px #a51840 solid;
     flex-direction: column;
     border-radius: 10px;
@@ -1114,6 +1119,7 @@ button.carousel-control-next {
 
 
 .TEMA .cadre {
+    padding: 1% 5%;
     border: 5px #a51840 solid;
     border-radius: 10px;
     display: flex;
@@ -1128,7 +1134,7 @@ button.carousel-control-next {
 
 .TEMA .img_TEMA {
     flex-direction: column;
-    width: 40%;
+    width: 85%;
     align-items: center;
     justify-content: center;
     display: flex;
@@ -1174,6 +1180,7 @@ button.carousel-control-next {
 }
 
 .ritz .cadre {
+    padding: 1% 5%;
     border: 5px #a51840 solid;
     border-radius: 10px;
     display: flex;
@@ -1237,6 +1244,8 @@ button.carousel-control-next {
 
 
 .pougne .cadre {
+    padding: 1% 5%;
+    padding: 1% 5%;
     border: 5px #a51840 solid;
     border-radius: 10px;
     display: flex;
@@ -1299,6 +1308,7 @@ button.carousel-control-next {
 }
 
 .DD .cadre {
+    padding: 1% 5%;
     border: 5px #a51840 solid;
     border-radius: 10px;
     display: flex;
@@ -1919,8 +1929,8 @@ button.carousel-control-next {
         width: 90%;
     }
 
-    #carousel-secrétariat {
-        width: 90%;
+    .img_secrétariat {
+        width: 150%;
     }
 
     #carousel-RE {
