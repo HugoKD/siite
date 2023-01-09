@@ -319,7 +319,6 @@ canvas {
 
 .copy p {
     margin-bottom: 0;
-    padding-bottom: 5px;
 }
 
 @media (hover: none) and (orientation: portrait), (max-width:980px) {
