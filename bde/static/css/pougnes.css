@@ -61,7 +61,7 @@ html, body {
 
 #particles-js {
     background-color: #17182f;
-    height: 92.3%;
+    height: 93.5%;
 }
 
 
@@ -280,30 +280,26 @@ canvas {
 }
 
 .parentIcon {
-    position: relative;
-    bottom: 0;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     text-align: center;
     width: 100%;
-    background-color: black;
+    background-color: #000000; border-radius: 4%;
 }
-
 .parentIcon a {
     text-align: center;
     width: 12%;
-    padding: 0 10px 0px 10px;
+    padding: 10px;
     color: #a51840;
-    font-size: 35px;
+    font-size: 30px;
 }
-
 .parentIcon a:hover {
-    color: #1f2121;
+    color: #000000;
 }
 
 .copy {
-    display: flex; height: 29px;
+    height: 30%;
     background-color: black;
     color: white;
     align-items: center;
@@ -311,10 +307,9 @@ canvas {
     flex-direction: column;
     text-align: center;
 }
-
 .copy p {
     margin-bottom: 0;
-    padding-bottom: 5px;
+    padding-bottom: 2px;
 }
 
 @media (hover: none) and (orientation: portrait), (max-width:980px) {

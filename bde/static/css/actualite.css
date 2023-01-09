@@ -32,27 +32,31 @@ section#id .texte {
     flex-direction: column;
     text-align: center;
     width: 100%;
-    background-color: black;
+    background-color: #000000; border-radius: 4%;
 }
 .parentIcon a {
     text-align: center;
     width: 12%;
     padding: 10px;
     color: #a51840;
-    font-size: 35px;
+    font-size: 30px;
 }
 .parentIcon a:hover {
-    color: #1f2121;
+    color: #000000;
 }
 
 .copy {
-    height: 5vh;
+    height: 30%;
     background-color: black;
     color: white;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     text-align: center;
+}
+.copy p {
+    margin-bottom: 0;
+    padding-bottom: 2px;
 }
 
 @media (hover: none) and (orientation: portrait), (max-width:700px) {

@@ -192,7 +192,7 @@ body {
     border: 2px solid #a51840;
     border-radius: 5px;
     width: 80%;
-    object-fit: cover;
+    object-fit: cover; z-index: 200;
 }
 
 .astro {
@@ -1113,7 +1113,7 @@ button.carousel-control-next {
     background-color: #1f2121 ;
     box-shadow: 0px 10px 50px -10px #a92a37;
     border: 1px solid #a51840;
-    z-index: 5;
+    z-index: 3;
 }
 
 .TEMA .img_TEMA {
@@ -1346,25 +1346,21 @@ button.carousel-control-next {
     flex-direction: column;
     text-align: center;
     width: 100%;
-    background-color: black;
+    background-color: #000000; border-radius: 4%;
 }
-
-
 .parentIcon a {
     text-align: center;
     width: 12%;
-    padding: 0 10px 0px 10px;
+    padding: 10px;
     color: #a51840;
-    font-size: 35px;
-    transition: all .4s;
+    font-size: 30px;
 }
-
 .parentIcon a:hover {
-    color: #1f2121;
+    color: #000000;
 }
 
 .copy {
-    display: flex; height: 29px;
+    height: 30%;
     background-color: black;
     color: white;
     align-items: center;
@@ -1372,10 +1368,9 @@ button.carousel-control-next {
     flex-direction: column;
     text-align: center;
 }
-
 .copy p {
     margin-bottom: 0;
-    padding-bottom: 5px;
+    padding-bottom: 2px;
 }
 
 .popup-img {
@@ -1386,7 +1381,7 @@ button.carousel-control-next {
 
 
 #rocket{
-    z-index: 5;
+    z-index: 3;
     position:absolute; bottom:10%; right:0;
     width: 6%;
     margin-top: 10%;
@@ -1395,16 +1390,16 @@ button.carousel-control-next {
 #rocket.fixed:hover {
     transform: scale(1.05);
     animation: bounce 0.8s ease infinite;
-    z-index: 5;
+    z-index: 3;
 }
 
 #rocket img {
     width: 100%;
-    z-index: 5;
+    z-index: 3;
 }
 
 #rocket.fixed{position:fixed; top:0;
-    z-index: 5;}
+    z-index: 3;}
 
 
 @keyframes bounce{
@@ -1420,10 +1415,10 @@ button.carousel-control-next {
 
 
 #rocket_bottom img {
-    width: 100%;
+    width: 100%; z-index: 3;
 }
 
-#rocket_bottom.fixed{position:fixed; top:0;}
+#rocket_bottom.fixed{position:fixed; top:0; z-index: 3}
 
 
 
@@ -1434,6 +1429,7 @@ button.carousel-control-next {
     z-index: 10;
     display: flex;
     margin-top: 10%;
+    z-index: 3;
 }
 
 #rocket_bottom.fixed:hover {
@@ -1441,20 +1437,6 @@ button.carousel-control-next {
     animation: bounce 0.8s ease infinite;
 }
 
-/*
-#clique {
-    position:absolute; bottom:10%; left: 0;
-    width: 1%;
-    display: flex;
-    margin-left: 400px;
-}
-
-#clique img {
-    width: 100%;
-}
-
-
- */
 @media screen and  (max-width:2400px) and (min-width: 1900px) {
     .astro_pres {
         top: -170px;
@@ -1572,6 +1554,7 @@ button.carousel-control-next {
         width: 85%;
         margin-right: auto; margin-left: auto;
     }
+
     .RI .cadre {
         flex-direction: row;
         flex-wrap: wrap;
@@ -1789,6 +1772,9 @@ button.carousel-control-next {
 
 @media (orientation: portrait), (max-width:700px) {
 
+    #carousel-pougne {
+        width: 90%;
+    }
     .président .icon {
         height: 50px;
         justify-items: center;
@@ -1957,15 +1943,10 @@ button.carousel-control-next {
         height: 100%;
         width: 100%;
     }
-    .secrétariat img_secrétariat {
+    .secrétariat .img_secrétariat {
         width: 90%;
     }
-    .secrétariat img_secrétariat img {
-        width: 90%;
-    }
-    .secrétariat .icon a {
 
-    }
 
     .trésorerie {
         width: 85%;
@@ -1999,12 +1980,16 @@ button.carousel-control-next {
         margin-top: 10%;
     }
 
+    .ritz .img_ritz {
+        width: 90%;
+    }
     .RI {
         width: 85%;
         min-height: 700px;
         margin: auto;
         margin-top: 10%;
     }
+
 
     .DD {
         width: 85%;
@@ -2020,7 +2005,6 @@ button.carousel-control-next {
         margin-top: 10%;
     }
 
-    #carousel-pougne {}
 
     .TEMA {
        width: 85%;
@@ -2028,6 +2012,11 @@ button.carousel-control-next {
         margin: auto;
         margin-top: 10%;
     }
+
+    .TEMA .img_TEMA {
+        width: 80%;
+    }
+
 
     .cadre {
         flex-direction: column;
@@ -2091,7 +2080,11 @@ button.carousel-control-next {
         justify-content: center;
     }
     .icon a {
-        margin: 15%;
+        margin: 10px 20px 0 20px;
+    }
+
+    .RI .icon a {
+        padding: 0;
     }
 
     .copy {

@@ -49,7 +49,7 @@ html, body {
 
 #contact{
     display: flex;
-    height: 92.5%;
+    height: 93.3%;
     padding-top: 5%; padding-bottom: 10%;
     background-image: url("../img/im2.jpg");
     background-repeat: no-repeat;
@@ -175,7 +175,7 @@ footer {
     flex-direction: column;
     text-align: center;
     width: 100%;
-    background-color: black;
+    background-color: #000000; border-radius: 4%;
 }
 .parentIcon a {
     text-align: center;
@@ -185,7 +185,7 @@ footer {
     font-size: 30px;
 }
 .parentIcon a:hover {
-    color: #1f2121;
+    color: #000000;
 }
 
 .copy {
@@ -199,7 +199,7 @@ footer {
 }
 .copy p {
     margin-bottom: 0;
-    padding-bottom: 10px;
+    padding-bottom: 2px;
 }
 
 

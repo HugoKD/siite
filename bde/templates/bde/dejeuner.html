@@ -16,8 +16,18 @@
     {% block content %}
     {% endblock %}
 
-    <section class="dejeuner">
-        <h1>Page pas encore disponible les gourmands</h1>
+    <section id="dejeuner">
+        <div class="contact_div">
+                <div class="texte">
+                    <h1>Déjeuner</h1></div>
+                <form action="#" method="post">
+                    <input type="text" name="name" placeholder="Votre nom" required="">
+                    <input type="text" name="adresse" placeholder="Votre adresse mail" required="">
+                    <input type="text" name="objet" placeholder="Objet" required="">
+                    <textarea type="text" name="message" placeholder="Message"></textarea>
+                    <button type="submit">Envoyer</button>
+                </form>
+            </div>
     </section>
     <footer>
         <div class="parentIcon">
