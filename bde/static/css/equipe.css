@@ -1408,7 +1408,7 @@ button.carousel-control-next {
 
 
 #rocket{
-    z-index: 5;
+    z-index: 4;
     position:absolute; bottom:10%; right:0;
     width: 6%;
     margin-top: 10%;
@@ -1422,11 +1422,11 @@ button.carousel-control-next {
 
 #rocket img {
     width: 100%;
-    z-index: 5;
+    z-index: 4;
 }
 
 #rocket.fixed{position:fixed; top:0;
-    z-index: 5;}
+    z-index: 3;}
 
 
 @keyframes bounce{
@@ -1453,7 +1453,7 @@ button.carousel-control-next {
     z-index: 100;
     position:absolute; bottom:10%; right: 0;
     width: 6%;
-    z-index: 10;
+    z-index: 4;
     display: flex;
     margin-top: 10%;
 }
@@ -1463,20 +1463,8 @@ button.carousel-control-next {
     animation: bounce 0.8s ease infinite;
 }
 
-/*
-#clique {
-    position:absolute; bottom:10%; left: 0;
-    width: 1%;
-    display: flex;
-    margin-left: 400px;
-}
-
-#clique img {
-    width: 100%;
-}
 
 
- */
 @media screen and  (max-width:2400px) and (min-width: 1900px) {
     .astro_pres {
         top: -170px;

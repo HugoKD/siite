@@ -58,7 +58,7 @@ body {
 
 
 .parentIcon {
-    position: relative;
+    position: relative; height: 45px;
     bottom: 0;
     align-items: center;
     justify-content: center;
@@ -81,7 +81,7 @@ body {
 }
 
 .copy {
-    display: flex; height: 50px;
+    display: flex; bottom: 0;
     background-color: black;
     color: white;
     align-items: center;
@@ -92,6 +92,7 @@ body {
 
 .copy p {
     margin-bottom: 0;
+    padding-bottom: 3px;
 }
 
 @media screen and (max-width:700px) {
