@@ -23,7 +23,7 @@ body {
 
 
 .contact_div {
-    backdrop-filter: blur(6px);
+    backdrop-filter: blur(3px);
     -webkit-backdrop-filter: blur(6px); /* compatibilité avec safari */
     display: flex;
     flex-direction: column;
