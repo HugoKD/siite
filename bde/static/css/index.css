@@ -192,7 +192,7 @@ html, body {
     padding-top: 70px;
     padding-bottom: 50px;
     display: flex;
-    background-color: #1f2121;
+    background-image: url("../img/cross-stripes-1920x1080.png");
 }
 
 .texte {
@@ -411,7 +411,7 @@ html, body {
     .parentIcon {
         align-items: center;
         justify-content: center;
-        flex-direction: column;
+        flex-direction: row;
         text-align: center;
         width: 100%;
         background-color: black;
@@ -432,6 +432,7 @@ html, body {
         justify-content: center;
         flex-direction: column;
         text-align: center;
+        padding-bottom: 4px;
     }
 }
 
