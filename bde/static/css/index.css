@@ -193,6 +193,7 @@ html, body {
     padding-bottom: 50px;
     display: flex;
     background-image: url("../img/cross-stripes-1920x1080.png");
+    justify-content: space-around;
 }
 
 .texte {
