@@ -19,6 +19,7 @@ body {
     height: 93.3vh; overflow-y: hidden;
     background-image: url("../img/escheresque-dark-1920x1080.png");
     background-repeat: repeat;
+    padding-top: 5%;
 }
 
 
