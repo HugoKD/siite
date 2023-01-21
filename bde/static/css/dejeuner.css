@@ -75,7 +75,10 @@ section#dejeuner .contact_div form{
 
 section#dejeuner .contact_div form input{
     width: 45%;
+}
 
+section#dejeuner .contact_div form input[name="num"]{
+    width: 100%;
 }
 
 section#dejeuner .contact_div form input:hover,
@@ -101,8 +104,7 @@ section#dejeuner .contact_div form input[name="objet"]{
 
 section#dejeuner .contact_div form textarea {
     width: 100%;
-    resize: none;
-    height: 150px;
+    resize: none;mail
     margin-bottom: 5%;
 }
 
