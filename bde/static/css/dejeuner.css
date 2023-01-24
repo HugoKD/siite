@@ -104,7 +104,7 @@ section#dejeuner .contact_div form input[name="objet"]{
 
 section#dejeuner .contact_div form textarea {
     width: 100%;
-    resize: none;mail
+    resize: none;
     margin-bottom: 5%;
 }
 
