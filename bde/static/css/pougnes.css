@@ -80,7 +80,6 @@ canvas {
     text-align: center;
     position: absolute;
     margin-top: 15%;
-    transform: translateY(-30px);
 
 }
 
@@ -319,6 +318,7 @@ canvas {
 
 .copy p {
     margin-bottom: 0;
+    padding-bottom: 5px;
 }
 
 @media (hover: none) and (orientation: portrait), (max-width:980px) {
@@ -339,7 +339,7 @@ canvas {
         height: inherit;
     }
     .bloc1 {
-        margin-top: 20%;
+        margin-top: 30%;
         margin-left: 10%;
         margin-right: 10%;
         width: 80%;
@@ -357,11 +357,11 @@ canvas {
         min-height: 750px;
         margin-right: 0;
         margin-left: 0;
+        transform: translateY(-30px);
     }
     .tsp {
         width: 100%;
         min-height: 750px;
-        margin-bottom: 10%;
         margin-left: 0;
         margin-right: 0;
     }
@@ -389,6 +389,7 @@ canvas {
         background-color: black;
     }
     .parentIcon a {
+        transform: translateX(5px);
         text-align: center;
         width: 12%;
         padding: 10px;
@@ -416,5 +417,56 @@ canvas {
 @media screen and (max-width: 700px) {
     .imt .img_ h1 {
         transform: translateY(20%);
+    }
+}
+
+@media screen and (min-width: 1000px) and (max-height: 800px){
+        .cadre {
+            transform: translateY(-15%);
+        }
+}
+@media screen and (max-width: 1100px) and (max-height: 650px){
+        .cadre {
+            height: 50%;
+            width: 50%;
+        }
+}
+
+@media screen and (min-width: 900px) and (max-width: 1290px) and (max-height: 820px){
+    html, body {
+        height: 150vh;
+    }
+
+    .bloc1 {
+        flex-direction: row;
+    }
+
+    .cadre {
+        transform: translateY(2%);
+    }
+
+    .tsp {
+        height: 600px;
+        margin-left: 2%;
+        margin-right: 1%;
+    }
+
+    .imt {
+        height: 600px;
+        margin-left: 1%;
+        margin-right: 2%;
+    }
+
+    .bloc1 {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .bloc1 h1 {
+        padding: 3px;
+    }
+
+    .bloc1 p {
+        padding: 5px;
     }
 }

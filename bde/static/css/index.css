@@ -192,7 +192,7 @@ html, body {
     padding-top: 70px;
     padding-bottom: 50px;
     display: flex;
-    background-image: url("../img/cross-stripes-1920x1080.png");
+    background-color: #1f2121;
     justify-content: space-around;
 }
 
@@ -274,7 +274,7 @@ html, body {
 }
 .parentIcon a {
     text-align: center;
-
+    transform: translateX(5px);
     padding: 0 10px 0px 10px;
     color: #a51840;
     font-size: 35px;

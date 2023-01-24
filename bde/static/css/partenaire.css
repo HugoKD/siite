@@ -273,6 +273,60 @@ html, body {
     background-color: #a51840;
 }
 
+
+.royalfood {
+    height: 400px;
+    width: 400px;
+    margin-left: 1%;
+}
+
+.royalfood .cadre {
+    border-radius: 10px;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #1f2121 ;
+    box-shadow: 0px 10px 50px -10px #a92a37;
+    flex-direction: column;
+    -webkit-backdrop-filter: blur(15px); /* assure la compatibilité avec safari */
+    backdrop-filter: blur(15px);
+    background-color: rgba(182, 182, 182, 0.2);
+}
+
+
+
+
+
+.royalfood .img_royalfood {
+    width: 70%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.royalfood .img_royalfood img {
+    width: 90%;
+
+}
+.royalfood .img_royalfood h1 {
+    transform: translateY(-22px);
+
+}
+
+
+
+
+.royalfood .box {
+    width: 25%;
+    height: 5px;
+    margin-left: 37.5%;
+    background-color: #a51840;
+}
+
 footer {
     z-index: 1;
 }
@@ -285,6 +339,7 @@ footer {
     background-color: black;
 }
 .parentIcon a {
+    transform: translateX(5px);
     text-align: center;
     width: 12%;
     padding: 10px;
@@ -311,8 +366,11 @@ footer {
 
 @media screen and (max-width: 700px) {
 
+.main {
+    height: 150vh;
+}
+
 .page_title {
-    margin-top: 100px;
     margin-left: 14%;
     z-index: 100;
 }
@@ -347,12 +405,12 @@ footer {
 }
     .bloc1 {
         flex-direction: column;
+        transform: translateY(-50px);
     }
 
 .numérique {
     height: 300px;
     width: 300px;
-    margin-right: 1%;
 }
 
 
@@ -389,6 +447,23 @@ footer {
     height: 80%;
 }
 
+.royalfood {
+    height: 300px;
+    width: 300px;
+}
+
+.royalfood .cadre {
+    width: 100%;
+    height: 100%;
+    margin-top: 10%;
+}
+
+
+.royalfood .img_royalfood img {
+    width: 80%;
+    height: 80%;
+}
+
 }
 
 @media screen and (max-height: 820px) {
@@ -402,6 +477,11 @@ footer {
         height: 250px;
     }
 
+    .royalfood {
+        width:250px;
+        height:250px;
+    }
+
     .img_essaion h1 {
         font-size: 1.5rem;
     }
@@ -409,6 +489,11 @@ footer {
     .img_secrétariat h1 {
         font-size: 1.5rem;
     }
+        .img_royalfood h1 {
+        font-size: 1.5rem;
+    }
+
+
 }
 
 @media screen and (max-height: 700px) {
@@ -422,20 +507,31 @@ footer {
         height: 225px;
     }
 
+    .royalfood {
+        width:225px;
+        height:225px;
+    }
+
 }
 
 
 @media screen and (min-width: 500px) and (max-width: 1200px) {
-    .numérique {
-        margin-left: 5%;
+
+    .main {
+        height: 150vh;
     }
 
-    .secrétariat {
-        margin-right: 5%;
+    #circle-orbit-container {
+      top: 8%;
+      left: 10%;
+      height: 30%;
+      width: 30%;
     }
 
     .bloc1 {
+        transform: translateY(100px);
         top:-15%;
+        flex-direction: column;
     }
 
 
@@ -444,6 +540,19 @@ footer {
         margin-left: 30%;
         z-index: 100;
     }
+
+    .numérique {
+        margin-bottom: 30px;
+    }
+
+    .secrétariat {
+        margin-bottom: 30px;
+    }
+
+    .royalfood {
+        margin-bottom: 30px;
+    }
+
 }
 
 @media screen and (max-width: 400px) and (min-width: 300px) {
@@ -480,4 +589,56 @@ footer {
         height: 80%;
         width: 80%;
     }
+}
+
+
+@media screen and (min-width: 900px) and (max-width: 1290px) and (max-height: 820px){
+
+    .main {
+        height: 100vh;
+    }
+
+    .bloc1 {
+        flex-direction: row;
+        transform: translateY(70%);
+    }
+
+   .img_essaion img{
+       width: 80%;
+       height: 80%;
+   }
+
+    #circle-orbit-container {
+      top: 15%;
+      left: 5%;
+      height: 30%;
+      width: 30%;
+    }
+
+    .page_title {
+        transform: translateY(-30px);
+    }
+
+        .numérique {
+        width: 250px;
+        height: 250px;
+    }
+
+    .secrétariat {
+        width: 250px;
+        height: 250px;
+    }
+
+    .royalfood {
+        width:250px;
+        height:250px;
+        margin-left: 20px;
+    }
+
+    .royalfood .cadre {
+        margin-top: 0;
+        transform: translateY(0);
+    }
+
+
 }

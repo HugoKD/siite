@@ -1373,6 +1373,7 @@ button.carousel-control-next {
 
 
 .parentIcon a {
+    transform: translateX(5px);
     text-align: center;
     width: 12%;
     padding: 0 10px 0px 10px;

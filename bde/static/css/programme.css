@@ -281,6 +281,7 @@ html, body {
     z-index: 10;
 }
 .parentIcon a {
+    transform: translateX(5px);
     text-align: center;
     width: 12%;
     padding: 10px;
