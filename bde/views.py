@@ -16,8 +16,6 @@ def contact(request):
 def programme(request):
     return render(request, "bde/programme.html")
 
-def dejeuner(request):
-    return render(request, "bde/dejeuner.html")
 
 def clique(request):
     return render(request, "bde/clique.html")
