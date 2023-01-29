@@ -1,0 +1,146 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border: 0;
+  border-spacing: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+}
+
+#main {
+    height: 100vh;
+    max-width: 100%;
+    background-image: url("../img/cross-stripes-1920x1080.png");
+}
+
+.above {
+    height: 100vh;
+    z-index: -99;
+}
+
+.above img {
+    position: absolute;
+    min-width: 50%;
+    min-height: 50%;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: -100;
+}
+
+.above h1 {
+    color: white;
+    transform: translateY(100px);
+    text-align: center;
+}
+
+.tableau {
+    color: white;
+    position: relative;
+    z-index: 10;
+    margin: 0 auto;
+    width: 500px;
+    margin-top: 180px;
+}
+
+.inttab1 {
+    margin-top: -40px;
+    padding: 10px;
+    height: 90px;
+    width: 500px;
+    border-radius: 10px;
+    margin-bottom: 50px;
+    -webkit-backdrop-filter: blur(15px); /* assure la compatibilité avec safari */
+    backdrop-filter: blur(15px);
+    background-color: rgba(182, 182, 182, 0.2);
+    box-shadow: 0px 10px 50px -10px #a92a37;
+}
+
+.inttab2 {
+    border-radius: 10px;
+    padding: 10px;
+    height: 500px;
+    width: 500px;
+    overflow: auto;
+    -webkit-backdrop-filter: blur(15px); /* assure la compatibilité avec safari */
+    backdrop-filter: blur(15px);
+    background-color: rgba(182, 182, 182, 0.2);
+    box-shadow: 0px 10px 50px -10px #a92a37;
+}
+
+
+
+table, .table2{
+    margin-top: -10px;
+    width: 100%;
+    padding: 5px;
+}
+
+tr {
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    color: white;
+    text-align: center;
+}
+
+#total {
+    text-align: center;
+    transform: translateX(200px);
+}
+
+.first {
+    color: gold;
+}
+
+.second {
+    color: silver;
+}
+
+.third {
+    color:saddlebrown;
+}
+
+
+
+.parentIcon {
+    display: flex; height: 45px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    text-align: center;
+    width: 100%;
+    background-color: black;
+}
+.parentIcon a {
+    text-align: center;
+    transform: translateX(5px);
+    padding: 0 10px 0px 10px;
+    color: #a51840;
+    font-size: 35px;
+    transition: all .4s;
+}
+.parentIcon a:hover {
+    color: #1f2121;
+}
+
+.copy {
+    height: 5vh;
+    display: flex; height: 29px;
+    background-color: black;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.copy p {
+    margin-bottom: 0;
+    padding-bottom: 5px;
+}
