@@ -26,9 +26,9 @@
                     <form action="" method="post">
 
                         {% csrf_token %}
-
+                        <div class="formulaire">
                         {{ form.as_p }}
-
+                        </div>
                         <button type="submit" onclick="maFonction()">Envoyer</button>
                     </form>
                     <script>
