@@ -10,6 +10,14 @@ def dejeuner(request):
             message= request.POST.get('Message')
             vieux=request.POST.get('Vieux')
             couvert=request.POST.get('Couvert')
+            if vieux=='on':
+                vieux=True;
+            else:
+                vieux=False;
+            if couvert=='on':
+                couvert=True
+            else:
+                couvert=False
             horaire= request.POST.get('Horaire')
             NewComamande= ContactModel.objects.create(Nom= nom, Prenom=prenom, Adresse=adresse, Message=message, Vieux=vieux,Couvert=couvert,Horaire=horaire)
             #faire condition sur NewCommande
