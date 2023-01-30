@@ -7,7 +7,7 @@ from .models import ContactModel
 @admin.register(ContactModel)
 
 class ContactAdmin(admin.ModelAdmin):
-    list_display = ('Nom', 'Prénom','Horaire', 'Livraison')
+    list_display = ('Nom', 'Prenom','Horaire', 'Adresse')
     ordering = ('Horaire',)
     search_fields = ('Horaire','Nom','Menu')
     list_filter = ('Menu', 'Horaire')

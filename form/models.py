@@ -12,14 +12,14 @@ CHOICE1=(('', '----'),('0', '7h00'),('1', '7h30'),('2', '8h00'),('3', '8h30'),('
 CHOICE2 = (('', '----'),('0', 'Menu1'),('1', 'Menu2'),('2', 'Menu3'),)
 
 class ContactModel(models.Model):
-    Prénom = models.CharField(max_length=20)
+    Prenom = models.CharField(max_length=20)
     Nom= models.CharField(max_length=20)
     Num= models.CharField(max_length=10)
-    Livraison= models.CharField(max_length=30)
-    Menu= models.CharField(max_length=10, choices=CHOICE2)
+    Adresse= models.CharField(max_length=30)
     Vieux= models.BooleanField()
+    Couvert = models.BooleanField()
     Horaire= models.CharField(max_length=10, choices=CHOICE1)
-    Couvert= models.BooleanField()
+    Menu = models.CharField(max_length=10, choices=CHOICE2)
     Message= models.TextField(max_length=200, blank=True)
 
 
