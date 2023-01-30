@@ -29,4 +29,4 @@ def contact(request):
 
 
 def redirection(request):
-    return render(request, "form/redirection.html")
+    return render(request, "contact/redirection.html")
