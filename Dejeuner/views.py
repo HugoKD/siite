@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponseRedirect
 from .models import ContactModel
 
+
 def dejeuner(request):
     if request.method == 'POST':
             nom= request.POST.get('Nom')
@@ -10,20 +11,41 @@ def dejeuner(request):
             message= request.POST.get('Message')
             vieux=request.POST.get('Vieux')
             couvert=request.POST.get('Couvert')
+            menu=request.POST.get('Menu')
+            num = request.POST.get('Num')
+            print(vieux)
             if vieux=='on':
                 vieux=True;
-            else:
+            elif vieux=='None':
                 vieux=False;
             if couvert=='on':
                 couvert=True
-            else:
+            elif couvert=='None':
                 couvert=False
             horaire= request.POST.get('Horaire')
-            NewComamande= ContactModel.objects.create(Nom= nom, Prenom=prenom, Adresse=adresse, Message=message, Vieux=vieux,Couvert=couvert,Horaire=horaire)
-            #faire condition sur NewCommande
+            Users=ContactModel.objects.all()
+            list_prenom, list_nom = [], []
+            for i in Users:
+                list_prenom.append(i.Prenom)
+                list_nom.append(i.Nom)
+            for i in range(0,len(list_nom)):
+                if nom == list_nom[i]:
+                    for j in range(0,len(list_prenom)):
+                        if list_prenom[j]==nom:
+                            print(ok)
+                            return HttpResponseRedirect('/erreur1/')
+                            break
+                elif prenom == list_prenom[i]:
+                    for j in range(0,len(list_nom)):
+                        if list_nom[j]==prenom:
+                            print(ok)
+                            return HttpResponseRedirect('/erreur1/')
+                            break
+            print(list_prenom)
+            list_prenom.append(nom)
+            list_nom.append(prenom)
+            NewComamande= ContactModel.objects.create(Nom= nom, Prenom=prenom, Adresse=adresse, Message=message, Vieux=vieux,Couvert=couvert,Horaire=horaire, Menu=menu, Num= num)
             NewComamande.save()
-            print(request.POST.get('nom'))
-
 
             #form.save()
             return HttpResponseRedirect('/redirection/')
@@ -33,3 +55,6 @@ def dejeuner(request):
 
 def redirection(request):
     return render(request, "dejeuner/redirection.html")
+
+def erreur1(request):
+    return render(request, "dejeuner/erreur1.html")
