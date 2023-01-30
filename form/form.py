@@ -9,9 +9,5 @@ class ContactForm(ModelForm):
         model= ContactModel
         fields="__all__"
 
-    widgets = {
-
-
-    }
 
 ''
