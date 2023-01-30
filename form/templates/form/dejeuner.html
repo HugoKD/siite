@@ -36,16 +36,17 @@
                             <div class="couvert">Couvert :<input type="checkbox" id="Couvert" name="Couvert" checked></div>
                             <div class="vieux"> Vieux : <input type="checkbox" id="Vieux" name="Vieux" checked></div>
                         </div>
-                        <div class="menu">
-                            Menu :
-                            <select name="Menu">
-                                <option value="">-----</option>
-                                <option value="Menu1">Menu1</option>
-                                <option value="Menu2">Menu2</option>
-                                <option value="Menu3">Menu3</option>
-                            </select>
-                        </div>
-                        <div class="horaire">
+                        <div class="bloc">
+                            <div class="menu">
+                                Menu :
+                                <select name="Menu">
+                                    <option value="">-----</option>
+                                    <option value="Menu1">Menu1</option>
+                                    <option value="Menu2">Menu2</option>
+                                    <option value="Menu3">Menu3</option>
+                                </select>
+                            </div>
+                            <div class="horaire">
                             Horaire de livraison :
                             <select name="Horaire">
                                 <option value="">-----</option>
@@ -70,6 +71,7 @@
                                 <option value="16h30">16h30</option>
                                 <option value="17h00">17h00</option>
                             </select>
+                        </div>
                         </div>
                         <textarea type="text" name="Message" placeholder="Remarques particulieres (allergies ...)" maxlength="100"></textarea>
                         <button type="submit" onclick="maFonction()">Envoyer</button>
