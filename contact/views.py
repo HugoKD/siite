@@ -17,10 +17,15 @@ def contact(request):
         message = request.POST.get('Message')
         NewUser= ContactModel.objects.create(Nom=name,Mail=mail,Objet=objet,Message=message)
         print(NewUser)
-        NewUser.save()
-        return HttpResponseRedirect('/redirection/')
-    return render(request, "contact/contact.html")
 
+        NewUser.save()
+
+        return HttpResponseRedirect('/redirection/')
+
+    else :
+        form= ContactModel()
+
+    return render(request, "contact/contact.html")
 
 
 def redirection(request):
