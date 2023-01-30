@@ -1,5 +1,6 @@
 import datetime
 
+from django.http import HttpResponseRedirect
 from django.shortcuts import render
 from django.utils import timezone
 
@@ -17,5 +18,10 @@ def contact(request):
         NewUser= ContactModel.objects.create(Nom=name,Mail=mail,Objet=objet,Message=message)
         print(NewUser)
         NewUser.save()
-    #(request.POST.get('name')) accede à la valeur name de la resuquestr
+        return HttpResponseRedirect('/redirection/')
     return render(request, "contact/contact.html")
+
+
+
+def redirection(request):
+    return render(request, "form/redirection.html")
