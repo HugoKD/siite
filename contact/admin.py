@@ -8,4 +8,3 @@ from .models import ContactModel
 
 class ContactAdmin(admin.ModelAdmin):
     list_display = ('Nom', 'Mail','Objet', 'Message')
-    ordering = ('Nom',)
