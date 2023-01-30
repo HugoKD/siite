@@ -63,9 +63,6 @@ section#dejeuner .contact_div .texte h1{
 }
 
 
-section#dejeuner .contact_div form {
-    height: 80%;
-}
 section#dejeuner .contact_div form input {
     width: 40%;
     display: flex;
@@ -119,6 +116,7 @@ section#dejeuner .contact_div form button {
     margin: 0 auto;
     transition: 0.2s;
     display: block;
+    margin-top: 5%;
 
 }
 
