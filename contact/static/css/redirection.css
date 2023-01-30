@@ -25,6 +25,9 @@ body {
 
 .message {
     color: #ece0d2;
+    text-emphasis: #b20000;
+    text-align: center;
+    margin-bottom: 5%;
 }
 
 
