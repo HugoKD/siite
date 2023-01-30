@@ -1,0 +1,62 @@
+{% load static %}
+<header>
+    <style>
+        .dropdown-menu li:hover {
+            background-color: rgba(123, 0, 44, 0.37);
+            border-radius: 8%;
+        }
+    </style>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark" style="background-color:black ; padding: 0 ">
+        <div class="container" style="padding-left: 0">
+        <a href="../" class="navbar-brand mb-0 h1" style="padding: 0 ; justify-content: left">
+            <img src="{% static "img/astro.png" %}" style="height: 60px ; width: 60px  ; width: 60px ; margin-bottom: 5px " >
+        </a>
+        <button type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNav"
+                class="navbar-toggler"
+                aria-controls="navbarNav"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a href="../" class="nav-link" style="transition: all .4s;">
+                        Home
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="../lequipe/" class="nav-link" style="transition: all .4s;">
+                        L'équipe
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="../pougnes/" class="nav-link" style="transition: all .4s;">
+                        Pougnes
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="../programme/" class="nav-link" style="transition: all .4s;">
+                        Notre programme
+                    </a>
+                </li>
+                <li class="nav-item dropdown" style=" position: relative " >
+                    <a class="nav-link dropdown-toggle" href="../devenir-partenaire/" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Partenaires</a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style=" position: absolute ; overflow: visible ; background-color: #1f2121 ; color: white "  >
+                      <li class="dropdown-item"  style=" transition: .4s ; overflow: visible;"><a href="../devenir-partenaire/" style="color: white ; text-decoration: none ;">Nous contacter</a></li>
+                      <li class="dropdown-item" style=" overflow: visible; transition: .4s"><a href="../nos-partenaires/" style="color: white ; text-decoration: none ;">Nos partenaires</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="../dejeuner/" class="nav-link" style="transition: all .4s; position: absolute;">
+                        Déjeuner
+                    </a>
+                </li>
+            </ul>
+        </div>
+        </div>
+    </nav>
+</header>
