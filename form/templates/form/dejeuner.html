@@ -24,43 +24,53 @@
                     <form action="" method="post">
 
                         {% csrf_token %}
-
-                        <input type="text" name="Prenom" placeholder="Votre Prenom" required="" maxlength="20">
-                        <input type="text" name="Nom" placeholder="Votre nom" required="" maxlength="20">
-                        <input type="integer" name="Num" placeholder="Numero de tel" required="" maxlength="10">
-                        <input type="text" name="Adresse" placeholder="Adresse de livraison" required="">
-                        Couvert :<input type="checkbox" id="Couvert" name="Couvert" checked>
-                        Vieux : <input type="checkbox" id="Vieux" name="Vieux" checked>
-                        Menu : <select name="Menu">
-                            <option value="">-----</option>
-                            <option value="Menu1">Menu1</option>
-                            <option value="Menu2">Menu2</option>
-                            <option value="Menu3">Menu3</option>
-                        </select>
-                        Horaire de livraison: <select name="Horaire">
-                            <option value="">-----</option>
-                            <option value="7h00">7h00</option>
-                            <option value="7h30">7h30</option>
-                            <option value="8h00">8h00</option>
-                            <option value="9h00">9h00</option>
-                            <option value="9h30">9h30</option>
-                            <option value="10h00">10h00</option>
-                            <option value="10h30">10h30</option>
-                            <option value="11h00">11h00</option>
-                            <option value="11h30">11h30</option>
-                            <option value="12h00">12h00</option>
-                            <option value="12h30">12h30</option>
-                            <option value="13h00">13h00</option>
-                            <option value="13h30">13h30</option>
-                            <option value="14h00">14h00</option>
-                            <option value="14h30">14h30</option>
-                            <option value="15h00">15h00</option>
-                            <option value="15h30">15H30</option>
-                            <option value="16h00">16h00</option>
-                            <option value="16h30">16h30</option>
-                            <option value="17h00">17h00</option>
-
-                        </select>
+                        <div class="bloc">
+                            <input type="text" name="Prenom" placeholder="Votre Prenom" required="" maxlength="20">
+                            <input type="text" name="Nom" placeholder="Votre nom" required="" maxlength="20">
+                        </div>
+                        <div class="bloc">
+                            <input type="integer" name="Num" placeholder="Numero de tel" required="" maxlength="10">
+                            <input type="text" name="Adresse" placeholder="Adresse de livraison" required="">
+                        </div>
+                        <div class="bloc">
+                            <div class="couvert">Couvert :<input type="checkbox" id="Couvert" name="Couvert" checked></div>
+                            <div class="vieux"> Vieux : <input type="checkbox" id="Vieux" name="Vieux" checked></div>
+                        </div>
+                        <div class="menu">
+                            Menu :
+                            <select name="Menu">
+                                <option value="">-----</option>
+                                <option value="Menu1">Menu1</option>
+                                <option value="Menu2">Menu2</option>
+                                <option value="Menu3">Menu3</option>
+                            </select>
+                        </div>
+                        <div class="horaire">
+                            Horaire de livraison :
+                            <select name="Horaire">
+                                <option value="">-----</option>
+                                <option value="7h00">7h00</option>
+                                <option value="7h30">7h30</option>
+                                <option value="8h00">8h00</option>
+                                <option value="9h00">9h00</option>
+                                <option value="9h30">9h30</option>
+                                <option value="10h00">10h00</option>
+                                <option value="10h30">10h30</option>
+                                <option value="11h00">11h00</option>
+                                <option value="11h30">11h30</option>
+                                <option value="12h00">12h00</option>
+                                <option value="12h30">12h30</option>
+                                <option value="13h00">13h00</option>
+                                <option value="13h30">13h30</option>
+                                <option value="14h00">14h00</option>
+                                <option value="14h30">14h30</option>
+                                <option value="15h00">15h00</option>
+                                <option value="15h30">15H30</option>
+                                <option value="16h00">16h00</option>
+                                <option value="16h30">16h30</option>
+                                <option value="17h00">17h00</option>
+                            </select>
+                        </div>
                         <textarea type="text" name="Message" placeholder="Remarques particulieres (allergies ...)" maxlength="100"></textarea>
                         <button type="submit" onclick="maFonction()">Envoyer</button>
 

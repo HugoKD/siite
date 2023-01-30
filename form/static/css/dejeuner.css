@@ -53,12 +53,6 @@ body {
 }
 
 
-.contact_div form .formulaire {
-    display: flex;
-    flex-direction: row; flex-wrap: wrap;
-    justify-content: space-between;
-}
-
 section#dejeuner .contact_div .texte h3{
     font-size: 1.2em;
 }
@@ -68,15 +62,21 @@ section#dejeuner .contact_div .texte h1{
     font-size: 3em;
 }
 
+section#dejeuner .contact_div form input {
+    width: 40%;
+    display: flex;
+}
 
-
-section#dejeuner .contact_div
+section#dejeuner .contact_div form .bloc {
+    justify-content: space-evenly;
+    flex-direction: row;
+    display: flex;
+}
 section#dejeuner .contact_div form input:hover,
 section#dejeuner .contact_div form textarea:hover {
     border-bottom: 2px solid #a51840;
 }
 
-section#dejeuner .contact_div form input,
 section#dejeuner .contact_div form textarea {
     margin: 15px 0;
     padding: 10px;
@@ -87,6 +87,16 @@ section#dejeuner .contact_div form textarea {
     transition: 0.2s;
     border-radius: 10px;
     width: 100%;
+}
+section#dejeuner .contact_div form input {
+    margin: 15px 0;
+    padding: 10px;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #1f2121;
+    transition: 0.2s;
+    border-radius: 10px;
 }
 
 
@@ -114,11 +124,6 @@ section#dejeuner .contact_div form button:hover {
     box-shadow: 0px 10px 40px -10px #1f2121;
 }
 
-
-
-section#dejeuner .contact_div form input {
-    width: 100%; height: 50%;
-}
 
 
 
