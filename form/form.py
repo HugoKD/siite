@@ -11,7 +11,6 @@ class ContactForm(ModelForm):
 
     widgets = {
 
-        'Message': Textarea({"style": "height:100px; width:500px"}),
 
     }
 
