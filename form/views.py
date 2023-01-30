@@ -4,11 +4,7 @@ from django.http import HttpResponseRedirect
 
 def dejeuner(request):
     if request.method == 'POST':
-
-        form = ContactForm(request.POST)
-
-
-        if form.is_valid():
+            name= request.POST.get()
 
             form.save()
             return HttpResponseRedirect('/redirection/')
