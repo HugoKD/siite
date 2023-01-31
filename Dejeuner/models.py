@@ -2,9 +2,9 @@ from django import forms
 from django.db import models
 
 
-class HoraireModel(models.Model):
+class PlaceDispo(models.Model):
     Horaire=models.CharField(max_length=5)
-    Count=models.IntegerField()
+    Count=models.IntegerField(default=25)
 
 
 class ContactModel(models.Model):

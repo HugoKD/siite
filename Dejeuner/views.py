@@ -1,16 +1,11 @@
 from django.shortcuts import render
 from django.http import HttpResponseRedirect
-from .models import ContactModel,HoraireModel
+from .models import ContactModel,PlaceDispo
 
 
 def dejeuner(request):
 
-    x=20
-
-    horaires = [ '7h00', '7h30', '8h00', '8h30', '9h00', '9h30', '10h00', '10h30', '11h00', '11h30', '12h00',
-                    '12h30', '13h00', '13h30', '14h00', '14h30', '15h00', '15h30', '16h00', '16h30', '17h30'] #defninir count des horaires
-
-
+    horaires=PlaceDispo.objects.all()
 
     context = {
         'horaires': horaires,
@@ -27,9 +22,15 @@ def dejeuner(request):
             num = request.POST.get('Num')
             horaire = request.POST.get('Horaire')
 
-            print(HoraireModel.objects.filter(Horaire='7h30'))
 
             Users = ContactModel.objects.all()
+            Horaire_list = PlaceDispo.objects.all()
+            for i in Horaire_list:
+
+            #print("avt :"+ x.Count)
+            #x.Count-=1
+            #x.save()
+            #print("apres:" + x.Count)
 
             if vieux=='on':
                 vieux=True;

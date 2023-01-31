@@ -51,8 +51,9 @@
                             <select name="Horaire" required>
 
                                 {% for horaire in horaires %}
-
-                                    <option value="{{horaire}}">{{horaire}}</option>
+                                    if horaire.Count!=0 :
+                                        <option value="{{horaire.Horaire}}">{{horaire.Horaire}}</option>
+                                    else :
                                 {% endfor %}
                             </select>
 
