@@ -33,8 +33,8 @@
                             <input type="text" name="Adresse" placeholder="Adresse de livraison" required="">
                         </div>
                         <div class="bloc">
-                            <div class="couvert">Couvert :<input type="checkbox" id="Couvert" name="Couvert" checked></div>
-                            <div class="vieux"> Vieux : <input type="checkbox" id="Vieux" name="Vieux" checked></div>
+                            <div class="couvert">Couvert :<input type="checkbox" id="Couvert" name="Couvert"></div>
+                            <div class="vieux"> Vieux : <input type="checkbox" id="Vieux" name="Vieux"></div>
                         </div>
                         <div class="bloc">
                             <div class="menu">
@@ -48,17 +48,17 @@
                             </div>
                             <div class="horaire">
                             Horaire de livraison :
+
                             <select name="Horaire" required>
 
                                 {% for horaire in horaires %}
-                                    {% if horaire.Count != 0 %}
-                                        <option value="{{horaire.Horaire}}">{{horaire.Horaire}}</option>
+                                    {% if horaire.Count >= 1 %}
+                                        <option value="{{horaire.Horaire}}">{{horaire.Horaire}} (place dispo : {{horaire.Count}})</option>
                                     {% elif horaire.Count <= 0 %}
                                     {% endif %}
                                 {% endfor %}
                             </select>
 
-                            </select>
                         </div>
                         </div>
                         <textarea type="text" name="Message" placeholder="Remarques particulieres (allergies ...)" maxlength="100"></textarea>

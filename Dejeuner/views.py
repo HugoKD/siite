@@ -22,6 +22,8 @@ def dejeuner(request):
             num = request.POST.get('Num')
             horaire = request.POST.get('Horaire')
 
+            print(vieux)
+            print(couvert)
 
             Users = ContactModel.objects.all()
             Horaire_list = PlaceDispo.objects.all()
@@ -30,17 +32,16 @@ def dejeuner(request):
                 if i.Horaire==horaire:
                     i.Count-=1
                     i.save()
-                    print(i.Horaire, i.Count)
                     break
 
 
             if vieux=='on':
-                vieux=True;
-            elif vieux=='None':
-                vieux=False;
+                vieux=True
+            elif vieux==None:
+                vieux=False
             if couvert=='on':
                 couvert=True
-            elif couvert=='None':
+            elif couvert==None:
                 couvert=False
 
             list_prenom, list_nom = ['pivot'], ['pivot']

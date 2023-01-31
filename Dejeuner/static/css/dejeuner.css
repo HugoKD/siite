@@ -120,6 +120,12 @@ section#dejeuner .contact_div form button {
 
 }
 
+section#dejeuner .contact_div form .bloc .menu select option {
+        background-color: #865b27;
+        color: blue;
+        border: 1px solid blue ;
+        margin-left: 5px;
+}
 
 section#dejeuner .contact_div form button:hover {
     transform: translateY(-5px);
