@@ -25,12 +25,14 @@ def dejeuner(request):
 
             Users = ContactModel.objects.all()
             Horaire_list = PlaceDispo.objects.all()
-            for i in Horaire_list:
 
-            #print("avt :"+ x.Count)
-            #x.Count-=1
-            #x.save()
-            #print("apres:" + x.Count)
+            for i in Horaire_list:
+                if i.Horaire==horaire:
+                    i.Count-=1
+                    i.save()
+                    print(i.Horaire, i.Count)
+                    break
+
 
             if vieux=='on':
                 vieux=True;
