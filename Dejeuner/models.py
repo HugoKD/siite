@@ -2,6 +2,10 @@ from django import forms
 from django.db import models
 
 
+class HoraireModel(models.Model):
+    Horaire=models.CharField(max_length=5)
+    Count=models.IntegerField()
+
 
 class ContactModel(models.Model):
     Prenom = models.CharField(max_length=20)

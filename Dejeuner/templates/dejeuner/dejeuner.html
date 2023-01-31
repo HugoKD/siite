@@ -49,27 +49,13 @@
                             <div class="horaire">
                             Horaire de livraison :
                             <select name="Horaire" required>
-                                <option value="">-----</option>
-                                <option value="7h00">7h00</option>
-                                <option value="7h30">7h30</option>
-                                <option value="8h00">8h00</option>
-                                <option value="9h00">9h00</option>
-                                <option value="9h30">9h30</option>
-                                <option value="10h00">10h00</option>
-                                <option value="10h30">10h30</option>
-                                <option value="11h00">11h00</option>
-                                <option value="11h30">11h30</option>
-                                <option value="12h00">12h00</option>
-                                <option value="12h30">12h30</option>
-                                <option value="13h00">13h00</option>
-                                <option value="13h30">13h30</option>
-                                <option value="14h00">14h00</option>
-                                <option value="14h30">14h30</option>
-                                <option value="15h00">15h00</option>
-                                <option value="15h30">15H30</option>
-                                <option value="16h00">16h00</option>
-                                <option value="16h30">16h30</option>
-                                <option value="17h00">17h00</option>
+
+                                {% for horaire in horaires %}
+
+                                    <option value="{{horaire}}">{{horaire}}</option>
+                                {% endfor %}
+                            </select>
+
                             </select>
                         </div>
                         </div>

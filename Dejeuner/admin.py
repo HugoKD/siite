@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import ContactModel
+from .models import ContactModel, HoraireModel
 
 
 
@@ -10,3 +10,5 @@ class ContactAdmin(admin.ModelAdmin):
     ordering = ('Horaire',)
     search_fields = ('Horaire','Nom','Menu')
     list_filter = ('Menu', 'Horaire')
+
+
