@@ -13,7 +13,10 @@ def dejeuner(request):
             couvert=request.POST.get('Couvert')
             menu=request.POST.get('Menu')
             num = request.POST.get('Num')
-            print(vieux)
+            horaire = request.POST.get('Horaire')
+
+            Users = ContactModel.objects.all()
+
             if vieux=='on':
                 vieux=True;
             elif vieux=='None':
@@ -22,25 +25,18 @@ def dejeuner(request):
                 couvert=True
             elif couvert=='None':
                 couvert=False
-            horaire= request.POST.get('Horaire')
-            Users=ContactModel.objects.all()
-            list_prenom, list_nom = [], []
+
+            list_prenom, list_nom = ['pivot'], ['pivot']
             for i in Users:
                 list_prenom.append(i.Prenom)
                 list_nom.append(i.Nom)
             for i in range(0,len(list_nom)):
                 if nom == list_nom[i]:
                     for j in range(0,len(list_prenom)):
-                        if list_prenom[j]==nom:
-                            print(ok)
+                        if list_prenom[j]==prenom:
                             return HttpResponseRedirect('/erreur1/')
                             break
-                elif prenom == list_prenom[i]:
-                    for j in range(0,len(list_nom)):
-                        if list_nom[j]==prenom:
-                            print(ok)
-                            return HttpResponseRedirect('/erreur1/')
-                            break
+            #dernier test :
             print(list_prenom)
             list_prenom.append(nom)
             list_nom.append(prenom)
