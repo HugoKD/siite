@@ -13,13 +13,13 @@ body {
 }
 
 #dejeuner {
- display: flex;
+ display: flex; flex-direction: column;
  align-items: center;
  justify-content: center;
- height: 93.5vh; overflow-y: hidden;
+ min-height: 93.5vh; overflow-y: hidden;
  background-image: url("../img/escheresque-dark-1920x1080.png");
  background-repeat: repeat;
- padding-top: 5%;
+ padding-top: 80px;
 }
 
 
@@ -29,10 +29,10 @@ body {
  max-width: 80%;
  min-height: 80%; width: 70%;
  padding: 50px 10px;
- margin: 0px auto;
+ margin: 0 auto 20px auto;
  border-radius: 15px;
  border: 1px solid #a51840;
- box-shadow: 0px 10px 50px -10px #1f2121;
+ box-shadow: 0px 10px 50px -10px #050505;
  text-align: center;
  color: white;
  animation-duration: 2s;
@@ -53,6 +53,23 @@ body {
 }
 
 
+section#dejeuner h2 {
+    margin-bottom: 20px;
+    color: #ece0d2;
+}
+
+section#dejeuner .message {
+    text-align: center;
+}
+section#dejeuner .message h2 a {
+    color: #ff0557;
+    text-decoration: none;
+}
+
+section#dejeuner .message h2 a:hover {
+    color: #a51840;
+}
+
 section#dejeuner .contact_div .texte h3{
     font-size: 1.2em;
 }
@@ -67,8 +84,12 @@ section#dejeuner .contact_div form input {
     width: 45%;
     display: flex;
 }
+section#dejeuner .contact_div form .boisson {
+    margin: 10px 0;
+}
 
 section#dejeuner .contact_div form .bloc {
+    margin: 10px 0;
     justify-content: space-evenly;
     flex-direction: row;
     display: flex;
@@ -100,7 +121,28 @@ section#dejeuner .contact_div form input {
     border-radius: 10px;
 }
 
+section#dejeuner .contact_div form .bloc .vieux {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
 
+section#dejeuner .contact_div form .bloc .vieux input {
+    flex: 1; margin: 0 10px;
+}
+section#dejeuner .contact_div form .bloc .couvert {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+section#dejeuner .contact_div form .bloc .couvert input {
+    flex: 1; margin: 0 10px;
+}
 
 section#dejeuner .contact_div form button {
     width: 192px;
@@ -166,4 +208,33 @@ section#dejeuner .contact_div form button:hover {
 .copy p {
     margin-bottom: 0;
     padding-bottom: 2px;
+}
+
+@media screen and (max-width: 500px) {
+
+    section#dejeuner .contact_div {
+        overflow-x: scroll;
+    }
+
+    section#dejeuner .contact_div {
+        margin-bottom: 20px;
+    }
+    section#dejeuner .contact_div form .bloc {
+        display: flex;
+        flex-direction: column;
+    }
+    section#dejeuner .contact_div form .bloc input {
+        width: 95%;
+    }
+    section#dejeuner .contact_div form .bloc .couvert {
+        margin: 10px 0;
+    }
+
+    section#dejeuner .contact_div form .menu{
+        margin: 10px 0;
+    }
+
+    section#dejeuner .contact_div form .horaire {
+        margin: 10px 0;
+    }
 }

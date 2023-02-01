@@ -17,6 +17,10 @@
     {% endblock %}
 
     <section id="dejeuner">
+        <div class="message">
+            <h2>Salut, juste pour rappel tu n'as le droit qu'à une seule commande et ce que si tu es cotisant BDE.</h2>
+            <h2> Voici le <a href="../menu">menu</a> si tu l'as oublié</h2>
+        </div>
         <div class="contact_div">
                 <div class="texte"><h1>Déjeuner</h1></div>
 
@@ -58,18 +62,26 @@
                                     {% endif %}
                                 {% endfor %}
                             </select>
-
+                            </div>
                         </div>
+                        <div class="boisson">
+                            boisson :
+                            <select name="Boisson" required>
+                                <option value="">-----</option>
+                                <option value="Boisson1">Boisson1</option>
+                                <option value="Boisson2">Boisson2</option>
+                                <option value="Boisson3">Boisson3</option>
+                            </select>
                         </div>
                         <textarea type="text" name="Message" placeholder="Remarques particulieres (allergies ...)" maxlength="100"></textarea>
                         <button type="submit" onclick="maFonction()">Envoyer</button>
 
-                    <script>
-                          function maFonction()
-                          {
-                            confirm("Attention tu n'as droit que à un seul menu par personne, es-tu sur de ton choix ?");
-                          }
-                    </script>
+                        <script>
+                              function maFonction()
+                              {
+                                confirm("Attention tu n'as droit que à un seul menu par personne, es-tu sur de ton choix ?");
+                              }
+                        </script>
                     </form>
         </div>
     </section>

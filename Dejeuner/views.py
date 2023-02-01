@@ -71,3 +71,7 @@ def redirection(request):
 
 def erreur1(request):
     return render(request, "dejeuner/erreur1.html")
+
+def menu(request):
+    return render(request, "dejeuner/menu.html")
+
