@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponseRedirect
-from .models import ContactModel,PlaceDispo
+from .models import PlaceDispo, ContactModel
 
 
 def dejeuner(request):
@@ -20,10 +20,9 @@ def dejeuner(request):
             couvert=request.POST.get('Couvert')
             menu=request.POST.get('Menu')
             num = request.POST.get('Num')
+            boisson= request.POST.get('Boisson')
             horaire = request.POST.get('Horaire')
 
-            print(vieux)
-            print(couvert)
 
             Users = ContactModel.objects.all()
             Horaire_list = PlaceDispo.objects.all()
@@ -34,7 +33,6 @@ def dejeuner(request):
                     i.save()
                     break
 
-
             if vieux=='on':
                 vieux=True
             elif vieux==None:
@@ -44,20 +42,22 @@ def dejeuner(request):
             elif couvert==None:
                 couvert=False
 
-            list_prenom, list_nom = ['pivot'], ['pivot']
+            list_prenom, list_nom = ['PiVoT'], ['PiVoT']
+            #fonction qui enleve les majuscules dans les strings
+
             for i in Users:
-                list_prenom.append(i.Prenom)
-                list_nom.append(i.Nom)
+                list_prenom.append(i.Prenom.lower())
+                list_nom.append(i.Nom.lower())
             for i in range(0,len(list_nom)):
-                if nom == list_nom[i]:
+                if nom.lower() == list_nom[i]:
                     for j in range(0,len(list_prenom)):
-                        if list_prenom[j]==prenom:
+                        if list_prenom[j]==prenom.lower():
                             return HttpResponseRedirect('/erreur1/')
                             break
-            #dernier test --> matcher liste prénoms + nom école :
-            list_prenom.append(nom)
-            list_nom.append(prenom)
-            NewComamande= ContactModel.objects.create(Nom= nom, Prenom=prenom, Adresse=adresse, Message=message, Vieux=vieux,Couvert=couvert,Horaire=horaire, Menu=menu, Num= num)
+
+            #dernier test --> matcher liste prénoms + nom école : fait ok
+
+            NewComamande= ContactModel.objects.create(Nom= nom, Prenom=prenom, Adresse=adresse, Message=message, Vieux=vieux,Couvert=couvert,Horaire=horaire, Menu=menu, Num= num, Boisson=boisson)
             NewComamande.save()
 
             #form.save()

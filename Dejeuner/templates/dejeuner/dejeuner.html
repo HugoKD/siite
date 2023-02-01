@@ -29,6 +29,7 @@
                     <form action="" method="post">
 
                         {% csrf_token %}
+
                         <div class="bloc">
                             <input type="text" name="Prenom" placeholder="Votre Prenom" required="" maxlength="20">
                             <input type="text" name="Nom" placeholder="Votre nom" required="" maxlength="20">
@@ -51,7 +52,17 @@
                                     <option value="Menu3">Menu3</option>
                                 </select>
                             </div>
-                            <div class="horaire">
+                            <div class="boisson">
+                                Boisson :
+                                <select name="Boisson">
+                                    <option value="SansBoisson">Sans boisson</option>
+                                    <option value="Boisson1">Boisson1</option>
+                                    <option value="Boisson2">Boisson2</option>
+                                    <option value="Boisson3">Boisson3</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="horaire">
                             Horaire de livraison :
 
                             <select name="Horaire" required>
@@ -64,16 +75,7 @@
                                 {% endfor %}
                             </select>
                             </div>
-                        </div>
-                        <div class="boisson">
-                            Boisson :
-                            <select name="Boisson" required>
-                                <option value="">-----</option>
-                                <option value="Boisson1">Boisson1</option>
-                                <option value="Boisson2">Boisson2</option>
-                                <option value="Boisson3">Boisson3</option>
-                            </select>
-                        </div>
+
                         <textarea type="text" name="Message" placeholder="Remarques particulieres (allergies ...)" maxlength="100"></textarea>
                         <button type="submit" onclick="maFonction()">Envoyer</button>
 

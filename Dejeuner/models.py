@@ -17,6 +17,8 @@ class ContactModel(models.Model):
     Horaire= models.CharField(max_length=10)
     Menu = models.CharField(max_length=10)
     Message= models.TextField(max_length=200, blank=True)
+    Boisson= models.CharField(max_length=20)
+
 
 
     def __str__(self):
