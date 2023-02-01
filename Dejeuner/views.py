@@ -61,7 +61,7 @@ def dejeuner(request):
             NewComamande.save()
 
             #form.save()
-            return HttpResponseRedirect('/redirection/')
+            return HttpResponseRedirect('/redirectionDej/')
 
 
     return render(request, "dejeuner/dejeuner.html", context)

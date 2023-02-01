@@ -4,5 +4,5 @@ from .views import contact,redirection
 
 urlpatterns = [
     path('nous-contacter/', contact, name='contact'),
-    path('redirection/',redirection,name='redirection')
+    path('redirectionContact/',redirection,name='redirection')
 ]
