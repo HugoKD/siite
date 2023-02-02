@@ -12,8 +12,8 @@ def dejeuner(request):
     }
 
     if request.method == 'POST':
-            nom= request.POST.get('Nom')
-            prenom= request.POST.get('Prenom')
+            nom= request.POST.get('Nom').lower()
+            prenom= request.POST.get('Prenom').lower()
             adresse= request.POST.get('Adresse')
             message= request.POST.get('Message')
             vieux=request.POST.get('Vieux')
@@ -46,8 +46,8 @@ def dejeuner(request):
             #fonction qui enleve les majuscules dans les strings
 
             for i in Users:
-                list_prenom.append(i.Prenom.lower())
-                list_nom.append(i.Nom.lower())
+                list_prenom.append(i.Prenom)
+                list_nom.append(i.Nom)
             for i in range(0,len(list_nom)):
                 if nom.lower() == list_nom[i]:
                     for j in range(0,len(list_prenom)):
