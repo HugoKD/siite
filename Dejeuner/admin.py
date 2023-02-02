@@ -6,7 +6,7 @@ from .models import ContactModel,PlaceDispo
 @admin.register(ContactModel)
 
 class ContactAdmin(admin.ModelAdmin):
-    list_display = ('Nom', 'Prenom','Horaire', 'Adresse')
+    list_display = ('Nom', 'Prenom','Horaire', 'Adresse','Boisson')
     ordering = ('Horaire',)
     search_fields = ('Horaire','Nom','Menu')
     list_filter = ('Menu', 'Horaire')

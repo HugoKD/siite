@@ -64,6 +64,7 @@ section#dejeuner .message {
 section#dejeuner .message h2 a {
     color: #ff0557;
     text-decoration: none;
+    transition: 0.3s;
 }
 
 section#dejeuner .message h2 a:hover {
@@ -85,7 +86,7 @@ section#dejeuner .contact_div form input {
     display: flex;
 }
 section#dejeuner .contact_div form .boisson {
-    margin: 10px 0;
+    margin: 15px 0;
 }
 
 section#dejeuner .contact_div form .bloc {
@@ -120,6 +121,8 @@ section#dejeuner .contact_div form input {
     transition: 0.2s;
     border-radius: 10px;
 }
+
+
 
 section#dejeuner .contact_div form .bloc .vieux {
     text-align: center;

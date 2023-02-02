@@ -20,7 +20,7 @@ def contact(request):
 
         NewUser.save()
 
-        return HttpResponseRedirect('/redirection/')
+        return HttpResponseRedirect('/redirectionContact/')
 
     else :
         form= ContactModel()
