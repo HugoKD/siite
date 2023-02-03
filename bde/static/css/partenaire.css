@@ -518,7 +518,7 @@ footer {
 @media screen and (min-width: 500px) and (max-width: 1200px) {
 
     .main {
-        height: 150vh;
+        min-height: 150vh;
     }
 
     #circle-orbit-container {
