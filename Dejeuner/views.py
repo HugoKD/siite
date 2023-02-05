@@ -70,6 +70,7 @@ def dejeuner(request):
             ws[f'H{ws["L1"].value}'].value = couvert
             ws[f'I{ws["L1"].value}'].value = menu
             ws[f'J{ws["L1"].value}'].value = boisson
+            ws[f'K{ws["L1"].value}'].value = message
 
             ws['L1'].value += 1
 
