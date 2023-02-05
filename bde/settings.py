@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'contact',
-    'Dejeuner',
+    'Dejeuner.apps.DejeunerConfig',
     'accounts.apps.AccountsConfig',
     'astrocoins.apps.AstrocoinsConfig',
 ]

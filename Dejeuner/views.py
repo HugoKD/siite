@@ -1,7 +1,8 @@
 from django.shortcuts import render
 from django.http import HttpResponseRedirect
 from .models import PlaceDispo, ContactModel
-
+from openpyxl import load_workbook
+import os
 
 def dejeuner(request):
 
@@ -56,6 +57,24 @@ def dejeuner(request):
                             break
 
             #dernier test --> matcher liste prénoms + nom école : fait ok
+
+            wb = load_workbook('Dejeuner/petitdej.xlsx')
+            ws = wb[f'{horaire}']
+            ws[f'A{ws["L1"].value}'].value = adresse
+            ws[f'B{ws["L1"].value}'].value = 'Evry'
+            ws[f'C{ws["L1"].value}'].value = 91000
+            ws[f'D{ws["L1"].value}'].value = prenom
+            ws[f'E{ws["L1"].value}'].value = nom
+            ws[f'F{ws["L1"].value}'].value = num
+            ws[f'G{ws["L1"].value}'].value = vieux
+            ws[f'H{ws["L1"].value}'].value = couvert
+            ws[f'I{ws["L1"].value}'].value = menu
+            ws[f'J{ws["L1"].value}'].value = boisson
+
+            ws['L1'].value += 1
+
+            wb.save('Dejeuner/petitdej.xlsx')
+
 
             NewComamande= ContactModel.objects.create(Nom= nom, Prenom=prenom, Adresse=adresse, Message=message, Vieux=vieux,Couvert=couvert,Horaire=horaire, Menu=menu, Num= num, Boisson=boisson)
             NewComamande.save()
