@@ -18,7 +18,7 @@ class Migration(migrations.Migration):
                 ('Prenom', models.CharField(max_length=20)),
                 ('Nom', models.CharField(max_length=20)),
                 ('Num', models.CharField(max_length=10)),
-                ('Adresse', models.CharField(max_length=30)),
+                ('Adresse', models.CharField(max_length=40)),
                 ('Vieux', models.BooleanField()),
                 ('Couvert', models.BooleanField()),
                 ('Horaire', models.CharField(max_length=10)),
