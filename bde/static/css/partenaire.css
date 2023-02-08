@@ -25,63 +25,32 @@ html, body {
 
 .main {
     padding: 15px 0;
-    margin: 0 auto;
     background: #1f2121;
     align-items: center;
     justify-content: center;
-    z-index: 0;
-    height: 100vh;
+    min-height: 100vh;
+    position: relative;
 }
 
 .page_title {
-    display: flex;
+    width: 100%;
+    display: block;
     text-align: center;
     color: white;
     position: absolute;
     align-content: center;
     margin-top: 150px;
-    margin-left: 38%;
 }
 
-
-.loader {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: #000000;
-    z-index: 1000;
-    display: flex;
-    justify-content: center;
-}
-
-.loader img{
-    position: relative;
-    transform: scale(0.4) ;
-    -webkit-animation: flash linear 1.3s infinite;
-	animation: flash linear 1.3s infinite;
-}
-
-
-@-webkit-keyframes flash {
-	0% { opacity: 1; }
-	50% { opacity: .3; }
-	100% { opacity: 1; }
-}
-
-.fondu-out {
-    opacity: 0;
-    transition: opacity 0.4s ease-out;
-    z-index: -99;
-}
 
 /* ---------- Container for the orbiting circles animation ---------- */
 #circle-orbit-container {
-  position: relative;display: flex;
-  top: 20%;
+  position: absolute;display: flex;
+  top: 10%;
   left: 20%;
   height: 60%;
-  width: 60%;
-    margin-bottom: -10%
+  width: 60%; height: 60%;
+
 }
 
 /* ---------- Inner orbit - This is the circles closest to the central point ---------- */
@@ -172,20 +141,61 @@ html, body {
     position: relative;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     color: white;
+    flex-wrap: wrap;
+    margin: 20px 0 20px 0;
+    margin-top: 400px;
 }
 
 
-
-.numérique {
+.flip-card {
+    height: 100%; width: 100%;
+}
+.essaion {
+    margin: 50px 0;
     height: 400px;
     width: 400px;
     margin-right: 1%;
 }
 
 
-.numérique .cadre {
+.essaion .flip-card .cadre_front {
+    border-radius: 10px;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #1f2121 ;
+    box-shadow: 0px 10px 50px -10px #a92a37;
+    flex-direction: column;
+    -webkit-backdrop-filter: blur(15px); /* assure la compatibilité avec safari */
+    backdrop-filter: blur(15px);
+    background-color: rgba(182, 182, 182, 0.2);
+    flex: 1;
+    position: relative;
+}
+
+.fleche {
+    z-index: 20;
+    position: absolute;
+    top: 0; right: 0;
+    width: 15%; height: 15%;
+}
+.fleche img {
+    width: 100%;
+    height: 100%;
+}
+.ocs {
+    margin: 50px 20px;
+    height: 400px;
+    width: 400px;
+    margin-right: 1%;
+}
+
+
+.ocs .cadre_front {
     border-radius: 10px;
     display: flex;
     width: 100%;
@@ -200,38 +210,83 @@ html, body {
     background-color: rgba(182, 182, 182, 0.2);
 }
 
-
-.img_essaion {
-    text-align: center;
+.simone {
+    margin: 50px 0;
+    height: 400px;
+    width: 400px;
+    margin-right: 1%;
 }
 
-.img_essaion h1 {
+
+.simone .cadre_front {
+    border-radius: 10px;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #1f2121 ;
+    box-shadow: 0px 10px 50px -10px #a92a37;
+    flex-direction: column;
+    -webkit-backdrop-filter: blur(15px); /* assure la compatibilité avec safari */
+    backdrop-filter: blur(15px);
+    background-color: rgba(182, 182, 182, 0.2);
+    flex: 1;
+    position: relative;
+}
+
+.img_simone {
+    text-align: center;
+    width: 90%;
+}
+
+.img_simone img {
+    width: 80%;
+}
+
+.img_simone h1 {
     margin-top: -20px;
 }
 
 
-.img_essaion img {
+.img_ocs {
+    text-align: center;
+    width: 90%;
+}
+
+.img_ocs img {
+    width: 80%;
+}
+
+.img_ocs h1 {
+    margin-top: -20px;
+}
+
+
+
+.flip-card .img_essaion {
+    text-align: center;
+}
+
+.flip-card .img_essaion h1 {
+    margin-top: -20px;
+}
+
+
+.flip-card .img_essaion img {
     padding-left: 10px;
     border-radius: 100%;
 }
 
 
-.numérique .box {
-    width: 25%;
-    height: 5px;
-    margin-left: 37.5%;
-    background-color: #a51840;
-}
-
-
-
-.secrétariat {
+.labo {
+    margin: 50px 0;
     height: 400px;
     width: 400px;
     margin-left: 1%;
 }
 
-.secrétariat .cadre {
+.labo .cadre_front {
     border-radius: 10px;
     display: flex;
     width: 100%;
@@ -244,13 +299,12 @@ html, body {
     -webkit-backdrop-filter: blur(15px); /* assure la compatibilité avec safari */
     backdrop-filter: blur(15px);
     background-color: rgba(182, 182, 182, 0.2);
+    flex: 1;
 }
 
 
 
-
-
-.secrétariat .img_secrétariat {
+.labo .img_labo {
     width: 50%;
     align-items: center;
     justify-content: center;
@@ -259,28 +313,21 @@ html, body {
 }
 
 
-.secrétariat .img_secrétariat img {
+.labo .img_labo img {
     width: 90%;
     border-radius: 100%;
 }
 
 
 
-.secrétariat .box {
-    width: 25%;
-    height: 5px;
-    margin-left: 37.5%;
-    background-color: #a51840;
-}
-
-
 .royalfood {
+    margin: 50px 0;
     height: 400px;
     width: 400px;
     margin-left: 1%;
 }
 
-.royalfood .cadre {
+.royalfood .cadre_front {
     border-radius: 10px;
     display: flex;
     width: 100%;
@@ -293,6 +340,7 @@ html, body {
     -webkit-backdrop-filter: blur(15px); /* assure la compatibilité avec safari */
     backdrop-filter: blur(15px);
     background-color: rgba(182, 182, 182, 0.2);
+    flex: 1;
 }
 
 
@@ -300,7 +348,7 @@ html, body {
 
 
 .royalfood .img_royalfood {
-    width: 70%;
+    width: 100%;
     align-items: center;
     justify-content: center;
     display: flex;
@@ -309,7 +357,7 @@ html, body {
 
 
 .royalfood .img_royalfood img {
-    width: 90%;
+    width: 100%;
 
 }
 .royalfood .img_royalfood h1 {
@@ -319,13 +367,6 @@ html, body {
 
 
 
-
-.royalfood .box {
-    width: 25%;
-    height: 5px;
-    margin-left: 37.5%;
-    background-color: #a51840;
-}
 
 footer {
     z-index: 1;
@@ -364,281 +405,32 @@ footer {
     padding-bottom: 10px;
 }
 
-@media screen and (max-width: 700px) {
-
-.main {
-    height: 150vh;
-}
-
-.page_title {
-    margin-left: 14%;
-    z-index: 100;
-}
 
 
-    #circle-orbit-container {
-      top: 15%;
-      left: 10%;
-      height: 30%;
-      width: 30%;
+@media screen and (max-width: 500px) {
+
+    .labo {
+        width: 90%;
     }
 
-    #inner-orbit {
-      top: 45px;
-      left: 55px;
-      width: 100px;
-      height: 100px;
-
-}
-
-    #middle-orbit {
-      top: 20px;
-      left: 20px;
-      width: 160px;
-      height: 160px;
-}
-
-    #outer-orbit {
-      width: 200px;
-      height: 200px;
-
-}
-    .bloc1 {
-        flex-direction: column;
-        transform: translateY(-50px);
-    }
-
-.numérique {
-    height: 300px;
-    width: 300px;
-}
-
-
-.numérique .cadre {
-    width: 100%;
-    height: 100%;
-}
-
-.img_essaion h1 {
-    margin-top: -20px;
-}
-
-
-.img_essaion img {
-    width: 80%;
-    height: 80%;
-}
-
-
-.secrétariat {
-    height: 300px;
-    width: 300px;
-}
-
-.secrétariat .cadre {
-    width: 100%;
-    height: 100%;
-    margin-top: 5%;
-}
-
-
-.secrétariat .img_secrétariat img {
-    width: 80%;
-    height: 80%;
-}
-
-.royalfood {
-    height: 300px;
-    width: 300px;
-}
-
-.royalfood .cadre {
-    width: 100%;
-    height: 100%;
-    margin-top: 10%;
-}
-
-
-.royalfood .img_royalfood img {
-    width: 80%;
-    height: 80%;
-}
-
-}
-
-@media screen and (max-height: 820px) {
-    .numérique {
-        width: 250px;
-        height: 250px;
-    }
-
-    .secrétariat {
-        width: 250px;
-        height: 250px;
+    .labo .img_labo {
+        margin-left: 5%;
     }
 
     .royalfood {
-        width:250px;
-        height:250px;
+        width: 90%;
+    }
+    .ocs {
+        width: 90%;
     }
 
-    .img_essaion h1 {
-        font-size: 1.5rem;
+    .essaion {
+        width: 90%;
     }
 
-    .img_secrétariat h1 {
-        font-size: 1.5rem;
-    }
-        .img_royalfood h1 {
-        font-size: 1.5rem;
-    }
-
-
-}
-
-@media screen and (max-height: 700px) {
-    .numérique {
-        width: 225px;
-        height: 225px;
-    }
-
-    .secrétariat {
-        width: 225px;
-        height: 225px;
-    }
-
-    .royalfood {
-        width:225px;
-        height:225px;
+    .simone {
+        width: 90%;
     }
 
 }
 
-
-@media screen and (min-width: 500px) and (max-width: 1200px) {
-
-    .main {
-        min-height: 150vh;
-    }
-
-    #circle-orbit-container {
-      top: 8%;
-      left: 10%;
-      height: 30%;
-      width: 30%;
-    }
-
-    .bloc1 {
-        transform: translateY(100px);
-        top:-15%;
-        flex-direction: column;
-    }
-
-
-    .page_title {
-        margin-top: 100px;
-        margin-left: 30%;
-        z-index: 100;
-    }
-
-    .numérique {
-        margin-bottom: 30px;
-    }
-
-    .secrétariat {
-        margin-bottom: 30px;
-    }
-
-    .royalfood {
-        margin-bottom: 30px;
-    }
-
-}
-
-@media screen and (max-width: 400px) and (min-width: 300px) {
-    .bloc1 h1 {
-        font-size: 1.3rem;
-    }
-
-}
-
-@media screen and (max-width: 300px) {
-    .page_title h1 {
-        font-size: 1.4rem;
-    }
-    .page_title {
-        margin-left: 10%;
-    }
-}
-
-@media  screen and (max-height:450px) and (min-width:600px ){
-
-    .main {
-        height: 150vh;
-    }
-
-    .bloc1 {
-        transform: translateY(40%);
-    }
-
-    .bloc1 h1 {
-        font-size: 1rem;
-    }
-
-    img {
-        height: 80%;
-        width: 80%;
-    }
-}
-
-
-@media screen and (min-width: 900px) and (max-width: 1290px) and (max-height: 820px){
-
-    .main {
-        height: 100vh;
-    }
-
-    .bloc1 {
-        flex-direction: row;
-        transform: translateY(70%);
-    }
-
-   .img_essaion img{
-       width: 80%;
-       height: 80%;
-   }
-
-    #circle-orbit-container {
-      top: 15%;
-      left: 5%;
-      height: 30%;
-      width: 30%;
-    }
-
-    .page_title {
-        transform: translateY(-30px);
-    }
-
-        .numérique {
-        width: 250px;
-        height: 250px;
-    }
-
-    .secrétariat {
-        width: 250px;
-        height: 250px;
-    }
-
-    .royalfood {
-        width:250px;
-        height:250px;
-        margin-left: 20px;
-    }
-
-    .royalfood .cadre {
-        margin-top: 0;
-        transform: translateY(0);
-    }
-
-
-}
