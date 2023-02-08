@@ -1,0 +1,35 @@
+* {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ font-family: 'Lato', sans-serif;
+}
+
+
+.menu {
+    background-color: #1f2121;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.int {
+    margin: 0 auto;
+    width: 80%;
+}
+
+.menu img {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+@media screen and (max-width :700px) {
+    .menu {
+        height: 100vh;
+    }
+
+    .int {
+        width: 100%;
+        margin-top: 100px;
+    }
+}

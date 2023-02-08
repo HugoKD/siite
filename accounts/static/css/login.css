@@ -177,3 +177,16 @@ html, body {
         height: 400px;
     }
 }
+
+
+@media screen and (min-width: 1000px) and (min-height: 550px) and (max-height: 850px){
+    .title {
+        height: 130vh;
+    }
+
+    .form {
+        transform: translateY(120px);
+        height: 500px;
+    }
+
+}

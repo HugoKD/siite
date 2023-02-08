@@ -162,6 +162,17 @@ html, body {
 
     .form {
         font-size: 0.8rem;
-        height: 400px;
+        height: 350px;
     }
+}
+@media screen and (min-width: 1000px) and (min-height: 550px) and (max-height: 850px){
+    .title{
+        height: 140vh;
+    }
+
+    .form {
+        transform: translateY(150px);
+        height: 500px;
+    }
+
 }

@@ -166,9 +166,7 @@ section#dejeuner .contact_div form button {
 }
 
 section#dejeuner .contact_div form .bloc .menu select option {
-        background-color: #865b27;
-        color: blue;
-        border: 1px solid blue ;
+
         margin-left: 5px;
 }
 
@@ -232,6 +230,10 @@ section#dejeuner .contact_div form button:hover {
     section#dejeuner .contact_div form .bloc .couvert {
         margin: 10px 0;
     }
+
+    section#dejeuner .contact_div form .bloc .vieux {
+    margin: 0 auto;
+}
 
     section#dejeuner .contact_div form .menu{
         margin: 10px 0;

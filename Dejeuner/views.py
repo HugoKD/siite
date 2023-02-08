@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponseRedirect
-from .models import PlaceDispo, ContactModel
+from .models import PlaceDispo, ContactModel, CompteurMenu
 from openpyxl import load_workbook
 import os
 
@@ -25,23 +25,10 @@ def dejeuner(request):
             horaire = request.POST.get('Horaire')
 
 
+
+
             Users = ContactModel.objects.all()
             Horaire_list = PlaceDispo.objects.all()
-
-            for i in Horaire_list:
-                if i.Horaire==horaire:
-                    i.Count-=1
-                    i.save()
-                    break
-
-            if vieux=='on':
-                vieux=True
-            elif vieux==None:
-                vieux=False
-            if couvert=='on':
-                couvert=True
-            elif couvert==None:
-                couvert=False
 
             list_prenom, list_nom = ['PiVoT'], ['PiVoT']
             #fonction qui enleve les majuscules dans les strings
@@ -55,6 +42,49 @@ def dejeuner(request):
                         if list_prenom[j]==prenom.lower():
                             return HttpResponseRedirect('/erreur1/')
                             break
+
+
+
+
+
+            wb_cotisant = load_workbook('Dejeuner/Cotisants-BDE-respo-num.xlsx')
+            ws_cotisant = wb_cotisant.active
+            cotisant = False
+            for i in range(2, 1507):
+                if ws_cotisant[f'A{i}'].value.lower() == nom.lower() and  ws_cotisant[f'B{i}'].value.lower() == prenom.lower():
+                    cotisant = True
+                    break
+
+            if cotisant == False:
+                wb_cotisant.save('Dejeuner/Cotisants-BDE-respo-num.xlsx')
+                return HttpResponseRedirect('/erreur1/')
+
+
+            wb_cotisant.save('Dejeuner/Cotisants-BDE-respo-num.xlsx')
+
+
+            for i in Horaire_list:
+                if i.Horaire==horaire:
+                    i.Count-=1
+                    i.save()
+                    break
+
+            compteur_menus = CompteurMenu.objects.all()
+
+            for menu_display in compteur_menus:
+                if menu_display.menu == menu:
+                    menu_display.compteur += 1
+                    menu_display.save()
+
+            if vieux=='on':
+                vieux=True
+            elif vieux==None:
+                vieux=False
+            if couvert=='on':
+                couvert=True
+            elif couvert==None:
+                couvert=False
+
 
             #dernier test --> matcher liste prénoms + nom école : fait ok
 
@@ -87,7 +117,7 @@ def dejeuner(request):
     return render(request, "dejeuner/dejeuner.html", context)
 
 def redirection(request):
-    return render(request, "dejeuner/redirection.html")
+    return render(request, "dejeuner/redirection1.html")
 
 def erreur1(request):
     return render(request, "dejeuner/erreur1.html")

@@ -20,7 +20,7 @@
     <section id="dejeuner">
         <div class="message">
             <h2>Salut, juste pour rappel tu n'as le droit qu'à une seule commande, et ce, que si tu es cotisant BDE.</h2>
-            <h2> Voici le <a href="../menu">menu</a> si tu l'as oublié</h2>
+            <h2> Voici le <a href="../menu" target="_blank" rel="noopener noreferrer">menu</a> si tu l'as oublié</h2>
         </div>
         <div class="contact_div">
                 <div class="texte"><h1>Déjeuner</h1></div>
@@ -31,15 +31,14 @@
                         {% csrf_token %}
 
                         <div class="bloc">
-                            <input type="text" name="Prenom" placeholder="Votre Prenom" required="" maxlength="20">
-                            <input type="text" name="Nom" placeholder="Votre nom" required="" maxlength="20">
+                            <input type="text" name="Prenom" placeholder="Prénom" required="" maxlength="20">
+                            <input type="text" name="Nom" placeholder="Nom (avec - entre les mots)" required="" maxlength="20">
                         </div>
                         <div class="bloc">
-                            <input type="integer" name="Num" placeholder="Numero de tel" required="" maxlength="10">
-                            <input type="text" name="Adresse" placeholder="Adresse de livraison" required="">
+                            <input type="integer" name="Num" placeholder="Numéro de tel" required="" maxlength="10">
+                            <input type="text" name="Adresse" placeholder="Numéro Maisel OU Adresse de livraison" required="">
                         </div>
                         <div class="bloc">
-                            <div class="couvert">Couvert :<input type="checkbox" id="Couvert" name="Couvert"></div>
                               <div class="vieux"> Vieux    :  <input type="checkbox" id="Vieux" name="Vieux"></div>
                         </div>
                         <div class="bloc">
@@ -47,18 +46,20 @@
                                 Menu :
                                 <select name="Menu" required>
                                     <option value="">-----</option>
-                                    <option value="Menu1">Menu1</option>
-                                    <option value="Menu2">Menu2</option>
-                                    <option value="Menu3">Menu3</option>
+                                    <option value="Milkyway">Milky way</option>
+                                    <option value="Roquetteteam">Roquette team</option>
+                                    <option value="Meteoritz">Météoritz</option>
                                 </select>
                             </div>
                             <div class="boisson">
                                 Boisson :
                                 <select name="Boisson">
                                     <option value="SansBoisson">Sans boisson</option>
-                                    <option value="Boisson1">Boisson1</option>
-                                    <option value="Boisson2">Boisson2</option>
-                                    <option value="Boisson3">Boisson3</option>
+                                    <option value="Boisson1">Coca</option>
+                                    <option value="Boisson2">Icetea</option>
+                                    <option value="Boisson3">Jus d'orange</option>
+                                    <option value="Boisson4">Chocolat chaud</option>
+                                    <option value="Boisson4">Café</option>
                                 </select>
                             </div>
                         </div>

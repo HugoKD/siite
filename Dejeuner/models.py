@@ -19,7 +19,12 @@ class ContactModel(models.Model):
     Message= models.TextField(max_length=200, blank=True)
     Boisson= models.CharField(max_length=20)
 
-
-
     def __str__(self):
         return self.Prenom + ' ' + self.Nom
+
+
+class CompteurMenu(models.Model):
+    menu = models.CharField(max_length=20)
+    compteur = models.IntegerField(default=0)
+
+
